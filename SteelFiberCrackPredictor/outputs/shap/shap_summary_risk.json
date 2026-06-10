@@ -1,0 +1,85 @@
+{
+  "task": "cracking_risk",
+  "top_features": [
+    {
+      "feature": "fiber_content",
+      "mean_abs_shap": 1.5345719105808648
+    },
+    {
+      "feature": "w_b_ratio",
+      "mean_abs_shap": 0.91872397519683
+    },
+    {
+      "feature": "tensile_strength",
+      "mean_abs_shap": 0.8111139431479482
+    },
+    {
+      "feature": "humidity",
+      "mean_abs_shap": 0.2507278630740669
+    },
+    {
+      "feature": "binder_content",
+      "mean_abs_shap": 0.19378315611092453
+    },
+    {
+      "feature": "sand_ratio",
+      "mean_abs_shap": 0.1667284549276373
+    },
+    {
+      "feature": "slag_powder",
+      "mean_abs_shap": 0.16312190527957862
+    },
+    {
+      "feature": "strength_grade_enc",
+      "mean_abs_shap": 0.12264045700937759
+    },
+    {
+      "feature": "concrete_type_enc",
+      "mean_abs_shap": 0.11649573738058577
+    },
+    {
+      "feature": "sand_content",
+      "mean_abs_shap": 0.11400397186816068
+    },
+    {
+      "feature": "curing_days",
+      "mean_abs_shap": 0.0649272711884599
+    },
+    {
+      "feature": "fiber_material_enc",
+      "mean_abs_shap": 0.06409452673115691
+    },
+    {
+      "feature": "aspect_ratio",
+      "mean_abs_shap": 0.0557960815396024
+    },
+    {
+      "feature": "cube_strength_mpa",
+      "mean_abs_shap": 0.052268149079883496
+    },
+    {
+      "feature": "fiber_content_x_aspect_ratio",
+      "mean_abs_shap": 0.05190114936073465
+    },
+    {
+      "feature": "fiber_type_enc",
+      "mean_abs_shap": 0.04075012340123067
+    },
+    {
+      "feature": "sand_type_enc",
+      "mean_abs_shap": 0.030969258105493877
+    },
+    {
+      "feature": "fly_ash",
+      "mean_abs_shap": 0.027112620575644543
+    },
+    {
+      "feature": "mixing_water",
+      "mean_abs_shap": 0.026495739123745202
+    },
+    {
+      "feature": "stone_content",
+      "mean_abs_shap": 0.019225489904289135
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "compressive": {
+    "n_skipped_total": 0,
+    "summary": {},
+    "samples": [],
+    "max_samples_stored": 100
+  },
+  "flexural": {
+    "n_skipped_total": 0,
+    "summary": {},
+    "samples": [],
+    "max_samples_stored": 100
+  }
+}

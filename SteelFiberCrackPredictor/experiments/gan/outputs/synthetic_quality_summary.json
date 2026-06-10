@@ -1,0 +1,283 @@
+{
+  "memorization": {
+    "used_numeric_columns": [
+      "strength_grade_enc",
+      "concrete_type_enc",
+      "fiber_type_enc",
+      "curing_days",
+      "fiber_content",
+      "aspect_ratio",
+      "w_b_ratio",
+      "binder_content",
+      "cement_content",
+      "mixing_water",
+      "fly_ash",
+      "slag_powder"
+    ],
+    "n_real_checked": 24,
+    "n_synthetic_checked": 120,
+    "real_real_nn_distance_reference": {
+      "q01": 36.59326472797081,
+      "q05": 38.275403933916486,
+      "q10": 47.80752610094195,
+      "median": 60.74359208256671
+    },
+    "synthetic_to_real_nn_distance": {
+      "min": 138.53161957016545,
+      "q01": 175.24927369261164,
+      "q05": 234.38948084826137,
+      "q50": 303.27886771241947,
+      "mean": 303.62697540869453,
+      "max": 427.70169646955196
+    },
+    "suspicious_near_copy": {
+      "threshold": 38.275403933916486,
+      "count": 0,
+      "ratio": 0.0
+    },
+    "synthetic_internal_repeat": {
+      "near_duplicate_threshold": 38.275403933916486,
+      "near_duplicate_count": 101,
+      "near_duplicate_ratio": 0.8416666666666667,
+      "exact_duplicate_count": 0,
+      "exact_duplicate_ratio": 0.0
+    },
+    "memorization_risk": "high",
+    "honest_conclusion_zh": "存在明显记忆风险：synthetic 可能包含近复制真实样本或内部模式塌缩。"
+  },
+  "distribution_shift": {
+    "columns": {
+      "w_b_ratio": {
+        "real": {
+          "present": true,
+          "n": 36,
+          "min": 0.3072119668554727,
+          "q05": 0.32,
+          "q50": 0.39777656002732686,
+          "q95": 0.4635701443361854,
+          "max": 0.4842114394590383,
+          "mean": 0.3979887471179946,
+          "std": 0.04885861419442988
+        },
+        "synthetic": {
+          "present": true,
+          "n": 120,
+          "min": 0.4157434736079993,
+          "q05": 0.5094795631342101,
+          "q50": 0.5611619519121944,
+          "q95": 0.5843516661444433,
+          "max": 0.5888150693834369,
+          "mean": 0.5561131024937592,
+          "std": 0.02689090728132156
+        }
+      },
+      "fiber_content": {
+        "real": {
+          "present": true,
+          "n": 36,
+          "min": 0.0,
+          "q05": 0.0,
+          "q50": 1.2187220622358503,
+          "q95": 2.478571882490797,
+          "max": 2.633507683170415,
+          "mean": 1.172372637831176,
+          "std": 0.8831219294663978
+        },
+        "synthetic": {
+          "present": true,
+          "n": 120,
+          "min": 1.2227648856572368,
+          "q05": 1.8533345188731152,
+          "q50": 3.5316533285406146,
+          "q95": 3.9187978175396054,
+          "max": 4.410487088654,
+          "mean": 3.206981525572368,
+          "std": 0.759878806125395
+        }
+      },
+      "aspect_ratio": {
+        "real": {
+          "present": true,
+          "n": 36,
+          "min": 0.0,
+          "q05": 0.0,
+          "q50": 65.6859841306077,
+          "q95": 705.882353,
+          "max": 705.882353,
+          "mean": 131.06852499671226,
+          "std": 189.2491894653935
+        },
+        "synthetic": {
+          "present": true,
+          "n": 120,
+          "min": 55.94378174730024,
+          "q05": 150.0,
+          "q50": 150.0,
+          "q95": 150.0,
+          "max": 150.0,
+          "mean": 148.33042342120132,
+          "std": 10.896148469473216
+        }
+      },
+      "binder_content": {
+        "real": {
+          "present": true,
+          "n": 36,
+          "min": 370.0,
+          "q05": 370.0,
+          "q50": 464.76484352757893,
+          "q95": 623.5017000172553,
+          "max": 789.4797199687324,
+          "mean": 485.22321436653783,
+          "std": 89.299429901922
+        },
+        "synthetic": {
+          "present": true,
+          "n": 120,
+          "min": 112.47876806163396,
+          "q05": 141.1854798633741,
+          "q50": 283.10017050419225,
+          "q95": 493.8861505247017,
+          "max": 650.3909040453578,
+          "mean": 297.45497915197353,
+          "std": 108.21507210909337
+        }
+      },
+      "cement_content": {
+        "real": {
+          "present": true,
+          "n": 36,
+          "min": 208.0,
+          "q05": 208.0,
+          "q50": 329.0087963748372,
+          "q95": 484.8333587856637,
+          "max": 539.9436305823051,
+          "mean": 341.91747136946884,
+          "std": 79.0421817405703
+        },
+        "synthetic": {
+          "present": true,
+          "n": 120,
+          "min": 33.80209774162557,
+          "q05": 38.14803462364366,
+          "q50": 67.60801150741406,
+          "q95": 135.69080368864863,
+          "max": 224.14693878308623,
+          "mean": 72.49563659916788,
+          "std": 33.92681915950217
+        }
+      },
+      "mixing_water": {
+        "real": {
+          "present": true,
+          "n": 36,
+          "min": 156.54358553429574,
+          "q05": 160.69104453705535,
+          "q50": 170.0,
+          "q95": 281.15126190321314,
+          "max": 314.27103662832303,
+          "mean": 192.34837575539652,
+          "std": 40.657588056417076
+        },
+        "synthetic": {
+          "present": true,
+          "n": 120,
+          "min": 47.24180074511429,
+          "q05": 67.04374323318925,
+          "q50": 121.45153805568927,
+          "q95": 135.75515110286324,
+          "max": 166.92861405602906,
+          "mean": 108.53283251196284,
+          "std": 25.048958865778918
+        }
+      },
+      "fly_ash": {
+        "real": {
+          "present": true,
+          "n": 36,
+          "min": 5.3010123532993525,
+          "q05": 14.623239322512312,
+          "q50": 73.34882089633112,
+          "q95": 114.50463674050982,
+          "max": 117.43609726805266,
+          "mean": 66.80901811860647,
+          "std": 29.84477503760801
+        },
+        "synthetic": {
+          "present": true,
+          "n": 120,
+          "min": 0.0,
+          "q05": 0.0,
+          "q50": 0.0,
+          "q95": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "std": 0.0
+        }
+      },
+      "slag_powder": {
+        "real": {
+          "present": true,
+          "n": 36,
+          "min": 3.589888600735891,
+          "q05": 4.39358664924997,
+          "q50": 74.0,
+          "q95": 96.12187248193503,
+          "max": 99.35429967868474,
+          "mean": 61.14972104034694,
+          "std": 32.765432352063385
+        },
+        "synthetic": {
+          "present": true,
+          "n": 120,
+          "min": 0.0,
+          "q05": 0.0,
+          "q50": 0.0,
+          "q95": 39.62690933011417,
+          "max": 55.258591669726584,
+          "mean": 4.77616349331326,
+          "std": 12.92267625522823
+        }
+      }
+    },
+    "top_shifted_columns": [
+      {
+        "column": "cement_content",
+        "shift_score": 3.9793587477599357
+      },
+      {
+        "column": "w_b_ratio",
+        "shift_score": 3.6859838384324117
+      },
+      {
+        "column": "fly_ash",
+        "shift_score": 3.2385498980782756
+      },
+      {
+        "column": "mixing_water",
+        "shift_score": 2.4454026219191696
+      },
+      {
+        "column": "fiber_content",
+        "shift_score": 2.443436108970839
+      }
+    ],
+    "distribution_shift_risk": "high"
+  },
+  "label_feature_coupling": {
+    "syn_flexural_ge_compressive_count": 0,
+    "syn_flexural_ge_compressive_ratio": 0.0,
+    "condition_columns_checked": [],
+    "condition_label_mean_gap": [],
+    "avg_normalized_gap_weighted_by_syn_count": 0.0,
+    "label_feature_coupling_risk": "low",
+    "note": "x_only mode: synthetic does not generate y labels."
+  },
+  "summary": {
+    "memorization_risk": "high",
+    "distribution_shift_risk": "high",
+    "label_feature_coupling_risk": "low",
+    "recommend_enter_stage3": "no",
+    "minimal_next_step_zh": "先收紧条件采样与列范围，并优先考虑只生成 X 不生成 y；完成记忆/分布复核后再进第三阶段。"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "n_rows": 3,
+  "mean_quality": 0.9999999999999999,
+  "drop_reasons": [],
+  "crack_width_definition_id_counts": {
+    "CW_MAX_SURFACE_MM": 3
+  },
+  "crack_width_family_filter": null,
+  "n_samples_before_definition_filter": 3,
+  "n_samples_after_definition_filter": 3,
+  "dropped_by_definition_filter": 0,
+  "crack_width_definition_id_counts_before_filter": {
+    "CW_MAX_SURFACE_MM": 3
+  },
+  "crack_width_definition_id_counts_after_filter": {
+    "CW_MAX_SURFACE_MM": 3
+  },
+  "auto_annotate_user_enabled": true,
+  "annotated_user_csv_path": "D:\\cursor\\code\\SteelFiberCrackPredictor\\data\\training_data.annotated.csv",
+  "annotate_user_summary": {
+    "n_rows": 120,
+    "added_columns": [],
+    "source_group_mode": "fill_empty_fixed_default",
+    "used_default_crack_width_family": true,
+    "used_default_source_doi": true,
+    "crack_width_definition_id_counts": {
+      "CW_MAX_SURFACE_MM": 120
+    },
+    "source_doi_counts_top10": {
+      "USER_LOCAL_LAB": 120
+    },
+    "source_group_nunique": 1,
+    "source_group_counts_top20": {
+      "USER_LOCAL_LAB/DEFAULT": 120
+    },
+    "default_group_label": "USER_LOCAL_LAB/DEFAULT",
+    "default_group_count": 120,
+    "default_group_ratio": 1.0,
+    "has_many_default_groups": true
+  }
+}

@@ -1,0 +1,79 @@
+# 工程环境场 + 施工工艺 — Phase 1（不进 FEATURE_COLUMNS）
+
+version: 1
+module: environment_engineering_phase1
+
+A_environment_field:
+  description: 环境条件
+  fields:
+    - temperature
+    - humidity
+    - wind_speed_ms
+    - day_night_temp_diff_c
+    - solar_exposure_level
+
+B_curing_regime:
+  description: 养护制度
+  fields:
+    - curing_days
+    - curing_method
+
+C_construction_process:
+  description: 施工工艺
+  fields:
+    - casting_method
+    - vibration_quality
+    - bleeding_risk
+    - construction_season
+
+D_structural:
+  description: 结构条件
+  fields:
+    - member_type
+
+E_derived:
+  description: 解释层派生量
+  fields:
+    - evaporation_risk_index
+    - thermal_gradient_risk
+    - surface_shrinkage_risk
+    - environment_engineering_summary
+
+enums:
+  curing_method: [natural, water, membrane, steam, sealed]
+  solar_exposure_level: [low, medium, high]
+  vibration_quality: [poor, normal, good]
+  bleeding_risk: [low, medium, high]
+  construction_season: [spring, summer, autumn, winter]
+  member_type: [slab, wall, beam, column, mass_concrete]
+
+ui_labels_zh:
+  curing_method:
+    natural: 自然养护
+    water: 洒水养护
+    membrane: 覆膜养护
+    steam: 蒸汽养护
+    sealed: 密封养护
+  solar_exposure_level:
+    low: 阴凉
+    medium: 普通日晒
+    high: 强暴晒
+  vibration_quality:
+    poor: 振捣不足
+    normal: 正常
+    good: 振捣良好
+  bleeding_risk:
+    low: 低
+    medium: 中
+    high: 高
+  construction_season:
+    spring: 春季
+    summer: 夏季
+    autumn: 秋季
+    winter: 冬季
+  member_type:
+    slab: 板
+    wall: 墙
+    beam: 梁
+    column: 柱
+    mass_concrete: 大体积混凝土

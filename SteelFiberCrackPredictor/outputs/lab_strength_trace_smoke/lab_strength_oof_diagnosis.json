@@ -1,0 +1,196 @@
+{
+  "compressive": {
+    "task": "compressive",
+    "formula_bias_mean_y_minus_formula": 1.8545322702933666,
+    "formula_bias_note": "均值为正：整体上公式略低估真值（y_true 高于 formula_pred）。",
+    "mean_y_minus_final_pred_by_model": {
+      "linear": -0.30424148944023266,
+      "ridge": 0.8432760084138851,
+      "hgb": 0.8572383559339831
+    },
+    "best_residual_model_by_mean_abs_error_on_oof": "ridge",
+    "bias_after_best_model": 0.8432760084138851,
+    "residual_reduced_abs_bias_vs_formula": true,
+    "worst_5_samples_by_abs_error": [
+      {
+        "row_id": 0,
+        "fold_id": 1,
+        "source_group": "G0",
+        "y_true": 74.62647618402897,
+        "formula_pred": 74.625,
+        "residual_pred": -17.354934281372152,
+        "final_pred": 57.27006571862785,
+        "abs_err": 17.356410465401126
+      },
+      {
+        "row_id": 35,
+        "fold_id": 4,
+        "source_group": "XUkun/C41_BASE",
+        "y_true": 63.21,
+        "formula_pred": 49.75,
+        "residual_pred": 7.975469251867207,
+        "final_pred": 57.72546925186721,
+        "abs_err": 5.484530748132791
+      },
+      {
+        "row_id": 29,
+        "fold_id": 1,
+        "source_group": "XUkun/C35_BASE",
+        "y_true": 49.82,
+        "formula_pred": 39.8,
+        "residual_pred": 5.272723161538877,
+        "final_pred": 45.072723161538875,
+        "abs_err": 4.747276838461126
+      },
+      {
+        "row_id": 9,
+        "fold_id": 4,
+        "source_group": "G4",
+        "y_true": 77.31853271223898,
+        "formula_pred": 79.6,
+        "residual_pred": -7.0095886593348435,
+        "final_pred": 72.59041134066516,
+        "abs_err": 4.72812137157382
+      },
+      {
+        "row_id": 4,
+        "fold_id": 4,
+        "source_group": "G4",
+        "y_true": 59.10935217773841,
+        "formula_pred": 59.7,
+        "residual_pred": 3.8207966971341847,
+        "final_pred": 63.52079669713419,
+        "abs_err": 4.411444519395779
+      }
+    ],
+    "mean_final_minus_ytrue_by_source_group_formula_only": {
+      "G0": 0.664880269561192,
+      "G1": 0.8735387981477658,
+      "G2": -0.5022121257880429,
+      "G3": 0.713752721383696,
+      "G4": 0.907659190948964,
+      "XUkun/C33_BASE": -10.530000000000001,
+      "XUkun/C34_BASE": -6.560000000000002,
+      "XUkun/C35_BASE": -10.020000000000003,
+      "XUkun/C36_BASE": -4.410000000000004,
+      "XUkun/C37_BASE": -9.82,
+      "XUkun/C38_BASE": -6.109999999999999,
+      "XUkun/C39_BASE": -6.590000000000003,
+      "XUkun/C40_BASE": -6.079999999999998,
+      "XUkun/C41_BASE": -13.46
+    },
+    "mean_final_minus_ytrue_by_source_group_residual_ridge": {
+      "G0": -3.523153691338108,
+      "G1": 0.17047829394789743,
+      "G2": -0.37685428086281403,
+      "G3": -1.6446770204663117,
+      "G4": 0.6211200529905323,
+      "XUkun/C33_BASE": -2.7996548143235813,
+      "XUkun/C34_BASE": 3.407410436465682,
+      "XUkun/C35_BASE": -4.747276838461126,
+      "XUkun/C36_BASE": 1.8150722387358371,
+      "XUkun/C37_BASE": -0.19290276215262736,
+      "XUkun/C38_BASE": 4.307920696344539,
+      "XUkun/C39_BASE": 1.7218591274107098,
+      "XUkun/C40_BASE": -1.469452331910297,
+      "XUkun/C41_BASE": -5.484530748132791
+    }
+  },
+  "flexural": {
+    "task": "flexural",
+    "formula_bias_mean_y_minus_formula": 0.42094019593633936,
+    "formula_bias_note": "均值为正：整体上公式略低估真值（y_true 高于 formula_pred）。",
+    "mean_y_minus_final_pred_by_model": {
+      "linear": 0.45290928490359994,
+      "ridge": 0.13566939589669164,
+      "hgb": 0.1579604035245396
+    },
+    "best_residual_model_by_mean_abs_error_on_oof": "ridge",
+    "bias_after_best_model": 0.13566939589669164,
+    "residual_reduced_abs_bias_vs_formula": true,
+    "worst_5_samples_by_abs_error": [
+      {
+        "row_id": 0,
+        "fold_id": 1,
+        "source_group": "G0",
+        "y_true": 4.701460316506142,
+        "formula_pred": 4.683535584255634,
+        "residual_pred": -1.5142918559106693,
+        "final_pred": 3.1692437283449646,
+        "abs_err": 1.5322165881611776
+      },
+      {
+        "row_id": 9,
+        "fold_id": 4,
+        "source_group": "G4",
+        "y_true": 4.564149060126209,
+        "formula_pred": 4.641521324513308,
+        "residual_pred": -1.530327029057779,
+        "final_pred": 3.1111942954555287,
+        "abs_err": 1.4529547646706806
+      },
+      {
+        "row_id": 34,
+        "fold_id": 4,
+        "source_group": "XUkun/C40_BASE",
+        "y_true": 6.66,
+        "formula_pred": 5.046102349249931,
+        "residual_pred": 0.5677873516847063,
+        "final_pred": 5.613889700934637,
+        "abs_err": 1.0461102990653632
+      },
+      {
+        "row_id": 30,
+        "fold_id": 0,
+        "source_group": "XUkun/C36_BASE",
+        "y_true": 4.67,
+        "formula_pred": 4.348599180270174,
+        "residual_pred": 1.335042835506524,
+        "final_pred": 5.683642015776698,
+        "abs_err": 1.013642015776698
+      },
+      {
+        "row_id": 4,
+        "fold_id": 4,
+        "source_group": "G4",
+        "y_true": 6.022728521868957,
+        "formula_pred": 6.059957015858153,
+        "residual_pred": 0.7273018305045946,
+        "final_pred": 6.7872588463627475,
+        "abs_err": 0.7645303244937907
+      }
+    ],
+    "mean_final_minus_ytrue_by_source_group_formula_only": {
+      "G0": -7.883895377966966e-05,
+      "G1": 0.02738991040430836,
+      "G2": 0.03405544390354205,
+      "G3": -0.016171805780969172,
+      "G4": 0.028626084047786438,
+      "XUkun/C33_BASE": -1.6803104680362688,
+      "XUkun/C34_BASE": -1.1814008197298262,
+      "XUkun/C35_BASE": -1.8314008197298257,
+      "XUkun/C36_BASE": -0.3214008197298259,
+      "XUkun/C37_BASE": -1.731400819729826,
+      "XUkun/C38_BASE": -1.763897650750069,
+      "XUkun/C39_BASE": -1.9138976507500693,
+      "XUkun/C40_BASE": -1.6138976507500695,
+      "XUkun/C41_BASE": -2.1938976507500696
+    },
+    "mean_final_minus_ytrue_by_source_group_residual_ridge": {
+      "G0": -0.48635625823893996,
+      "G1": -0.26164593801641445,
+      "G2": 0.14978556612069022,
+      "G3": 0.04393726876575608,
+      "G4": -0.2497777609626307,
+      "XUkun/C33_BASE": -0.416432979622833,
+      "XUkun/C34_BASE": 0.700631488743162,
+      "XUkun/C35_BASE": -0.5560819338210319,
+      "XUkun/C36_BASE": 1.013642015776698,
+      "XUkun/C37_BASE": -0.031169976424745727,
+      "XUkun/C38_BASE": 0.4483197194072108,
+      "XUkun/C39_BASE": -0.17673775787352675,
+      "XUkun/C40_BASE": -1.0461102990653632,
+      "XUkun/C41_BASE": -0.6426424910153301
+    }
+  }
+}

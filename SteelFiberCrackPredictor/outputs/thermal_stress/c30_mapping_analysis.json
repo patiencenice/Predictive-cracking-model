@@ -1,0 +1,288 @@
+{
+  "analyzed_at_iso": "2026-05-23T11:31:35+00:00",
+  "raw_folder": "data/thermal_stress/raw/温度应力",
+  "summary": {
+    "bmp_count": 9,
+    "unique_c30_xls_time_series": 5,
+    "expected_groups": 9,
+    "gap_note": "9 张 bmp 各不相同，但独立 C30 时序 xls 仅 5 条指纹；R0/R50/R100 三档约束无法从现有 xls 文件名区分，文献库亦无温度应力矩阵可对表。"
+  },
+  "literature_bridge": {
+    "thermal_stress_in_literature_db": false,
+    "literature_purpose": "crack_width 抽取（paper_01~04），无 R0/R50/R100 温度应力矩阵",
+    "indirect_wb_references": [
+      {
+        "source": "data\\literature\\example_raw_extracted.csv",
+        "n_rows": 3,
+        "w_b_min": 0.38,
+        "w_b_max": 0.4,
+        "w_b_median": 0.39,
+        "note": "裂缝/主训练表 w_b_ratio，非温度应力原始试验"
+      },
+      {
+        "source": "data\\training_data.csv",
+        "n_rows": 120,
+        "w_b_min": 0.3015,
+        "w_b_max": 0.4991,
+        "w_b_median": 0.3993,
+        "note": "裂缝/主训练表 w_b_ratio，非温度应力原始试验"
+      }
+    ],
+    "bridge_note": "C30 温度应力 3×3 矩阵为独立实验 ground truth；与 data/literature 无直接行级映射，仅 w_b_ratio 量纲可与主训练表对照。"
+  },
+  "bmp_matrix": [
+    {
+      "file": "C30温度应力/0.36R0.bmp",
+      "sample_id": "C30_wb0p36_R0",
+      "w_b_ratio": 0.36,
+      "restraint_code": "R0"
+    },
+    {
+      "file": "C30温度应力/0.36R100.bmp",
+      "sample_id": "C30_wb0p36_R100",
+      "w_b_ratio": 0.36,
+      "restraint_code": "R100"
+    },
+    {
+      "file": "C30温度应力/0.36R50.bmp",
+      "sample_id": "C30_wb0p36_R50",
+      "w_b_ratio": 0.36,
+      "restraint_code": "R50"
+    },
+    {
+      "file": "C30温度应力/0.44R0.bmp",
+      "sample_id": "C30_wb0p44_R0",
+      "w_b_ratio": 0.44,
+      "restraint_code": "R0"
+    },
+    {
+      "file": "C30温度应力/0.44R100.bmp",
+      "sample_id": "C30_wb0p44_R100",
+      "w_b_ratio": 0.44,
+      "restraint_code": "R100"
+    },
+    {
+      "file": "C30温度应力/0.44R50.bmp",
+      "sample_id": "C30_wb0p44_R50",
+      "w_b_ratio": 0.44,
+      "restraint_code": "R50"
+    },
+    {
+      "file": "C30温度应力/0.48R0.bmp",
+      "sample_id": "C30_wb0p48_R0",
+      "w_b_ratio": 0.48,
+      "restraint_code": "R0"
+    },
+    {
+      "file": "C30温度应力/0.48R100.bmp",
+      "sample_id": "C30_wb0p48_R100",
+      "w_b_ratio": 0.48,
+      "restraint_code": "R100"
+    },
+    {
+      "file": "C30温度应力/0.48R50.bmp",
+      "sample_id": "C30_wb0p48_R50",
+      "w_b_ratio": 0.48,
+      "restraint_code": "R50"
+    }
+  ],
+  "unique_xls_catalog": [
+    {
+      "path": "data/thermal_stress/raw/温度应力/C30.xls",
+      "nrows": 10843,
+      "duration_h": 96.362,
+      "temp_max_c": 37.8148,
+      "temp_min_c": -3.5756,
+      "axial_stress_min_mpa": -1.665,
+      "axial_stress_max_mpa": 0.3155,
+      "folder_hint": "温度应力"
+    },
+    {
+      "path": "data/thermal_stress/raw/温度应力/C30温度应力/2016-05-12-1122.xls",
+      "nrows": 13585,
+      "duration_h": 120.747,
+      "temp_max_c": 35.6901,
+      "temp_min_c": -0.5678,
+      "axial_stress_min_mpa": -0.9408,
+      "axial_stress_max_mpa": 0.0967,
+      "folder_hint": "C30温度应力根目录"
+    },
+    {
+      "path": "data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/2016-05-12-1122.xls",
+      "nrows": 13586,
+      "duration_h": 120.747,
+      "temp_max_c": 35.6901,
+      "temp_min_c": -0.5678,
+      "axial_stress_min_mpa": -0.9408,
+      "axial_stress_max_mpa": 0.0967,
+      "folder_hint": "C30温度应力根目录"
+    },
+    {
+      "path": "data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/C30基准72.xls",
+      "nrows": 8264,
+      "duration_h": 73.432,
+      "temp_max_c": 35.6901,
+      "temp_min_c": 18.3981,
+      "axial_stress_min_mpa": -0.9408,
+      "axial_stress_max_mpa": 0.0967,
+      "folder_hint": "C30温度应力根目录"
+    },
+    {
+      "path": "data/thermal_stress/raw/温度应力/C30温度应力/C30/金隅C30/2016-05-23-1153.xls",
+      "nrows": 7817,
+      "duration_h": 69.459,
+      "temp_max_c": 35.2506,
+      "temp_min_c": 21.2023,
+      "axial_stress_min_mpa": -0.8556,
+      "axial_stress_max_mpa": 0.0956,
+      "folder_hint": "C30温度应力根目录"
+    }
+  ],
+  "w_b_hypotheses_low_confidence": [
+    {
+      "xls": "data/thermal_stress/raw/温度应力/C30温度应力/C30/金隅C30/2016-05-23-1153.xls",
+      "suggested_w_b_ratio": 0.48,
+      "confidence": "low",
+      "reason": "金隅C30 子目录独立试验；时长较短(≈69h)；可能与较高 w/b 档对应（待实验记录确认）",
+      "fingerprints": {
+        "path": "data/thermal_stress/raw/温度应力/C30温度应力/C30/金隅C30/2016-05-23-1153.xls",
+        "nrows": 7817,
+        "duration_h": 69.459,
+        "temp_max_c": 35.2506,
+        "temp_min_c": 21.2023,
+        "axial_stress_min_mpa": -0.8556,
+        "axial_stress_max_mpa": 0.0956,
+        "folder_hint": "C30温度应力根目录"
+      }
+    },
+    {
+      "xls": "data/thermal_stress/raw/温度应力/C30温度应力/2016-05-12-1122.xls",
+      "suggested_w_b_ratio": 0.44,
+      "confidence": "low",
+      "reason": "C30温度应力 根目录与 基准C30 同指纹长试验(≈120h)；可能为中档 w/b（待确认）",
+      "fingerprints": {
+        "path": "data/thermal_stress/raw/温度应力/C30温度应力/2016-05-12-1122.xls",
+        "nrows": 13585,
+        "duration_h": 120.747,
+        "temp_max_c": 35.6901,
+        "temp_min_c": -0.5678,
+        "axial_stress_min_mpa": -0.9408,
+        "axial_stress_max_mpa": 0.0967,
+        "folder_hint": "C30温度应力根目录"
+      }
+    },
+    {
+      "xls": "data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/C30基准72.xls",
+      "suggested_w_b_ratio": 0.36,
+      "confidence": "low",
+      "reason": "文件名含「72」、时长≈73h，为 2016-05-12 同试验截断版；可能为低 w/b（待确认）",
+      "fingerprints": {
+        "path": "data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/C30基准72.xls",
+        "nrows": 8264,
+        "duration_h": 73.432,
+        "temp_max_c": 35.6901,
+        "temp_min_c": 18.3981,
+        "axial_stress_min_mpa": -0.9408,
+        "axial_stress_max_mpa": 0.0967,
+        "folder_hint": "C30温度应力根目录"
+      }
+    },
+    {
+      "xls": "data/thermal_stress/raw/温度应力/C30.xls",
+      "suggested_w_b_ratio": null,
+      "confidence": "low",
+      "reason": "根目录独立长试验(≈96h)，T_max 更高、拉应力更大；可能为标定/对照试件，未必在 3×3 矩阵内",
+      "fingerprints": {
+        "path": "data/thermal_stress/raw/温度应力/C30.xls",
+        "nrows": 10843,
+        "duration_h": 96.362,
+        "temp_max_c": 37.8148,
+        "temp_min_c": -3.5756,
+        "axial_stress_min_mpa": -1.665,
+        "axial_stress_max_mpa": 0.3155,
+        "folder_hint": "温度应力"
+      }
+    }
+  ],
+  "group_status": [
+    {
+      "sample_id": "C30_wb0p36_R0",
+      "w_b_ratio": 0.36,
+      "restraint_code": "R0",
+      "stem_match_xls_exists": false,
+      "explicit_map_configured": false,
+      "status": "pending_manual_mapping"
+    },
+    {
+      "sample_id": "C30_wb0p36_R50",
+      "w_b_ratio": 0.36,
+      "restraint_code": "R50",
+      "stem_match_xls_exists": false,
+      "explicit_map_configured": false,
+      "status": "pending_manual_mapping"
+    },
+    {
+      "sample_id": "C30_wb0p36_R100",
+      "w_b_ratio": 0.36,
+      "restraint_code": "R100",
+      "stem_match_xls_exists": false,
+      "explicit_map_configured": false,
+      "status": "pending_manual_mapping"
+    },
+    {
+      "sample_id": "C30_wb0p44_R0",
+      "w_b_ratio": 0.44,
+      "restraint_code": "R0",
+      "stem_match_xls_exists": false,
+      "explicit_map_configured": false,
+      "status": "pending_manual_mapping"
+    },
+    {
+      "sample_id": "C30_wb0p44_R50",
+      "w_b_ratio": 0.44,
+      "restraint_code": "R50",
+      "stem_match_xls_exists": false,
+      "explicit_map_configured": false,
+      "status": "pending_manual_mapping"
+    },
+    {
+      "sample_id": "C30_wb0p44_R100",
+      "w_b_ratio": 0.44,
+      "restraint_code": "R100",
+      "stem_match_xls_exists": false,
+      "explicit_map_configured": false,
+      "status": "pending_manual_mapping"
+    },
+    {
+      "sample_id": "C30_wb0p48_R0",
+      "w_b_ratio": 0.48,
+      "restraint_code": "R0",
+      "stem_match_xls_exists": false,
+      "explicit_map_configured": false,
+      "status": "pending_manual_mapping"
+    },
+    {
+      "sample_id": "C30_wb0p48_R50",
+      "w_b_ratio": 0.48,
+      "restraint_code": "R50",
+      "stem_match_xls_exists": false,
+      "explicit_map_configured": false,
+      "status": "pending_manual_mapping"
+    },
+    {
+      "sample_id": "C30_wb0p48_R100",
+      "w_b_ratio": 0.48,
+      "restraint_code": "R100",
+      "stem_match_xls_exists": false,
+      "explicit_map_configured": false,
+      "status": "pending_manual_mapping"
+    }
+  ],
+  "recommended_next_steps": [
+    "对照实验记录/Origin 工程，确认每个 w/b 对应哪一份日期 xls",
+    "确认 R0/R50/R100 是否各有独立 xls（当前目录可能缺失 6 份）",
+    "在 c30_group_source_map.json 填写 9 行路径后运行 import_c30_temperature_stress.py",
+    "或把 xls 重命名为 0.36R0.xls 等与 bmp 同名（方式 A）"
+  ],
+  "do_not_auto_import": true
+}

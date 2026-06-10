@@ -1,0 +1,15 @@
+{
+  "groups": {
+    "compressive": {
+      "source_group": "XUkun/C30_BASE",
+      "error": "OOF 表中未找到该组",
+      "rows": []
+    },
+    "flexural": {
+      "source_group": "XUkun/C41_BASE",
+      "error": "OOF 表中未找到该组",
+      "rows": []
+    }
+  },
+  "note": "pred_minus_true 为正表示整体高估真值。"
+}

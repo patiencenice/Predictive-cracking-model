@@ -1,0 +1,16 @@
+{
+  "_comment": "由 auto_map_c30_from_database.py 自动生成/更新",
+  "_analysis": "outputs/thermal_stress/c30_mapping_analysis.md",
+  "_mapping_assumption": "w/b=0.36→基准72；0.44→2016-05-12；0.48→金隅2016-05-23；R 档来自 bmp 文件名",
+  "C30_wb0p36_R0": "data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/C30基准72.xls",
+  "C30_wb0p36_R50": "data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/C30基准72.xls",
+  "C30_wb0p36_R100": "data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/C30基准72.xls",
+  "C30_wb0p44_R0": "data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/2016-05-12-1122.xls",
+  "C30_wb0p44_R50": "data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/2016-05-12-1122.xls",
+  "C30_wb0p44_R100": "data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/2016-05-12-1122.xls",
+  "C30_wb0p48_R0": "data/thermal_stress/raw/温度应力/C30温度应力/C30/金隅C30/2016-05-23-1153.xls",
+  "C30_wb0p48_R50": "data/thermal_stress/raw/温度应力/C30温度应力/C30/金隅C30/2016-05-23-1153.xls",
+  "C30_wb0p48_R100": "data/thermal_stress/raw/温度应力/C30温度应力/C30/金隅C30/2016-05-23-1153.xls",
+  "_auto_report": "outputs/thermal_stress/c30_mapping_auto.json",
+  "_generated_at": "2026-05-23T11:58:33+00:00"
+}

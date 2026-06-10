@@ -1,0 +1,355 @@
+{
+  "focus_groups": [
+    "XUkun/C33_BASE",
+    "XUkun/C35_BASE",
+    "XUkun/C37_BASE",
+    "XUkun/C41_BASE"
+  ],
+  "key_fields_for_candidate": [
+    "lab_specimen",
+    "lab_cube_edge_mm",
+    "lab_loading_compression",
+    "lab_curing_regime",
+    "cube_strength_mpa_semantics",
+    "lab_protocol_closed_flag_compressive"
+  ],
+  "rows": [
+    {
+      "source_group": "XUkun/C33_BASE",
+      "n_rows": 1,
+      "key_fields": [
+        {
+          "field_name": "lab_specimen",
+          "current_value": null,
+          "is_missing": true,
+          "distinct_values_in_group": [
+            null
+          ],
+          "is_key_for_compressive_candidate": true,
+          "must_fill_for_candidate": true,
+          "missing_should_trigger_manual_review": true,
+          "fill_purpose": "用于 compressive 协议闭合审计与 strict/relaxed 候选集判定",
+          "affects_candidate_set": "strict_and_relaxed"
+        },
+        {
+          "field_name": "lab_cube_edge_mm",
+          "current_value": null,
+          "is_missing": true,
+          "distinct_values_in_group": [
+            null
+          ],
+          "is_key_for_compressive_candidate": true,
+          "must_fill_for_candidate": true,
+          "missing_should_trigger_manual_review": true,
+          "fill_purpose": "用于 compressive 协议闭合审计与 strict/relaxed 候选集判定",
+          "affects_candidate_set": "strict_and_relaxed"
+        },
+        {
+          "field_name": "lab_loading_compression",
+          "current_value": null,
+          "is_missing": true,
+          "distinct_values_in_group": [
+            null
+          ],
+          "is_key_for_compressive_candidate": true,
+          "must_fill_for_candidate": true,
+          "missing_should_trigger_manual_review": true,
+          "fill_purpose": "用于 compressive 协议闭合审计与 strict/relaxed 候选集判定",
+          "affects_candidate_set": "strict_and_relaxed"
+        },
+        {
+          "field_name": "lab_curing_regime",
+          "current_value": null,
+          "is_missing": true,
+          "distinct_values_in_group": [
+            null
+          ],
+          "is_key_for_compressive_candidate": true,
+          "must_fill_for_candidate": true,
+          "missing_should_trigger_manual_review": true,
+          "fill_purpose": "用于 compressive 协议闭合审计与 strict/relaxed 候选集判定",
+          "affects_candidate_set": "strict_and_relaxed"
+        },
+        {
+          "field_name": "cube_strength_mpa_semantics",
+          "current_value": null,
+          "is_missing": true,
+          "distinct_values_in_group": [
+            null
+          ],
+          "is_key_for_compressive_candidate": true,
+          "must_fill_for_candidate": true,
+          "missing_should_trigger_manual_review": true,
+          "fill_purpose": "用于 compressive 协议闭合审计与 strict/relaxed 候选集判定",
+          "affects_candidate_set": "strict_and_relaxed"
+        },
+        {
+          "field_name": "lab_protocol_closed_flag_compressive",
+          "current_value": null,
+          "is_missing": true,
+          "distinct_values_in_group": [
+            null
+          ],
+          "is_key_for_compressive_candidate": true,
+          "must_fill_for_candidate": true,
+          "missing_should_trigger_manual_review": true,
+          "fill_purpose": "用于 compressive 协议闭合审计与 strict/relaxed 候选集判定",
+          "affects_candidate_set": "strict_and_relaxed"
+        }
+      ]
+    },
+    {
+      "source_group": "XUkun/C35_BASE",
+      "n_rows": 1,
+      "key_fields": [
+        {
+          "field_name": "lab_specimen",
+          "current_value": null,
+          "is_missing": true,
+          "distinct_values_in_group": [
+            null
+          ],
+          "is_key_for_compressive_candidate": true,
+          "must_fill_for_candidate": true,
+          "missing_should_trigger_manual_review": true,
+          "fill_purpose": "用于 compressive 协议闭合审计与 strict/relaxed 候选集判定",
+          "affects_candidate_set": "strict_and_relaxed"
+        },
+        {
+          "field_name": "lab_cube_edge_mm",
+          "current_value": null,
+          "is_missing": true,
+          "distinct_values_in_group": [
+            null
+          ],
+          "is_key_for_compressive_candidate": true,
+          "must_fill_for_candidate": true,
+          "missing_should_trigger_manual_review": true,
+          "fill_purpose": "用于 compressive 协议闭合审计与 strict/relaxed 候选集判定",
+          "affects_candidate_set": "strict_and_relaxed"
+        },
+        {
+          "field_name": "lab_loading_compression",
+          "current_value": null,
+          "is_missing": true,
+          "distinct_values_in_group": [
+            null
+          ],
+          "is_key_for_compressive_candidate": true,
+          "must_fill_for_candidate": true,
+          "missing_should_trigger_manual_review": true,
+          "fill_purpose": "用于 compressive 协议闭合审计与 strict/relaxed 候选集判定",
+          "affects_candidate_set": "strict_and_relaxed"
+        },
+        {
+          "field_name": "lab_curing_regime",
+          "current_value": null,
+          "is_missing": true,
+          "distinct_values_in_group": [
+            null
+          ],
+          "is_key_for_compressive_candidate": true,
+          "must_fill_for_candidate": true,
+          "missing_should_trigger_manual_review": true,
+          "fill_purpose": "用于 compressive 协议闭合审计与 strict/relaxed 候选集判定",
+          "affects_candidate_set": "strict_and_relaxed"
+        },
+        {
+          "field_name": "cube_strength_mpa_semantics",
+          "current_value": null,
+          "is_missing": true,
+          "distinct_values_in_group": [
+            null
+          ],
+          "is_key_for_compressive_candidate": true,
+          "must_fill_for_candidate": true,
+          "missing_should_trigger_manual_review": true,
+          "fill_purpose": "用于 compressive 协议闭合审计与 strict/relaxed 候选集判定",
+          "affects_candidate_set": "strict_and_relaxed"
+        },
+        {
+          "field_name": "lab_protocol_closed_flag_compressive",
+          "current_value": null,
+          "is_missing": true,
+          "distinct_values_in_group": [
+            null
+          ],
+          "is_key_for_compressive_candidate": true,
+          "must_fill_for_candidate": true,
+          "missing_should_trigger_manual_review": true,
+          "fill_purpose": "用于 compressive 协议闭合审计与 strict/relaxed 候选集判定",
+          "affects_candidate_set": "strict_and_relaxed"
+        }
+      ]
+    },
+    {
+      "source_group": "XUkun/C37_BASE",
+      "n_rows": 1,
+      "key_fields": [
+        {
+          "field_name": "lab_specimen",
+          "current_value": null,
+          "is_missing": true,
+          "distinct_values_in_group": [
+            null
+          ],
+          "is_key_for_compressive_candidate": true,
+          "must_fill_for_candidate": true,
+          "missing_should_trigger_manual_review": true,
+          "fill_purpose": "用于 compressive 协议闭合审计与 strict/relaxed 候选集判定",
+          "affects_candidate_set": "strict_and_relaxed"
+        },
+        {
+          "field_name": "lab_cube_edge_mm",
+          "current_value": null,
+          "is_missing": true,
+          "distinct_values_in_group": [
+            null
+          ],
+          "is_key_for_compressive_candidate": true,
+          "must_fill_for_candidate": true,
+          "missing_should_trigger_manual_review": true,
+          "fill_purpose": "用于 compressive 协议闭合审计与 strict/relaxed 候选集判定",
+          "affects_candidate_set": "strict_and_relaxed"
+        },
+        {
+          "field_name": "lab_loading_compression",
+          "current_value": null,
+          "is_missing": true,
+          "distinct_values_in_group": [
+            null
+          ],
+          "is_key_for_compressive_candidate": true,
+          "must_fill_for_candidate": true,
+          "missing_should_trigger_manual_review": true,
+          "fill_purpose": "用于 compressive 协议闭合审计与 strict/relaxed 候选集判定",
+          "affects_candidate_set": "strict_and_relaxed"
+        },
+        {
+          "field_name": "lab_curing_regime",
+          "current_value": null,
+          "is_missing": true,
+          "distinct_values_in_group": [
+            null
+          ],
+          "is_key_for_compressive_candidate": true,
+          "must_fill_for_candidate": true,
+          "missing_should_trigger_manual_review": true,
+          "fill_purpose": "用于 compressive 协议闭合审计与 strict/relaxed 候选集判定",
+          "affects_candidate_set": "strict_and_relaxed"
+        },
+        {
+          "field_name": "cube_strength_mpa_semantics",
+          "current_value": null,
+          "is_missing": true,
+          "distinct_values_in_group": [
+            null
+          ],
+          "is_key_for_compressive_candidate": true,
+          "must_fill_for_candidate": true,
+          "missing_should_trigger_manual_review": true,
+          "fill_purpose": "用于 compressive 协议闭合审计与 strict/relaxed 候选集判定",
+          "affects_candidate_set": "strict_and_relaxed"
+        },
+        {
+          "field_name": "lab_protocol_closed_flag_compressive",
+          "current_value": null,
+          "is_missing": true,
+          "distinct_values_in_group": [
+            null
+          ],
+          "is_key_for_compressive_candidate": true,
+          "must_fill_for_candidate": true,
+          "missing_should_trigger_manual_review": true,
+          "fill_purpose": "用于 compressive 协议闭合审计与 strict/relaxed 候选集判定",
+          "affects_candidate_set": "strict_and_relaxed"
+        }
+      ]
+    },
+    {
+      "source_group": "XUkun/C41_BASE",
+      "n_rows": 1,
+      "key_fields": [
+        {
+          "field_name": "lab_specimen",
+          "current_value": null,
+          "is_missing": true,
+          "distinct_values_in_group": [
+            null
+          ],
+          "is_key_for_compressive_candidate": true,
+          "must_fill_for_candidate": true,
+          "missing_should_trigger_manual_review": true,
+          "fill_purpose": "用于 compressive 协议闭合审计与 strict/relaxed 候选集判定",
+          "affects_candidate_set": "strict_and_relaxed"
+        },
+        {
+          "field_name": "lab_cube_edge_mm",
+          "current_value": null,
+          "is_missing": true,
+          "distinct_values_in_group": [
+            null
+          ],
+          "is_key_for_compressive_candidate": true,
+          "must_fill_for_candidate": true,
+          "missing_should_trigger_manual_review": true,
+          "fill_purpose": "用于 compressive 协议闭合审计与 strict/relaxed 候选集判定",
+          "affects_candidate_set": "strict_and_relaxed"
+        },
+        {
+          "field_name": "lab_loading_compression",
+          "current_value": null,
+          "is_missing": true,
+          "distinct_values_in_group": [
+            null
+          ],
+          "is_key_for_compressive_candidate": true,
+          "must_fill_for_candidate": true,
+          "missing_should_trigger_manual_review": true,
+          "fill_purpose": "用于 compressive 协议闭合审计与 strict/relaxed 候选集判定",
+          "affects_candidate_set": "strict_and_relaxed"
+        },
+        {
+          "field_name": "lab_curing_regime",
+          "current_value": null,
+          "is_missing": true,
+          "distinct_values_in_group": [
+            null
+          ],
+          "is_key_for_compressive_candidate": true,
+          "must_fill_for_candidate": true,
+          "missing_should_trigger_manual_review": true,
+          "fill_purpose": "用于 compressive 协议闭合审计与 strict/relaxed 候选集判定",
+          "affects_candidate_set": "strict_and_relaxed"
+        },
+        {
+          "field_name": "cube_strength_mpa_semantics",
+          "current_value": null,
+          "is_missing": true,
+          "distinct_values_in_group": [
+            null
+          ],
+          "is_key_for_compressive_candidate": true,
+          "must_fill_for_candidate": true,
+          "missing_should_trigger_manual_review": true,
+          "fill_purpose": "用于 compressive 协议闭合审计与 strict/relaxed 候选集判定",
+          "affects_candidate_set": "strict_and_relaxed"
+        },
+        {
+          "field_name": "lab_protocol_closed_flag_compressive",
+          "current_value": null,
+          "is_missing": true,
+          "distinct_values_in_group": [
+            null
+          ],
+          "is_key_for_compressive_candidate": true,
+          "must_fill_for_candidate": true,
+          "missing_should_trigger_manual_review": true,
+          "fill_purpose": "用于 compressive 协议闭合审计与 strict/relaxed 候选集判定",
+          "affects_candidate_set": "strict_and_relaxed"
+        }
+      ]
+    }
+  ],
+  "note": "只读清单：不自动编造字段值，不自动将 lab_protocol_closed_flag_compressive 置为 1。"
+}

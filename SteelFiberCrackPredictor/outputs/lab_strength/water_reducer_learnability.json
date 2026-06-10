@@ -1,0 +1,265 @@
+{
+  "n_rows_analyzed": 36,
+  "n_rows_water_reducer_type_none": 6,
+  "n_rows_water_reducer_type_unknown": 30,
+  "n_rows_water_reducer_type_known": 0,
+  "n_rows_water_reduction_rate_known": 6,
+  "n_rows_water_reduction_rate_unknown": 30,
+  "n_rows_water_reduction_rate_zero": 6,
+  "n_rows_water_reduction_rate_known_nonzero": 0,
+  "n_distinct_water_reducer_type_enc_among_known": 0,
+  "n_distinct_water_reduction_rate_pct_among_known_nonzero": 0,
+  "water_reducer_learnability_by_source_group": {
+    "G0": {
+      "n_rows_water_reducer_type_none": 0,
+      "n_rows_water_reducer_type_unknown": 5,
+      "n_rows_water_reducer_type_known": 0,
+      "n_rows_water_reduction_rate_known": 0,
+      "n_rows_water_reduction_rate_unknown": 5,
+      "n_rows_water_reduction_rate_zero": 0,
+      "n_rows_water_reduction_rate_known_nonzero": 0
+    },
+    "G1": {
+      "n_rows_water_reducer_type_none": 1,
+      "n_rows_water_reducer_type_unknown": 4,
+      "n_rows_water_reducer_type_known": 0,
+      "n_rows_water_reduction_rate_known": 1,
+      "n_rows_water_reduction_rate_unknown": 4,
+      "n_rows_water_reduction_rate_zero": 1,
+      "n_rows_water_reduction_rate_known_nonzero": 0
+    },
+    "G2": {
+      "n_rows_water_reducer_type_none": 3,
+      "n_rows_water_reducer_type_unknown": 2,
+      "n_rows_water_reducer_type_known": 0,
+      "n_rows_water_reduction_rate_known": 3,
+      "n_rows_water_reduction_rate_unknown": 2,
+      "n_rows_water_reduction_rate_zero": 3,
+      "n_rows_water_reduction_rate_known_nonzero": 0
+    },
+    "G3": {
+      "n_rows_water_reducer_type_none": 0,
+      "n_rows_water_reducer_type_unknown": 5,
+      "n_rows_water_reducer_type_known": 0,
+      "n_rows_water_reduction_rate_known": 0,
+      "n_rows_water_reduction_rate_unknown": 5,
+      "n_rows_water_reduction_rate_zero": 0,
+      "n_rows_water_reduction_rate_known_nonzero": 0
+    },
+    "G4": {
+      "n_rows_water_reducer_type_none": 2,
+      "n_rows_water_reducer_type_unknown": 2,
+      "n_rows_water_reducer_type_known": 0,
+      "n_rows_water_reduction_rate_known": 2,
+      "n_rows_water_reduction_rate_unknown": 2,
+      "n_rows_water_reduction_rate_zero": 2,
+      "n_rows_water_reduction_rate_known_nonzero": 0
+    },
+    "XUkun/C30_BASE": {
+      "n_rows_water_reducer_type_none": 0,
+      "n_rows_water_reducer_type_unknown": 1,
+      "n_rows_water_reducer_type_known": 0,
+      "n_rows_water_reduction_rate_known": 0,
+      "n_rows_water_reduction_rate_unknown": 1,
+      "n_rows_water_reduction_rate_zero": 0,
+      "n_rows_water_reduction_rate_known_nonzero": 0
+    },
+    "XUkun/C31_BASE": {
+      "n_rows_water_reducer_type_none": 0,
+      "n_rows_water_reducer_type_unknown": 1,
+      "n_rows_water_reducer_type_known": 0,
+      "n_rows_water_reduction_rate_known": 0,
+      "n_rows_water_reduction_rate_unknown": 1,
+      "n_rows_water_reduction_rate_zero": 0,
+      "n_rows_water_reduction_rate_known_nonzero": 0
+    },
+    "XUkun/C32_BASE": {
+      "n_rows_water_reducer_type_none": 0,
+      "n_rows_water_reducer_type_unknown": 1,
+      "n_rows_water_reducer_type_known": 0,
+      "n_rows_water_reduction_rate_known": 0,
+      "n_rows_water_reduction_rate_unknown": 1,
+      "n_rows_water_reduction_rate_zero": 0,
+      "n_rows_water_reduction_rate_known_nonzero": 0
+    },
+    "XUkun/C33_BASE": {
+      "n_rows_water_reducer_type_none": 0,
+      "n_rows_water_reducer_type_unknown": 1,
+      "n_rows_water_reducer_type_known": 0,
+      "n_rows_water_reduction_rate_known": 0,
+      "n_rows_water_reduction_rate_unknown": 1,
+      "n_rows_water_reduction_rate_zero": 0,
+      "n_rows_water_reduction_rate_known_nonzero": 0
+    },
+    "XUkun/C34_BASE": {
+      "n_rows_water_reducer_type_none": 0,
+      "n_rows_water_reducer_type_unknown": 1,
+      "n_rows_water_reducer_type_known": 0,
+      "n_rows_water_reduction_rate_known": 0,
+      "n_rows_water_reduction_rate_unknown": 1,
+      "n_rows_water_reduction_rate_zero": 0,
+      "n_rows_water_reduction_rate_known_nonzero": 0
+    },
+    "XUkun/C35_BASE": {
+      "n_rows_water_reducer_type_none": 0,
+      "n_rows_water_reducer_type_unknown": 1,
+      "n_rows_water_reducer_type_known": 0,
+      "n_rows_water_reduction_rate_known": 0,
+      "n_rows_water_reduction_rate_unknown": 1,
+      "n_rows_water_reduction_rate_zero": 0,
+      "n_rows_water_reduction_rate_known_nonzero": 0
+    },
+    "XUkun/C36_BASE": {
+      "n_rows_water_reducer_type_none": 0,
+      "n_rows_water_reducer_type_unknown": 1,
+      "n_rows_water_reducer_type_known": 0,
+      "n_rows_water_reduction_rate_known": 0,
+      "n_rows_water_reduction_rate_unknown": 1,
+      "n_rows_water_reduction_rate_zero": 0,
+      "n_rows_water_reduction_rate_known_nonzero": 0
+    },
+    "XUkun/C37_BASE": {
+      "n_rows_water_reducer_type_none": 0,
+      "n_rows_water_reducer_type_unknown": 1,
+      "n_rows_water_reducer_type_known": 0,
+      "n_rows_water_reduction_rate_known": 0,
+      "n_rows_water_reduction_rate_unknown": 1,
+      "n_rows_water_reduction_rate_zero": 0,
+      "n_rows_water_reduction_rate_known_nonzero": 0
+    },
+    "XUkun/C38_BASE": {
+      "n_rows_water_reducer_type_none": 0,
+      "n_rows_water_reducer_type_unknown": 1,
+      "n_rows_water_reducer_type_known": 0,
+      "n_rows_water_reduction_rate_known": 0,
+      "n_rows_water_reduction_rate_unknown": 1,
+      "n_rows_water_reduction_rate_zero": 0,
+      "n_rows_water_reduction_rate_known_nonzero": 0
+    },
+    "XUkun/C39_BASE": {
+      "n_rows_water_reducer_type_none": 0,
+      "n_rows_water_reducer_type_unknown": 1,
+      "n_rows_water_reducer_type_known": 0,
+      "n_rows_water_reduction_rate_known": 0,
+      "n_rows_water_reduction_rate_unknown": 1,
+      "n_rows_water_reduction_rate_zero": 0,
+      "n_rows_water_reduction_rate_known_nonzero": 0
+    },
+    "XUkun/C40_BASE": {
+      "n_rows_water_reducer_type_none": 0,
+      "n_rows_water_reducer_type_unknown": 1,
+      "n_rows_water_reducer_type_known": 0,
+      "n_rows_water_reduction_rate_known": 0,
+      "n_rows_water_reduction_rate_unknown": 1,
+      "n_rows_water_reduction_rate_zero": 0,
+      "n_rows_water_reduction_rate_known_nonzero": 0
+    },
+    "XUkun/C41_BASE": {
+      "n_rows_water_reducer_type_none": 0,
+      "n_rows_water_reducer_type_unknown": 1,
+      "n_rows_water_reducer_type_known": 0,
+      "n_rows_water_reduction_rate_known": 0,
+      "n_rows_water_reduction_rate_unknown": 1,
+      "n_rows_water_reduction_rate_zero": 0,
+      "n_rows_water_reduction_rate_known_nonzero": 0
+    }
+  },
+  "y_true_distribution_overview": {
+    "by_water_reducer_type_bucket": {
+      "none": {
+        "compressive_true": {
+          "n": 6,
+          "mean": 64.70655721450534,
+          "std": 12.557625653085672,
+          "min": 44.96310130394907,
+          "max": 79.05439505779393
+        },
+        "flexural_true": {
+          "n": 6,
+          "mean": 4.803242484673086,
+          "std": 0.6736161479974809,
+          "min": 4.241093054132915,
+          "max": 6.022728521868957
+        }
+      },
+      "unknown": {
+        "compressive_true": {
+          "n": 30,
+          "mean": 52.45850738775497,
+          "std": 15.060367538724904,
+          "min": 18.06383708139353,
+          "max": 81.23058810608984
+        },
+        "flexural_true": {
+          "n": 30,
+          "mean": 5.123796480211939,
+          "std": 1.0940234943318965,
+          "min": 2.762216081764584,
+          "max": 7.24
+        }
+      },
+      "known": {
+        "compressive_true": {
+          "n": 0
+        },
+        "flexural_true": {
+          "n": 0
+        }
+      }
+    },
+    "by_water_reduction_rate_bucket": {
+      "unknown": {
+        "compressive_true": {
+          "n": 30,
+          "mean": 52.45850738775497,
+          "std": 15.060367538724904,
+          "min": 18.06383708139353,
+          "max": 81.23058810608984
+        },
+        "flexural_true": {
+          "n": 30,
+          "mean": 5.123796480211939,
+          "std": 1.0940234943318965,
+          "min": 2.762216081764584,
+          "max": 7.24
+        }
+      },
+      "zero": {
+        "compressive_true": {
+          "n": 6,
+          "mean": 64.70655721450534,
+          "std": 12.557625653085672,
+          "min": 44.96310130394907,
+          "max": 79.05439505779393
+        },
+        "flexural_true": {
+          "n": 6,
+          "mean": 4.803242484673086,
+          "std": 0.6736161479974809,
+          "min": 4.241093054132915,
+          "max": 6.022728521868957
+        }
+      },
+      "known_nonzero": {
+        "compressive_true": {
+          "n": 0
+        },
+        "flexural_true": {
+          "n": 0
+        }
+      }
+    }
+  },
+  "conclusions": {
+    "type_dimension_learnable": false,
+    "type_dimension_note_zh": "当前无「类型已知」行，无法在类型维度拟合减水剂品种效应。",
+    "rate_dimension_learnable_nonzero_variation": false,
+    "rate_dimension_note_zh": "无「已知且非零」减水率样本，无法从率的分档学习真实减水率—强度梯度。 已知减水率行均为 0%（多为无外加剂闭合），无正减水率取值跨度。",
+    "rate_dimension_any_cross_bucket_signal": false,
+    "dominant_pattern": "missing_pattern",
+    "more_missing_than_mechanistic_signal": true,
+    "effect_vs_missing_pattern_zh": "当前更像在学习 missing pattern（占位/标志）与分组常数，而非减水剂类型或可辨识减水率水平的真实物理效应。",
+    "honest_summary_zh": "类型与（非零）减水率均缺乏交叉变异：模型更易利用 missing flag / 常数段，而非可解释的减水剂化学—率效应。"
+  },
+  "input_csv": "D:\\cursor\\code\\SteelFiberCrackPredictor\\data\\lab_strength_training_merged.csv"
+}

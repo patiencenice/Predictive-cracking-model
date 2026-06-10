@@ -1,0 +1,87 @@
+{
+  "definition_filter": {
+    "crack_width_family": "CW_MAX_SURFACE_MM",
+    "n_samples_before_definition_filter": 123,
+    "n_samples_after_definition_filter": 3,
+    "dropped_by_definition_filter": 120,
+    "crack_width_definition_id_counts_before_filter": {
+      "CW_UNSPECIFIED": 120,
+      "CW_MAX_SURFACE_MM": 3
+    },
+    "crack_width_definition_id_counts_after_filter": {
+      "CW_MAX_SURFACE_MM": 3
+    },
+    "mixed_definition_warning": null
+  },
+  "only_user": null,
+  "only_literature": {
+    "n_samples": 3,
+    "n_groups": 3,
+    "n_splits": 3,
+    "grouping_column": "source_group",
+    "grouping_note": "source_group 优先，空位回退 source_doi",
+    "distinct_groups": [
+      "10.1000/example-mix-2024/T2",
+      "10.1000/example-steel-2023/T3",
+      "10.1000/example-steel-2023/T4"
+    ],
+    "r2_mean": null,
+    "r2_std": null,
+    "mae_mean": 0.03344259838263194,
+    "mae_std": 0.005448773524382682,
+    "rmse_mean": 0.03344259838263194,
+    "rmse_std": 0.005448773524382682,
+    "folds": {
+      "r2": [
+        null,
+        null,
+        null
+      ],
+      "mae": [
+        0.030980464816093442,
+        0.028350127935409544,
+        0.04099720239639282
+      ],
+      "rmse": [
+        0.030980464816093442,
+        0.028350127935409544,
+        0.04099720239639282
+      ]
+    }
+  },
+  "merged": {
+    "n_samples": 3,
+    "n_groups": 3,
+    "n_splits": 3,
+    "grouping_column": "source_group",
+    "grouping_note": "source_group 优先，空位回退 source_doi",
+    "distinct_groups": [
+      "10.1000/example-mix-2024/T2",
+      "10.1000/example-steel-2023/T3",
+      "10.1000/example-steel-2023/T4"
+    ],
+    "r2_mean": null,
+    "r2_std": null,
+    "mae_mean": 0.03344259838263194,
+    "mae_std": 0.005448773524382682,
+    "rmse_mean": 0.03344259838263194,
+    "rmse_std": 0.005448773524382682,
+    "folds": {
+      "r2": [
+        null,
+        null,
+        null
+      ],
+      "mae": [
+        0.030980464816093442,
+        0.028350127935409544,
+        0.04099720239639282
+      ],
+      "rmse": [
+        0.030980464816093442,
+        0.028350127935409544,
+        0.04099720239639282
+      ]
+    }
+  }
+}

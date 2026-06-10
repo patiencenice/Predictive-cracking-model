@@ -1,0 +1,145 @@
+{
+  "dataset_stats": {
+    "n_rows_input": 9,
+    "n_rows_used": 9,
+    "n_rows_dropped": 0,
+    "feature_names": [
+      "w_b_ratio",
+      "restraint_factor_R",
+      "time_h_norm",
+      "specimen_temperature_c",
+      "delta_T_point",
+      "deformation_um",
+      "deformation_missing_flag"
+    ],
+    "target_col": "axial_stress_mpa",
+    "C30_defaults": {
+      "cube_strength_mpa": 30.0,
+      "thermal_expansion_alpha": 1e-05
+    }
+  },
+  "cv_fold_metrics": {
+    "target_col": "axial_stress_mpa",
+    "n_samples": 9,
+    "cv": "GroupKFold",
+    "n_folds": 3,
+    "n_unique_groups": 3,
+    "formula_only": {
+      "mae": {
+        "mean": 2.7797943331069632,
+        "std": 0.13950346988441828
+      },
+      "rmse": {
+        "mean": 3.1704944422634678,
+        "std": 0.15777438003749392
+      },
+      "r2": {
+        "mean": NaN,
+        "std": NaN
+      }
+    },
+    "linear": {
+      "mae": {
+        "mean": 0.2893209744424261,
+        "std": 0.15935211788003467
+      },
+      "rmse": {
+        "mean": 0.30543823104852763,
+        "std": 0.15247618114079978
+      },
+      "r2": {
+        "mean": NaN,
+        "std": NaN
+      }
+    },
+    "ridge": {
+      "mae": {
+        "mean": 0.7188935437343846,
+        "std": 0.10273526962920237
+      },
+      "rmse": {
+        "mean": 0.8232666910051046,
+        "std": 0.1205792636560306
+      },
+      "r2": {
+        "mean": NaN,
+        "std": NaN
+      }
+    },
+    "hgb": {
+      "mae": {
+        "mean": 1.2986244659984127,
+        "std": 0.03695823965223829
+      },
+      "rmse": {
+        "mean": 1.5345331827379762,
+        "std": 0.06479857500338912
+      },
+      "r2": {
+        "mean": NaN,
+        "std": NaN
+      }
+    }
+  },
+  "oof_global_metrics": {
+    "formula_only": {
+      "mae": 2.7797943331069632,
+      "rmse": 3.1731104894757474,
+      "r2": -6240.711824551819,
+      "n": 9
+    },
+    "linear": {
+      "mae": 0.2893209744424261,
+      "rmse": 0.3298360757450713,
+      "r2": -66.44187466704805,
+      "n": 9
+    },
+    "ridge": {
+      "mae": 0.7188935437343846,
+      "rmse": 0.8291326494602947,
+      "r2": -425.1685122006105,
+      "n": 9
+    },
+    "hgb": {
+      "mae": 1.2986244659984125,
+      "rmse": 1.5354449927645046,
+      "r2": -1460.5101950292553,
+      "n": 9
+    }
+  },
+  "default_method": "linear",
+  "feature_names": [
+    "w_b_ratio",
+    "restraint_factor_R",
+    "time_h_norm",
+    "specimen_temperature_c",
+    "delta_T_point",
+    "deformation_um",
+    "deformation_missing_flag"
+  ],
+  "row_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "groups": [
+    "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\C30\\基准C30\\C30基准72.xls",
+    "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\C30\\基准C30\\C30基准72.xls",
+    "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\C30\\基准C30\\C30基准72.xls",
+    "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\C30\\基准C30\\2016-05-12-1122.xls",
+    "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\C30\\基准C30\\2016-05-12-1122.xls",
+    "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\C30\\基准C30\\2016-05-12-1122.xls",
+    "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\C30\\金隅C30\\2016-05-23-1153.xls",
+    "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\C30\\金隅C30\\2016-05-23-1153.xls",
+    "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\C30\\金隅C30\\2016-05-23-1153.xls"
+  ],
+  "data_path": "D:\\cursor\\code\\SteelFiberCrackPredictor\\data\\thermal_stress\\c30_thermal_stress_training_summary.csv",
+  "target_col": "axial_stress_mpa",
+  "n_rows_csv": 9
+}

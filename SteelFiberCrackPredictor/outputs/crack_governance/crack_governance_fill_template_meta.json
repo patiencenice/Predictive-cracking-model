@@ -1,0 +1,44 @@
+{
+  "input_csv": "D:\\cursor\\code\\SteelFiberCrackPredictor\\data\\training_data.csv",
+  "output_csv": "D:\\cursor\\code\\SteelFiberCrackPredictor\\outputs\\crack_governance\\crack_governance_fill_template.csv",
+  "row_count": 120,
+  "columns": [
+    "row_index",
+    "strength_grade",
+    "fiber_type",
+    "fiber_content",
+    "aspect_ratio",
+    "w_b_ratio",
+    "cube_strength_mpa",
+    "curing_days",
+    "crack_width",
+    "crack_density",
+    "cracking_risk",
+    "source_group",
+    "data_tier",
+    "needs_manual_review",
+    "crack_width_definition_id",
+    "literature_key",
+    "source_doi",
+    "table_or_figure_ref",
+    "fill_note",
+    "reviewer",
+    "review_date"
+  ],
+  "governance_columns_left_empty": [
+    "source_group",
+    "data_tier",
+    "needs_manual_review",
+    "crack_width_definition_id",
+    "literature_key",
+    "source_doi",
+    "table_or_figure_ref"
+  ],
+  "meta_columns_left_empty": [
+    "fill_note",
+    "reviewer",
+    "review_date"
+  ],
+  "auto_filled_governance_values": false,
+  "generated_at_utc": "2026-05-22T05:29:42.854303+00:00"
+}

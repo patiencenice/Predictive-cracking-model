@@ -1,0 +1,10 @@
+﻿sample_id,source_file,strength_grade,w_b_ratio,restraint_code,restraint_percent,restraint_factor_R,time_h,time_h_norm,specimen_temperature_c,T_reference,delta_T_point,axial_stress_mpa,deformation_um,cube_strength_mpa,thermal_expansion_alpha,granularity
+C30_wb0p36_R0,data\thermal_stress\raw\温度应力\C30温度应力\C30\基准C30\C30基准72.xls,C30,0.36,R0,0,0.0,73.3961,1.0,35.6901,20.777,14.9131,-0.9408,88.6696,30.0,1e-05,summary_max_tensile
+C30_wb0p36_R50,data\thermal_stress\raw\温度应力\C30温度应力\C30\基准C30\C30基准72.xls,C30,0.36,R50,50,0.5,73.3961,1.0,35.6901,20.777,14.9131,-0.9408,88.6696,30.0,1e-05,summary_max_tensile
+C30_wb0p36_R100,data\thermal_stress\raw\温度应力\C30温度应力\C30\基准C30\C30基准72.xls,C30,0.36,R100,100,1.0,73.3961,1.0,35.6901,20.777,14.9131,-0.9408,88.6696,30.0,1e-05,summary_max_tensile
+C30_wb0p44_R0,data\thermal_stress\raw\温度应力\C30温度应力\C30\基准C30\2016-05-12-1122.xls,C30,0.44,R0,0,0.0,73.3961,1.0,35.6901,20.777,14.9131,-0.9408,207.7849,30.0,1e-05,summary_max_tensile
+C30_wb0p44_R50,data\thermal_stress\raw\温度应力\C30温度应力\C30\基准C30\2016-05-12-1122.xls,C30,0.44,R50,50,0.5,73.3961,1.0,35.6901,20.777,14.9131,-0.9408,207.7849,30.0,1e-05,summary_max_tensile
+C30_wb0p44_R100,data\thermal_stress\raw\温度应力\C30温度应力\C30\基准C30\2016-05-12-1122.xls,C30,0.44,R100,100,1.0,73.3961,1.0,35.6901,20.777,14.9131,-0.9408,207.7849,30.0,1e-05,summary_max_tensile
+C30_wb0p48_R0,data\thermal_stress\raw\温度应力\C30温度应力\C30\金隅C30\2016-05-23-1153.xls,C30,0.48,R0,0,0.0,69.4589,1.0,35.2506,21.5528,13.697799999999997,-0.8556,27.0762,30.0,1e-05,summary_max_tensile
+C30_wb0p48_R50,data\thermal_stress\raw\温度应力\C30温度应力\C30\金隅C30\2016-05-23-1153.xls,C30,0.48,R50,50,0.5,69.4589,1.0,35.2506,21.5528,13.697799999999997,-0.8556,27.0762,30.0,1e-05,summary_max_tensile
+C30_wb0p48_R100,data\thermal_stress\raw\温度应力\C30温度应力\C30\金隅C30\2016-05-23-1153.xls,C30,0.48,R100,100,1.0,69.4589,1.0,35.2506,21.5528,13.697799999999997,-0.8556,27.0762,30.0,1e-05,summary_max_tensile

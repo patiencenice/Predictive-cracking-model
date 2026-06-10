@@ -1,0 +1,60 @@
+{
+  "csv": "D:\\cursor\\code\\SteelFiberCrackPredictor\\data\\training_data.csv",
+  "models_dir": "D:\\cursor\\code\\SteelFiberCrackPredictor\\models",
+  "n_test": 24,
+  "partition": {
+    "test_size": 0.2,
+    "random_state": 42
+  },
+  "crack_width": {
+    "task": "regression",
+    "test_mae": 0.04114018395658079,
+    "test_rmse": 0.04957667736205245,
+    "test_r2": 0.4887892669478088
+  },
+  "crack_density": {
+    "task": "regression",
+    "test_mae": 0.2952589643409252,
+    "test_rmse": 0.39368537763638506,
+    "test_r2": -0.07709111594289131
+  },
+  "cracking_risk": {
+    "task": "multiclass_classification",
+    "test_accuracy": 0.5,
+    "test_macro_f1": 0.46958270487682247,
+    "test_weighted_f1": 0.46958270487682247,
+    "classification_report": {
+      "0": {
+        "precision": 0.5555555555555556,
+        "recall": 0.625,
+        "f1-score": 0.5882352941176471,
+        "support": 8.0
+      },
+      "1": {
+        "precision": 0.2,
+        "recall": 0.125,
+        "f1-score": 0.15384615384615385,
+        "support": 8.0
+      },
+      "2": {
+        "precision": 0.6,
+        "recall": 0.75,
+        "f1-score": 0.6666666666666666,
+        "support": 8.0
+      },
+      "accuracy": 0.5,
+      "macro avg": {
+        "precision": 0.4518518518518519,
+        "recall": 0.5,
+        "f1-score": 0.46958270487682247,
+        "support": 24.0
+      },
+      "weighted avg": {
+        "precision": 0.4518518518518519,
+        "recall": 0.5,
+        "f1-score": 0.46958270487682247,
+        "support": 24.0
+      }
+    }
+  }
+}

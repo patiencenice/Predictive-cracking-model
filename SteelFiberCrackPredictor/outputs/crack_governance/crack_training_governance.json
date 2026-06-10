@@ -1,0 +1,148 @@
+{
+  "input_csv": "D:\\cursor\\code\\SteelFiberCrackPredictor\\data\\training_data.csv",
+  "row_count": 123,
+  "governance_columns_expected": [
+    "source_group",
+    "data_tier",
+    "needs_manual_review",
+    "crack_width_definition_id",
+    "literature_key",
+    "source_doi",
+    "table_or_figure_ref"
+  ],
+  "column_presence": {
+    "source_group": true,
+    "data_tier": true,
+    "needs_manual_review": true,
+    "crack_width_definition_id": true,
+    "literature_key": true,
+    "source_doi": true,
+    "table_or_figure_ref": true
+  },
+  "nonempty_rate": {
+    "source_group": {
+      "present": true,
+      "n_nonempty": 123,
+      "nonempty_ratio": 1.0
+    },
+    "data_tier": {
+      "present": true,
+      "n_nonempty": 0,
+      "nonempty_ratio": 0.0
+    },
+    "needs_manual_review": {
+      "present": true,
+      "n_nonempty": 0,
+      "nonempty_ratio": 0.0
+    },
+    "crack_width_definition_id": {
+      "present": true,
+      "n_nonempty": 123,
+      "nonempty_ratio": 1.0
+    },
+    "literature_key": {
+      "present": true,
+      "n_nonempty": 0,
+      "nonempty_ratio": 0.0
+    },
+    "source_doi": {
+      "present": true,
+      "n_nonempty": 123,
+      "nonempty_ratio": 1.0
+    },
+    "table_or_figure_ref": {
+      "present": true,
+      "n_nonempty": 0,
+      "nonempty_ratio": 0.0
+    }
+  },
+  "data_tier_distribution": {
+    "<empty>": 123
+  },
+  "illegal_data_tier_values": [],
+  "needs_manual_review_distribution": {
+    "<empty>": 123
+  },
+  "crack_width_definition_id_distribution": {
+    "CW_MAX_SURFACE_MM": 123
+  },
+  "illegal_crack_width_definition_id_values": [],
+  "tier_ABC_hold_counts": {
+    "note": "互斥计数；空 needs_manual_review 归入暂缓；不自动标 A。",
+    "hold_pending": 123,
+    "tier_A_candidate": 0,
+    "tier_B": 0,
+    "tier_C_or_illegal_tier": 0,
+    "unclassified_tier_empty": 0,
+    "illegal_tier_row_count": 0
+  },
+  "group_audit": {
+    "source_group_present": true,
+    "n_rows_with_nonempty_source_group": 123,
+    "n_groups": 4,
+    "singleton_group_count": 3,
+    "singleton_groups": [
+      "10.1000/example-mix-2024/T2",
+      "10.1000/example-steel-2023/T3",
+      "10.1000/example-steel-2023/T4"
+    ],
+    "group_size_top20": {
+      "USER_LOCAL_LAB/DEFAULT": 120,
+      "10.1000/example-steel-2023/T3": 1,
+      "10.1000/example-steel-2023/T4": 1,
+      "10.1000/example-mix-2024/T2": 1
+    },
+    "max_group_share": 0.97561,
+    "suggested_holdout_groups": []
+  },
+  "literature_coverage": {
+    "literature_key": {
+      "present": true,
+      "n_nonempty": 0,
+      "nonempty_ratio": 0.0
+    },
+    "table_or_figure_ref": {
+      "present": true,
+      "n_nonempty": 0,
+      "nonempty_ratio": 0.0
+    },
+    "source_doi": {
+      "present": true,
+      "n_nonempty": 123,
+      "nonempty_ratio": 1.0
+    },
+    "rows_with_both_literature_key_and_table_ref": 0,
+    "source_group_literature_cross_sample": [
+      {
+        "source_group": "10.1000/example-mix-2024/T2",
+        "n_rows": 1,
+        "n_lit_key_nonempty": 0,
+        "n_table_ref_nonempty": 0
+      },
+      {
+        "source_group": "10.1000/example-steel-2023/T3",
+        "n_rows": 1,
+        "n_lit_key_nonempty": 0,
+        "n_table_ref_nonempty": 0
+      },
+      {
+        "source_group": "10.1000/example-steel-2023/T4",
+        "n_rows": 1,
+        "n_lit_key_nonempty": 0,
+        "n_table_ref_nonempty": 0
+      },
+      {
+        "source_group": "USER_LOCAL_LAB/DEFAULT",
+        "n_rows": 120,
+        "n_lit_key_nonempty": 0,
+        "n_table_ref_nonempty": 0
+      }
+    ]
+  },
+  "label_columns_present": {
+    "crack_width": true,
+    "crack_density": true,
+    "cracking_risk": true
+  },
+  "note": "本报告仅审计 sidecar 治理列；不改变 train_model / FEATURE_COLUMNS。"
+}

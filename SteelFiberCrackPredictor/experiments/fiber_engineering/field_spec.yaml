@@ -1,0 +1,64 @@
+# 工程抗裂纤维体系 — Phase 1 扩展字段（不进 FEATURE_COLUMNS）
+
+version: 1
+module: fiber_engineering_phase1
+
+A_basic_inputs:
+  description: 基础材料参数（侧栏「基础参数」区）
+  fields:
+    - fiber_material
+    - fiber_content
+    - fiber_length_mm
+    - aspect_ratio
+    - tensile_strength
+    - fiber_elastic_modulus_gpa
+    - fiber_type
+
+A_engineering_crack_inputs:
+  description: 工程抗裂参数（解释层）
+  fields:
+    - fiber_dispersion_quality    # good | normal | poor
+    - fiber_interface_bond        # weak | medium | strong
+    - fiber_function_role         # plastic_crack_control | thermal_crack_control | ...
+
+A_advanced_placeholders:
+  description: 高级占位（暂不参与计算）
+  fields:
+    - fiber_orientation_factor
+    - fiber_pullout_behavior
+    - fiber_bridge_factor
+
+B_derived:
+  description: 派生解释量（非训练特征）
+  fields:
+    - fiber_diameter_mm           # = fiber_length_mm / aspect_ratio
+    - aspect_ratio_norm
+    - fiber_constraint_index      # vol_frac × E_norm × aspect_ratio_norm
+    - bridge_capacity_score
+    - thermal_coordination_score
+    - interface_synergy_score
+    - fiber_engineering_summary
+
+enums:
+  fiber_dispersion_quality: [good, normal, poor]
+  fiber_interface_bond: [weak, medium, strong]
+  fiber_function_role:
+    - plastic_crack_control
+    - thermal_crack_control
+    - toughness_enhancement
+    - multi_function
+
+ui_labels_zh:
+  fiber_dispersion_quality:
+    good: 良好
+    normal: 一般
+    poor: 团聚风险
+  fiber_interface_bond:
+    weak: 偏弱
+    medium: 中等
+    strong: 较强
+  fiber_function_role:
+    plastic_crack_control: 塑性抗裂
+    thermal_crack_control: 温度抗裂
+    toughness_enhancement: 韧性增强
+    multi_function: 复合功能

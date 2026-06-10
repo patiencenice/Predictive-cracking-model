@@ -1,0 +1,10 @@
+﻿sample_id,w_b_ratio,restraint_code,restraint_percent,bmp_file,candidate_xls_low_confidence,confirmed_xls_path,status,notes
+C30_wb0p36_R0,0.36,R0,0,0.36R0.bmp,data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/C30基准72.xls,data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/C30基准72.xls,auto_mapped,w_b_conf=0.99; 文件名72≈73h；为2016-05-12长试验截断前缀；基准C30子目录
+C30_wb0p36_R100,0.36,R100,100,0.36R100.bmp,data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/C30基准72.xls,data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/C30基准72.xls,auto_mapped,w_b_conf=0.99; 文件名72≈73h；为2016-05-12长试验截断前缀；基准C30子目录
+C30_wb0p36_R50,0.36,R50,50,0.36R50.bmp,data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/C30基准72.xls,data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/C30基准72.xls,auto_mapped,w_b_conf=0.99; 文件名72≈73h；为2016-05-12长试验截断前缀；基准C30子目录
+C30_wb0p44_R0,0.44,R0,0,0.44R0.bmp,data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/2016-05-12-1122.xls,data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/2016-05-12-1122.xls,auto_mapped,w_b_conf=0.93; 完整长试验≈120h；有表头Sheet4；与基准72同曲线前缀
+C30_wb0p44_R100,0.44,R100,100,0.44R100.bmp,data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/2016-05-12-1122.xls,data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/2016-05-12-1122.xls,auto_mapped,w_b_conf=0.93; 完整长试验≈120h；有表头Sheet4；与基准72同曲线前缀
+C30_wb0p44_R50,0.44,R50,50,0.44R50.bmp,data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/2016-05-12-1122.xls,data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/2016-05-12-1122.xls,auto_mapped,w_b_conf=0.93; 完整长试验≈120h；有表头Sheet4；与基准72同曲线前缀
+C30_wb0p48_R0,0.48,R0,0,0.48R0.bmp,data/thermal_stress/raw/温度应力/C30温度应力/C30/金隅C30/2016-05-23-1153.xls,data/thermal_stress/raw/温度应力/C30温度应力/C30/金隅C30/2016-05-23-1153.xls,auto_mapped,w_b_conf=0.96; 金隅C30独立子目录；唯一较低T_max与σ_t指纹
+C30_wb0p48_R100,0.48,R100,100,0.48R100.bmp,data/thermal_stress/raw/温度应力/C30温度应力/C30/金隅C30/2016-05-23-1153.xls,data/thermal_stress/raw/温度应力/C30温度应力/C30/金隅C30/2016-05-23-1153.xls,auto_mapped,w_b_conf=0.96; 金隅C30独立子目录；唯一较低T_max与σ_t指纹
+C30_wb0p48_R50,0.48,R50,50,0.48R50.bmp,data/thermal_stress/raw/温度应力/C30温度应力/C30/金隅C30/2016-05-23-1153.xls,data/thermal_stress/raw/温度应力/C30温度应力/C30/金隅C30/2016-05-23-1153.xls,auto_mapped,w_b_conf=0.96; 金隅C30独立子目录；唯一较低T_max与σ_t指纹

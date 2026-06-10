@@ -1,0 +1,122 @@
+{
+  "input_csv": "D:\\cursor\\code\\SteelFiberCrackPredictor\\data\\lab_strength\\paper_yimeng_28d_final_for_lab_strength_residual.csv",
+  "read_encoding": "gbk",
+  "filled_columns": [
+    {
+      "column": "cube_strength_mpa",
+      "status": "filled",
+      "source": "src.features.STRENGTH_GRADE_TO_MPA，由列 strength_grade 文本映射（如 C30→30）"
+    },
+    {
+      "column": "strength_grade_enc",
+      "status": "filled",
+      "source": "src.features.STRENGTH_GRADE_ENC（与 STRENGTH_GRADE_ORDER 顺序一致，非手写猜测）"
+    },
+    {
+      "column": "fiber_material_enc",
+      "status": "partial",
+      "source_non_baseline": "mix_label 与 src.features.FIBER_MATERIAL_MAP 键一致时映射（钢纤维/玄武岩纤维/聚丙烯纤维/玻璃纤维）",
+      "source_baseline": "基准组：仓库内扫描的参考训练 CSV 中无上述三重零「同类」行，按约定不臆造，fiber_material_enc 保持缺失"
+    }
+  ],
+  "not_filled_intentionally": [
+    {
+      "column": "sand_ratio",
+      "reason": "在 data/lab_strength_training.example.csv 上，sand_ratio 与 100*sand/(sand+stone) 最大绝对误差为 17.875064，与「砂率=细骨料质量占比」类公式不一致，故不对易梦表计算 sand_ratio。"
+    }
+  ],
+  "sand_ratio_decision": {
+    "formula_tested": "100 * sand_content / (sand_content + stone_content)",
+    "matches_training_example_csv": false,
+    "max_abs_error": 17.875064072040317,
+    "decision": "do_not_compute",
+    "note": "在 data/lab_strength_training.example.csv 上，sand_ratio 与 100*sand/(sand+stone) 最大绝对误差为 17.875064，与「砂率=细骨料质量占比」类公式不一致，故不对易梦表计算 sand_ratio。"
+  },
+  "baseline_fiber_material_reference": {
+    "reference_csv": null,
+    "n_matching_rows_in_reference": 0,
+    "fiber_material_enc_mode": null
+  },
+  "still_missing_or_incomplete_for_gate": [
+    "admixture_enc",
+    "casting_method_enc",
+    "concrete_type_enc",
+    "fiber_material_enc（3/12 行仍缺失）",
+    "fiber_type_enc",
+    "humidity",
+    "sand_ratio（全列缺失，见 sand_ratio_decision）",
+    "sand_type_enc",
+    "slag_grade_enc",
+    "temperature"
+  ],
+  "columns_held_empty_by_policy": [
+    "fiber_type_enc",
+    "concrete_type_enc",
+    "slag_grade_enc",
+    "sand_type_enc",
+    "admixture_enc",
+    "temperature",
+    "humidity",
+    "casting_method_enc"
+  ],
+  "note_policy": "以上 8 列无论文/原始记录则一律不填；本脚本未写入。",
+  "gate_after_prepare": {
+    "ok": false,
+    "n_rows": 12,
+    "n_columns": 29,
+    "problems": [
+      "缺少训练必需列（共 8）: ['fiber_type_enc', 'concrete_type_enc', 'slag_grade_enc', 'sand_type_enc', 'admixture_enc', 'temperature', 'humidity', 'casting_method_enc']"
+    ],
+    "warnings": {
+      "reference_ranges": {
+        "type": "reference_ranges_warning",
+        "columns": {
+          "fiber_content": {
+            "reference_min": 0.5,
+            "reference_max": 3.0,
+            "n_outside_excluding_baseline_fiber_aspect": 9,
+            "row_indices_outside_sample": [
+              1,
+              2,
+              3,
+              5,
+              6,
+              7,
+              9,
+              10,
+              11
+            ]
+          },
+          "aspect_ratio": {
+            "reference_min": 30.0,
+            "reference_max": 100.0,
+            "n_outside_excluding_baseline_fiber_aspect": 6,
+            "row_indices_outside_sample": [
+              2,
+              3,
+              6,
+              7,
+              10,
+              11
+            ]
+          },
+          "w_b_ratio": {
+            "reference_min": 0.3,
+            "reference_max": 0.5,
+            "n_outside_excluding_baseline_fiber_aspect": 0,
+            "row_indices_outside_sample": []
+          }
+        }
+      },
+      "suspicious_flexural_ge_compressive": {
+        "n_suspicious": 0,
+        "row_indices_sample": []
+      },
+      "source_group_max_share": {
+        "largest_group": "XUkun/C30_BASE",
+        "largest_group_count": 1,
+        "largest_group_share": 0.083333
+      }
+    }
+  }
+}

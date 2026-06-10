@@ -1,0 +1,63 @@
+{
+  "resolved_input": "D:\\cursor\\code\\SteelFiberCrackPredictor\\data\\lab_strength\\paper_yimeng_28d_prepared_review.csv",
+  "requested_input": "D:\\cursor\\code\\SteelFiberCrackPredictor\\data\\lab_strength\\paper_yimeng_28d_prepared_review.csv",
+  "read_encoding": "utf-8-sig",
+  "status": "ok",
+  "gate": {
+    "ok": true,
+    "n_rows": 12,
+    "n_columns": 41,
+    "problems": [],
+    "warnings": {
+      "reference_ranges": {
+        "type": "reference_ranges_warning",
+        "columns": {
+          "fiber_content": {
+            "reference_min": 0.5,
+            "reference_max": 3.0,
+            "n_outside_excluding_baseline_fiber_aspect": 9,
+            "row_indices_outside_sample": [
+              1,
+              2,
+              3,
+              5,
+              6,
+              7,
+              9,
+              10,
+              11
+            ]
+          },
+          "aspect_ratio": {
+            "reference_min": 30.0,
+            "reference_max": 100.0,
+            "n_outside_excluding_baseline_fiber_aspect": 6,
+            "row_indices_outside_sample": [
+              2,
+              3,
+              6,
+              7,
+              10,
+              11
+            ]
+          },
+          "w_b_ratio": {
+            "reference_min": 0.3,
+            "reference_max": 0.5,
+            "n_outside_excluding_baseline_fiber_aspect": 0,
+            "row_indices_outside_sample": []
+          }
+        }
+      },
+      "suspicious_flexural_ge_compressive": {
+        "n_suspicious": 0,
+        "row_indices_sample": []
+      },
+      "source_group_max_share": {
+        "largest_group": "XUkun/C30_BASE",
+        "largest_group_count": 1,
+        "largest_group_share": 0.083333
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+streamlit
+pandas
+numpy
+scikit-learn
+xgboost
+matplotlib
+plotly
+joblib
+pyyaml
+fastapi
+uvicorn
+shap
+python-docx
+openpyxl
+

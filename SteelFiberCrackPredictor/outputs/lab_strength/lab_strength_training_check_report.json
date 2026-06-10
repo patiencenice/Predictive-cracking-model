@@ -1,0 +1,129 @@
+{
+  "input_path": "D:\\cursor\\code\\SteelFiberCrackPredictor\\data\\lab_strength_training.example.csv",
+  "output_path": "D:\\cursor\\code\\SteelFiberCrackPredictor\\outputs\\lab_strength\\lab_strength_training_check_report.json",
+  "status": "ok",
+  "checks": {
+    "n_rows": 24,
+    "n_columns": 29,
+    "required_columns_present": true,
+    "missing_required_columns": [],
+    "numeric_columns_checked": [
+      "compressive_true",
+      "flexural_true",
+      "fiber_content",
+      "aspect_ratio",
+      "w_b_ratio",
+      "cube_strength_mpa",
+      "tensile_strength",
+      "cement_content",
+      "curing_days",
+      "temperature",
+      "humidity"
+    ],
+    "numeric_coercion_ok": true,
+    "numeric_coercion_issues": [],
+    "missing_value_row_check": {
+      "columns_used": [
+        "compressive_true",
+        "flexural_true",
+        "fiber_content",
+        "aspect_ratio",
+        "w_b_ratio",
+        "source_group"
+      ],
+      "threshold_missing_frac": 0.5,
+      "n_rows_above_threshold": 0,
+      "row_indices_sample": []
+    },
+    "source_group": {
+      "n_unique": 5,
+      "min_samples_per_group_ge_2": true,
+      "n_groups_with_lt_2_samples": 0,
+      "recommended_for_groupkfold_5folds": true,
+      "min_group_count_for_cv_note": "GroupKFold 5 折通常需要至少约 5 个组（当前 5）",
+      "sufficient_for_any_grouped_cv": true
+    },
+    "duplicates": {
+      "subset": [
+        "compressive_true",
+        "flexural_true",
+        "fiber_content",
+        "aspect_ratio",
+        "w_b_ratio",
+        "source_group"
+      ],
+      "n_rows_in_duplicate_groups_keep_false": 0,
+      "n_duplicate_rows_excluding_first_occurrence": 0,
+      "duplicate_row_indices_sample": []
+    },
+    "positive_strength_labels": {
+      "compressive_true": {
+        "present": true,
+        "n_non_positive_among_numeric": 0,
+        "min_value": 18.06383708139353,
+        "row_indices_non_positive_sample": []
+      },
+      "flexural_true": {
+        "present": true,
+        "n_non_positive_among_numeric": 0,
+        "min_value": 2.762216081764584,
+        "row_indices_non_positive_sample": []
+      }
+    },
+    "passes_minimal_gates": true,
+    "warnings": {
+      "parameter_reference_ranges": {
+        "type": "parameter_reference_ranges",
+        "note": "以下为与当前预测侧栏常用上下界一致的参考区间，仅提醒录入是否异常；不纳入 passes_minimal_gates。",
+        "columns": {
+          "fiber_content": {
+            "reference_min": 0.5,
+            "reference_max": 3.0,
+            "description": "体积掺量 %，与预测表单范围一致",
+            "n_numeric": 24,
+            "n_below_reference": 0,
+            "n_above_reference": 0,
+            "n_outside_reference": 0,
+            "row_indices_outside_sample": []
+          },
+          "aspect_ratio": {
+            "reference_min": 30.0,
+            "reference_max": 100.0,
+            "description": "长径比，与预测表单范围一致",
+            "n_numeric": 24,
+            "n_below_reference": 0,
+            "n_above_reference": 0,
+            "n_outside_reference": 0,
+            "row_indices_outside_sample": []
+          },
+          "w_b_ratio": {
+            "reference_min": 0.3,
+            "reference_max": 0.5,
+            "description": "水胶比，与预测表单范围一致",
+            "n_numeric": 24,
+            "n_below_reference": 0,
+            "n_above_reference": 0,
+            "n_outside_reference": 0,
+            "row_indices_outside_sample": []
+          }
+        }
+      },
+      "suspicious_flexural_ge_compressive": {
+        "type": "suspicious_flexural_ge_compressive",
+        "note": "通常抗折强度（弯拉/断裂模量级）显著低于立方体抗压；若 flexural_true >= compressive_true 请核对单位或标签是否对调。",
+        "n_rows_checked_both_numeric": 24,
+        "n_suspicious_rows": 0,
+        "row_indices_suspicious_sample": []
+      },
+      "source_group_max_share": {
+        "type": "source_group_max_share",
+        "n_rows": 24,
+        "n_unique_groups": 5,
+        "largest_group_label": "G0",
+        "largest_group_count": 5,
+        "largest_group_share": 0.208333,
+        "note": "最大组占比过高时，GroupKFold/分组评估可能过度代表单一来源；建议结合业务检查是否需合并小类或分层抽样。"
+      }
+    }
+  }
+}

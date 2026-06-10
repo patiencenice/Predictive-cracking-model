@@ -1,0 +1,52 @@
+training_data.csv / training_data.real_template.csv 列说明（与 src.features.FEATURE_COLUMNS 及训练脚本一致）
+
+【通用】
+- 列名、顺序必须与训练脚本一致；除 curing_days、各 *_enc / cracking_risk 为整数外，其余列建议保存为数值（小数形式也可）。
+- 样本量：训练入口建议至少 8 行；正式建模建议数十行以上，三分类开裂风险尽量各类别均有样本。
+- fiber_content_x_aspect_ratio 须与 fiber_content × aspect_ratio 一致（与推理端 user_inputs_to_feature_frame 一致），否则训练与 App 输入分布不一致。
+
+【特征列 — 英文名 | 含义 | 类型 | 单位 / 取值】
+fiber_content | 纤维体积掺量 | 浮点 | %（见 data_processor「体积掺量」）
+aspect_ratio | 长径比 | 浮点 | 无量纲
+tensile_strength | 单丝抗拉强度 | 浮点 | MPa
+fiber_type_enc | 纤维外形 | 整数 | 端钩型=0，波纹型=1，平直型=2
+fiber_material_enc | 纤维材质 | 整数 | 钢纤维=0，玄武岩纤维=1，聚丙烯纤维=2，玻璃纤维=3
+cube_strength_mpa | 立方体抗压强度标准值对应代表值 | 浮点 | MPa（与所选强度等级一致，如 C30 常为 30）
+strength_grade_enc | 强度等级 | 整数 | C15..C80 依次为 0..14（见 src.features.STRENGTH_GRADE_ORDER）
+concrete_type_enc | 混凝土类型 | 整数 | 普通混凝土=0，高强混凝土=1，自密实混凝土(SCC)=2，轻骨料混凝土=见代码 CONCRETE_TYPE_MAP=3
+binder_content | 胶材总量（含水泥与矿物掺合料） | 浮点 | kg/m³
+cement_content | 水泥用量 | 浮点 | kg/m³
+fly_ash | 粉煤灰用量 | 浮点 | kg/m³
+slag_grade_enc | 矿粉活性等级 | 整数 | S75=0，S95=1，S105=2
+slag_powder | 矿粉用量 | 浮点 | kg/m³
+mixing_water | 拌合用水量 | 浮点 | kg/m³
+w_b_ratio | 水胶比 | 浮点 | 无量纲（0.3~0.5 常见）
+sand_type_enc | 细骨料类型 | 整数 | 天然砂=0，机制砂=1
+sand_content | 砂用量 | 浮点 | kg/m³
+sand_ratio | 砂率 | 浮点 | %（体积或质量砂率与试验记录一致即可，全文统一）
+stone_content | 粗骨料用量 | 浮点 | kg/m³
+admixture_enc | 外加剂类型 | 整数 | 无=0，减水剂=1，膨胀剂=2
+admixture_dosage | 外加剂用量 | 浮点 | kg/m³
+curing_days | 养护龄期 | 整数 | 天
+temperature | 环境温度 | 浮点 | °C
+humidity | 相对湿度 | 浮点 | %
+casting_method_enc | 浇筑方式 | 整数 | 常规=0，泵送=1
+fiber_content_x_aspect_ratio | 掺量×长径比 | 浮点 | = fiber_content * aspect_ratio
+
+【目标列】
+crack_width | 裂缝宽度 | 浮点 | mm（测试集最大裂缝宽度等指标，与试验定义一致）
+crack_density | 裂缝密度 | 浮点 | 条/m²（与 App 展示「条/m²」一致，全文统一计数口径）
+cracking_risk | 开裂风险等级 | 整数 | 0=低，1=中，2=高（须与标注规则一致，且建议三类均有样本）
+
+【治理列 — sidecar metadata（不进 FEATURE_COLUMNS，不作为主模型输入特征）】
+说明：以下列用于数据分层、分组评估与协议审计；由 scripts/init_crack_governance_columns.py 追加空列；
+scripts/diagnose_crack_training_governance.py 只读统计。不调用 annotate_user_training_data 的默认值逻辑；
+不改变 src.train_model / src.features.FEATURE_COLUMNS / src.predictor 现有训练与推理逻辑。
+
+source_group | 分组键（试验批次/文献表/配比系列） | 字符串 | 空=未分级；禁止无依据批量 DEFAULT
+data_tier | 数据可信度分层 | 字符串 | A_lab_native | B_literature_verified | C_literature_extracted | 空=未分级
+needs_manual_review | 是否暂缓入模 | 数值或空 | 1=暂缓；0=可训练候选；空=未判定（诊断归入暂缓，不自动当 0）
+crack_width_definition_id | 裂缝宽度测量口径 ID | 字符串 | CW_MAX_SURFACE_MM / CW_MEAN_MM / CW_INNER_MM / CW_UNSPECIFIED；空=未填
+literature_key | 文献或试验稳定标识 | 字符串 | 可选；文献行建议填写
+source_doi | 来源 DOI 或实验室标识 | 字符串 | 可选
+table_or_figure_ref | 原文表号/图号 | 字符串 | 可选；与 literature_key 配合避免混组

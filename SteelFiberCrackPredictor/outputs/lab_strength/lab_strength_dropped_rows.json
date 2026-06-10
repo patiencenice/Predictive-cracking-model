@@ -1,0 +1,80 @@
+{
+  "compressive": {
+    "n_skipped_total": 3,
+    "summary": {
+      "needs_manual_review": 3
+    },
+    "reason_by_column": {
+      "needs_manual_review|needs_manual_review": 3
+    },
+    "samples": [],
+    "max_samples_stored": 100,
+    "manual_review": {
+      "manual_review_rows_count": 3,
+      "manual_review_source_groups": [
+        "XUkun/C30_BASE",
+        "XUkun/C31_BASE",
+        "XUkun/C32_BASE"
+      ],
+      "manual_review_samples": [
+        {
+          "iloc": 24,
+          "source_group": "XUkun/C30_BASE",
+          "reason": "needs_manual_review",
+          "note": "字段语义未闭合：fcu/试件协议未与原文对齐前不入公式基线；补齐 cube_strength_mpa、lab_specimen、立方边长或棱柱尺寸、lab_loading_compression，并确认 compressive_true 与公式同口径后，将 needs_manual_review 置 0。"
+        },
+        {
+          "iloc": 25,
+          "source_group": "XUkun/C31_BASE",
+          "reason": "needs_manual_review",
+          "note": "字段语义未闭合：fcu/试件协议未与原文对齐前不入公式基线；补齐 cube_strength_mpa、lab_specimen、立方边长或棱柱尺寸、lab_loading_compression，并确认 compressive_true 与公式同口径后，将 needs_manual_review 置 0。"
+        },
+        {
+          "iloc": 26,
+          "source_group": "XUkun/C32_BASE",
+          "reason": "needs_manual_review",
+          "note": "字段语义未闭合：fcu/试件协议未与原文对齐前不入公式基线；补齐 cube_strength_mpa、lab_specimen、立方边长或棱柱尺寸、lab_loading_compression，并确认 compressive_true 与公式同口径后，将 needs_manual_review 置 0。"
+        }
+      ]
+    }
+  },
+  "flexural": {
+    "n_skipped_total": 3,
+    "summary": {
+      "needs_manual_review": 3
+    },
+    "reason_by_column": {
+      "needs_manual_review|needs_manual_review": 3
+    },
+    "samples": [],
+    "max_samples_stored": 100,
+    "manual_review": {
+      "manual_review_rows_count": 3,
+      "manual_review_source_groups": [
+        "XUkun/C30_BASE",
+        "XUkun/C31_BASE",
+        "XUkun/C32_BASE"
+      ],
+      "manual_review_samples": [
+        {
+          "iloc": 24,
+          "source_group": "XUkun/C30_BASE",
+          "reason": "needs_manual_review",
+          "note": "字段语义未闭合：fcu/试件协议未与原文对齐前不入公式基线；补齐 cube_strength_mpa、lab_specimen、立方边长或棱柱尺寸、lab_loading_compression，并确认 compressive_true 与公式同口径后，将 needs_manual_review 置 0。"
+        },
+        {
+          "iloc": 25,
+          "source_group": "XUkun/C31_BASE",
+          "reason": "needs_manual_review",
+          "note": "字段语义未闭合：fcu/试件协议未与原文对齐前不入公式基线；补齐 cube_strength_mpa、lab_specimen、立方边长或棱柱尺寸、lab_loading_compression，并确认 compressive_true 与公式同口径后，将 needs_manual_review 置 0。"
+        },
+        {
+          "iloc": 26,
+          "source_group": "XUkun/C32_BASE",
+          "reason": "needs_manual_review",
+          "note": "字段语义未闭合：fcu/试件协议未与原文对齐前不入公式基线；补齐 cube_strength_mpa、lab_specimen、立方边长或棱柱尺寸、lab_loading_compression，并确认 compressive_true 与公式同口径后，将 needs_manual_review 置 0。"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,41 @@
+# IDE
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Logs & local run artifacts
+*.log
+_st_*.txt
+SteelFiberCrackPredictor/_st_*.txt
+SteelFiberCrackPredictor/_st_run.log
+
+# Local documents (not for deployment)
+*.docx
+
+# Soft-copyright export dumps
+SteelFiberCrackPredictor/exports/
+
+# Demo / scratch scripts
+SteelFiberCrackPredictor/test.py
+test.py
+
+# Raw lab instrument exports (large binaries; not needed for web deploy)
+SteelFiberCrackPredictor/data/thermal_stress/raw/
+*.bmp
+*.et
+*.opj
+
+# Other projects in this workspace root
+ConcreteStrengthPredictor/
+python
+
+# OS
+.DS_Store
+Thumbs.db

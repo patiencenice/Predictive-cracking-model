@@ -1,0 +1,139 @@
+{
+  "check_type": "model_loading_integrity",
+  "checked_at_iso": "2026-05-22T15:03:54",
+  "project_root": "D:\\cursor\\code\\SteelFiberCrackPredictor",
+  "pkl_files": {
+    "crack_regressor.pkl": {
+      "path": "models/crack_regressor.pkl",
+      "exists": true,
+      "size_bytes": 384418,
+      "mtime_iso": "2026-04-03T20:07:44"
+    },
+    "crack_density_regressor.pkl": {
+      "path": "models/crack_density_regressor.pkl",
+      "exists": true,
+      "size_bytes": 444483,
+      "mtime_iso": "2026-04-03T20:07:44"
+    },
+    "crack_classifier.pkl": {
+      "path": "models/crack_classifier.pkl",
+      "exists": true,
+      "size_bytes": 838327,
+      "mtime_iso": "2026-04-03T20:07:44"
+    },
+    "feature_scaler.pkl": {
+      "path": "models/feature_scaler.pkl",
+      "exists": true,
+      "size_bytes": 1895,
+      "mtime_iso": "2026-04-03T20:07:44"
+    }
+  },
+  "metrics_files": {
+    "models/training_metrics.json": {
+      "path": "models/training_metrics.json",
+      "exists": true,
+      "size_bytes": 460,
+      "mtime_iso": "2026-04-03T20:07:44"
+    },
+    "models/cv_metrics.json": {
+      "path": "models/cv_metrics.json",
+      "exists": true,
+      "size_bytes": 3592,
+      "mtime_iso": "2026-04-03T19:33:39"
+    },
+    "models/feature_importance.json": {
+      "path": "models/feature_importance.json",
+      "exists": true,
+      "size_bytes": 3537,
+      "mtime_iso": "2026-04-03T20:07:44"
+    },
+    "outputs/training_metrics.json": {
+      "path": "outputs/training_metrics.json",
+      "exists": true,
+      "size_bytes": 460,
+      "mtime_iso": "2026-04-03T20:07:44"
+    }
+  },
+  "predictor_loading": {
+    "entry": "SteelFiberCrackPredictor.__init__ -> ensure_default_models(model_dir) -> _load_models()",
+    "ensure_default_models_on_init": true,
+    "ensure_default_models_would_run_at_check_time": false,
+    "ensure_default_models_trigger_conditions": [
+      "any of crack_regressor.pkl / crack_density_regressor.pkl / crack_classifier.pkl / feature_scaler.pkl missing",
+      "OR feature_scaler.pkl n_features_in_ != len(FEATURE_COLUMNS)"
+    ],
+    "ensure_default_models_uses_synthetic_dataset_when_triggered": true,
+    "synthetic_dataset_default_n_rows": 2800,
+    "synthetic_would_yield_approx_n_train": 2240,
+    "pkl_paths": {
+      "crack_width": "crack_regressor.pkl",
+      "crack_density": "crack_density_regressor.pkl",
+      "crack_risk": "crack_classifier.pkl",
+      "scaler": "feature_scaler.pkl"
+    },
+    "crack_density_optional": "if crack_density_regressor.pkl missing -> crack_density_model=None -> predict_all uses fallback"
+  },
+  "provenance_linkage": {
+    "training_metrics_has_data_path": false,
+    "training_metrics_has_trained_at": false,
+    "training_metrics_has_model_version": false,
+    "models_outputs_training_metrics_identical": true,
+    "n_train_n_test": {
+      "n_train": 96,
+      "n_test": 24
+    },
+    "training_data_csv_rows": 120,
+    "holdout_80_20_matches_csv": true,
+    "metrics_consistent_with_real_csv_training": true,
+    "metrics_inconsistent_with_synthetic_bootstrap_default": true,
+    "pkl_metrics_importance_same_mtime_batch": true,
+    "shared_mtime_iso": "2026-04-03T20:07:44",
+    "cv_metrics_older_than_pkl_batch": true,
+    "cv_metrics_note": "cv_metrics.json from separate py -m src.cross_validate run, not same artifact batch as pkl",
+    "same_origin_confirmed": "weak_yes",
+    "same_origin_rationale": [
+      "All four pkl + training_metrics.json + feature_importance.json share mtime 2026-04-03T20:07:44",
+      "n_train=96,n_test=24 matches 120-row CSV at test_size=0.2 (not synthetic n≈2240)",
+      "models/ and outputs/ training_metrics.json byte-identical"
+    ],
+    "inconsistency_risk": "medium",
+    "inconsistency_risk_notes": [
+      "JSON has no data_path/trained_at; cannot cryptographically prove pkl-metrics linkage",
+      "Fresh clone without pkl would silently train synthetic models via ensure_default_models and overwrite metrics",
+      "cv_metrics.json is not guaranteed to describe the same weights as current pkl"
+    ]
+  },
+  "readonly_prediction": {
+    "inputs": "PREDICTION_INPUT_DEFAULTS via validate_and_transform (same path as Streamlit app)",
+    "validate_ok": true,
+    "error": null,
+    "crack_width_source": "crack_regressor.pkl (XGB regress, clipped 0.02–2.0 mm)",
+    "crack_density_source": "regressor",
+    "crack_density_source_field": "intermediate.crack_density_source",
+    "crack_density_fallback": false,
+    "cracking_risk_source": "crack_classifier.pkl (predict_proba, weighted P)",
+    "risk_class_argmax": 2,
+    "sample_outputs": {
+      "crack_width_mm": 0.11657711863517761,
+      "crack_density_per_m2": 0.6486234664916992,
+      "risk_probability": 0.8086803704500198,
+      "alert_level": "高风险"
+    }
+  },
+  "bootstrap_ran_during_this_check": false,
+  "findings": {
+    "all_required_pkl_present": true,
+    "current_inference_likely_real_csv_weights": true,
+    "offline_metrics_holdout_display_safe_with_caveat": true,
+    "offline_metrics_caveat": "Hold-out metrics match likely real-CSV train; cv_metrics is separate run; UI should label metrics as offline/historical",
+    "page_prediction_vs_metrics_dealigned_risk": "low_on_this_machine_if_pkls_present",
+    "page_prediction_vs_metrics_dealigned_risk_if_pkls_missing": "high_synthetic_bootstrap",
+    "recommend_retrain_real_csv_before_governance": false,
+    "recommend_retrain_real_csv_when": [
+      "any required pkl missing on deploy machine",
+      "FEATURE_COLUMNS dimension changed",
+      "after governance closure and intentional model refresh"
+    ],
+    "recommend_continue_governance_first": true
+  }
+}

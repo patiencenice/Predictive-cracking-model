@@ -1,0 +1,19 @@
+{
+  "crack_width": {
+    "test_mae": 0.04114018395658079,
+    "test_rmse": 0.04957667736205245,
+    "test_r2": 0.4887892669478088
+  },
+  "crack_density": {
+    "test_mae": 0.2952589643409252,
+    "test_rmse": 0.39368537763638506,
+    "test_r2": -0.07709111594289131
+  },
+  "cracking_risk": {
+    "test_accuracy": 0.5,
+    "test_macro_f1": 0.46958270487682247,
+    "test_weighted_f1": 0.46958270487682247
+  },
+  "n_train": 96,
+  "n_test": 24
+}

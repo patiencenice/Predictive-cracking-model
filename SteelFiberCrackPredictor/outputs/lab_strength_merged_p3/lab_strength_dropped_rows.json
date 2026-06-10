@@ -1,0 +1,16 @@
+{
+  "compressive": {
+    "n_skipped_total": 0,
+    "summary": {},
+    "reason_by_column": {},
+    "samples": [],
+    "max_samples_stored": 100
+  },
+  "flexural": {
+    "n_skipped_total": 0,
+    "summary": {},
+    "reason_by_column": {},
+    "samples": [],
+    "max_samples_stored": 100
+  }
+}

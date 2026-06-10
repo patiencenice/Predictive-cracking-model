@@ -1,0 +1,4 @@
+﻿strategy,status,note,crack_width_family,n_samples_before_definition_filter,n_samples_after_definition_filter,dropped_by_definition_filter,n_samples,n_groups,n_splits,grouping_column,grouping_note,cv_r2_mean,cv_r2_std,cv_mae_mean,cv_mae_std,cv_rmse_mean,cv_rmse_std
+only_user,skipped,样本过少,CW_MAX_SURFACE_MM,123,3,120,,,,,,,,,,,
+only_literature,ok,,CW_MAX_SURFACE_MM,123,3,120,3.0,3.0,3.0,source_group,source_group 优先，空位回退 source_doi,,,0.03344259838263194,0.005448773524382682,0.03344259838263194,0.005448773524382682
+merged,ok,,CW_MAX_SURFACE_MM,123,3,120,3.0,3.0,3.0,source_group,source_group 优先，空位回退 source_doi,,,0.03344259838263194,0.005448773524382682,0.03344259838263194,0.005448773524382682

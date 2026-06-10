@@ -1,0 +1,66 @@
+{
+  "config_path": "D:\\cursor\\code\\SteelFiberCrackPredictor\\experiments\\gan\\config\\gan_experiment.yaml",
+  "backend": "ctgan",
+  "training_rows_real_protocol_closed_tier_selected": 36,
+  "condition_columns_used": [
+    "source_domain",
+    "strength_grade_enc",
+    "concrete_type_enc",
+    "fiber_type_enc",
+    "curing_days"
+  ],
+  "condition_combos_used": [
+    {
+      "source_domain": "fiber",
+      "strength_grade_enc": 12.0,
+      "concrete_type_enc": 0.0,
+      "fiber_type_enc": 0.0
+    },
+    {
+      "source_domain": "fiber",
+      "strength_grade_enc": 6.0,
+      "concrete_type_enc": 1.0,
+      "fiber_type_enc": 1.0
+    },
+    {
+      "source_domain": "fiber",
+      "strength_grade_enc": 13.0,
+      "concrete_type_enc": 2.0,
+      "fiber_type_enc": 2.0
+    },
+    {
+      "source_domain": "fiber",
+      "strength_grade_enc": 10.0,
+      "concrete_type_enc": 3.0,
+      "fiber_type_enc": 0.0
+    }
+  ],
+  "forbidden_condition_columns": [
+    "source_group"
+  ],
+  "n_rows_synthetic_raw": 120,
+  "n_rows_after_physical_gate": 120,
+  "n_rows_dropped_by_physical_gate": 0,
+  "protocol_check_raw_ok": true,
+  "protocol_check_filtered_ok": true,
+  "protocol_issues_raw": [],
+  "protocol_issues_filtered": [],
+  "physical_failed_reason_counts": {},
+  "fixed_quadruplet_check": {
+    "ok": true,
+    "issues": []
+  },
+  "quality_check_summary": {
+    "memorization_risk": "high",
+    "distribution_shift_risk": "high",
+    "label_feature_coupling_risk": "low",
+    "recommend_enter_stage3": "no",
+    "minimal_next_step_zh": "先收紧条件采样与列范围，并优先考虑只生成 X 不生成 y；完成记忆/分布复核后再进第三阶段。"
+  },
+  "outputs": {
+    "synthetic_raw_csv": "D:\\cursor\\code\\SteelFiberCrackPredictor\\experiments\\gan\\outputs\\synthetic_raw.csv",
+    "synthetic_filtered_csv": "D:\\cursor\\code\\SteelFiberCrackPredictor\\experiments\\gan\\outputs\\synthetic_filtered.csv",
+    "summary_json": "D:\\cursor\\code\\SteelFiberCrackPredictor\\experiments\\gan\\outputs\\synthetic_filter_summary.json",
+    "quality_summary_json": "D:\\cursor\\code\\SteelFiberCrackPredictor\\experiments\\gan\\outputs\\synthetic_quality_summary.json"
+  }
+}

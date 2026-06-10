@@ -1,0 +1,98 @@
+# GB/T 50082-2024 试验方法 — 结构化骨架
+# 第 8、9 章公开解读字段已预填；带 needs_pdf_verification 的项须对照正版 PDF 核对后改为 verified。
+
+standard_id: "GB/T 50082-2024"
+standard_title_zh: "混凝土长期性能和耐久性能试验方法标准"
+implementation_date: "2025-01-01"
+replaces: "GB/T 50082-2009"
+pdf_extraction_note: >
+  用户桌面 PDF 为 169 页扫描版，pypdf/pymupdf 均无可检索正文。
+  填表清单见 docs/gbt50082_ch08_ch09_extraction_checklist.md；
+  CSV 模板见 data/gbt50082/template_ch08_*.csv、template_ch09_*.csv。
+
+methods:
+  shrinkage_noncontact:
+    试验名称: "收缩试验（非接触法）"
+    clause_ref: "8.1（待 PDF 核对小节号）"
+    适用范围: "测定无约束且与外界无介质交换条件下的混凝土早期自收缩性能"
+    试件类型与尺寸: "棱柱体；常见 100mm×100mm×515mm（needs_pdf_verification）"
+    养护条件: "制作后按标准养护/带模要求；初凝时测初始读数（needs_pdf_verification）"
+    环境条件: "无振动；温湿度按条文（needs_pdf_verification）"
+    观测或加载方式: "非接触位移传感器；初凝后按设定间隔读变形（如 1h，needs_pdf_verification）"
+    结果计算公式: null
+    标签定义: "收缩应变/长度变化须为 L0 量测；公式输出仅 L2 基线"
+    报告必填项: "见第 3.3 章 + 8.1 报告条款（待 PDF 摘抄）"
+    extraction_template_csv: "data/gbt50082/template_ch08_shrinkage.csv"
+
+  shrinkage_contact:
+    试验名称: "收缩试验（接触法）"
+    clause_ref: "8.2（待 PDF 核对）"
+    适用范围: "硬化混凝土长度变化引起的收缩"
+    试件类型与尺寸: "立方体或棱柱体（needs_pdf_verification）"
+    养护条件: "按 8.2 与第 3 章（needs_pdf_verification）"
+    环境条件: "温度、湿度稳定（needs_pdf_verification）"
+    观测或加载方式: "千分表或位移传感器直接测长度变化"
+    结果计算公式: null
+    标签定义: "同 shrinkage_noncontact"
+    报告必填项: "待 PDF 摘抄"
+    extraction_template_csv: "data/gbt50082/template_ch08_shrinkage.csv"
+
+  shrinkage_corrugated_pipe:
+    试验名称: "收缩试验（波纹管法）"
+    clause_ref: "8.3（2024 新增，待 PDF 核对）"
+    适用范围: "无约束且与外界无介质交换条件下的混凝土早期自收缩"
+    试件类型与尺寸: >
+      低密度聚乙烯波纹管：长(420±2)mm，外径(80±1)mm，内径(60±1)mm，
+      壁厚(0.5±0.05)mm；每组 3 个（needs_pdf_verification）
+    养护条件: "按 8.3（needs_pdf_verification）"
+    环境条件: "试验温度 (20±2)℃（needs_pdf_verification）"
+    观测或加载方式: "按 8.3 读数间隔（needs_pdf_verification）"
+    结果计算公式: null
+    标签定义: "同 shrinkage_noncontact"
+    报告必填项: "待 PDF 摘抄"
+    extraction_template_csv: "data/gbt50082/template_ch08_shrinkage.csv"
+
+  early_cracking_plate:
+    试验名称: "早期抗裂试验"
+    clause_ref: "第 9 章（待 PDF 核对小节号）"
+    适用范围: "混凝土早期在约束与环境作用下的抗裂性能"
+    试件类型与尺寸: "平板试件；尺寸与骨料粒径限制见 PDF 9.x（needs_pdf_verification）"
+    养护条件: "浇筑后按第 9 章风场、温湿度、风速控制（needs_pdf_verification）"
+    环境条件: "风场/温度/湿度/风速（needs_pdf_verification）"
+    观测或加载方式: >
+      记录裂缝出现时间、宽度、长度/面积等；统计口径须与
+      crack_width_definition_id 一致（needs_pdf_verification）
+    结果计算公式: null
+    标签定义: >
+      crack_width_mm、crack_density_per_m2、cracking_risk 可为 L4 标签，
+      但必须来自量测且 standard_method_id=early_cracking_plate
+    报告必填项: "见 3.3 + 第 9 章报告（待 PDF 摘抄）"
+    extraction_template_csv: "data/gbt50082/template_ch09_early_cracking.csv"
+    maps_to_feature_columns:
+      crack_width_mm: crack_width
+      crack_density_per_m2: crack_density
+      cracking_risk: cracking_risk
+
+  crack_protocol_bridge:
+    试验名称: "裂缝宽度/密度/开裂风险（与主模型协议列对齐）"
+    适用范围: "工程内统一协议；可引用 50082 第 8/9 章作溯源"
+    试件类型与尺寸: "见 config/crack_protocol_schema.yaml"
+    养护条件: "见数据 CSV；缺列则闸门标记"
+    环境条件: "同上"
+    观测或加载方式: "与主链路一致；冲突时以 data_contract 裁决"
+    结果计算公式: null
+    标签定义: "主链路标签须独立质控"
+    报告必填项: "与主报告模板对齐"
+
+formula_usage_policy:
+  allowed_roles:
+    - "data_gate"
+    - "protocol_check"
+    - "baseline_feature"
+    - "baseline_residual_path_baseline_only"
+  forbidden_roles:
+    - "supervised_label_without_measurement_trace"
+
+verification_status:
+  note: "needs_pdf_verification 字段须对照扫描 PDF 人工/OCR 后改为 verified"
+  checklist_doc: "docs/gbt50082_ch08_ch09_extraction_checklist.md"

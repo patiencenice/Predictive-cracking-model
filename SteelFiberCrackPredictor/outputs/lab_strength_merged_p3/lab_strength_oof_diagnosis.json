@@ -1,0 +1,208 @@
+{
+  "compressive": {
+    "task": "compressive",
+    "formula_bias_mean_y_minus_formula": 2.95332124776892,
+    "formula_bias_note": "均值为正：整体上公式略低估真值（y_true 高于 formula_pred）。",
+    "mean_y_minus_final_pred_by_model": {
+      "linear": 1.7063713313363786,
+      "ridge": 1.1515512685856821,
+      "hgb": 1.1930814293106922
+    },
+    "best_residual_model_by_mean_abs_error_on_oof": "ridge",
+    "bias_after_best_model": 1.1515512685856821,
+    "residual_reduced_abs_bias_vs_formula": true,
+    "worst_5_samples_by_abs_error": [
+      {
+        "row_id": 0,
+        "fold_id": 3,
+        "source_group": "G0",
+        "y_true": 74.62647618402897,
+        "formula_pred": 74.625,
+        "residual_pred": -26.629507325692273,
+        "final_pred": 47.99549267430773,
+        "abs_err": 26.630983509721247
+      },
+      {
+        "row_id": 9,
+        "fold_id": 4,
+        "source_group": "G4",
+        "y_true": 77.31853271223898,
+        "formula_pred": 79.6,
+        "residual_pred": -9.67148296771061,
+        "final_pred": 69.92851703228939,
+        "abs_err": 7.390015679949585
+      },
+      {
+        "row_id": 24,
+        "fold_id": 3,
+        "source_group": "XUkun/C30_BASE",
+        "y_true": 48.99,
+        "formula_pred": 29.85,
+        "residual_pred": 12.205546964541227,
+        "final_pred": 42.05554696454123,
+        "abs_err": 6.934453035458773
+      },
+      {
+        "row_id": 35,
+        "fold_id": 4,
+        "source_group": "XUkun/C41_BASE",
+        "y_true": 63.21,
+        "formula_pred": 49.75,
+        "residual_pred": 6.867448586722105,
+        "final_pred": 56.617448586722105,
+        "abs_err": 6.592551413277896
+      },
+      {
+        "row_id": 3,
+        "fold_id": 0,
+        "source_group": "G3",
+        "y_true": 64.74717232311693,
+        "formula_pred": 64.675,
+        "residual_pred": -5.183545709428397,
+        "final_pred": 59.491454290571596,
+        "abs_err": 5.255718032545332
+      }
+    ],
+    "mean_final_minus_ytrue_by_source_group_formula_only": {
+      "G0": 0.664880269561192,
+      "G1": 0.8735387981477658,
+      "G2": -0.5022121257880429,
+      "G3": 0.713752721383696,
+      "G4": 0.907659190948964,
+      "XUkun/C30_BASE": -19.14,
+      "XUkun/C31_BASE": -12.920000000000002,
+      "XUkun/C32_BASE": -13.059999999999995,
+      "XUkun/C33_BASE": -10.530000000000001,
+      "XUkun/C34_BASE": -6.560000000000002,
+      "XUkun/C35_BASE": -10.020000000000003,
+      "XUkun/C36_BASE": -4.410000000000004,
+      "XUkun/C37_BASE": -9.82,
+      "XUkun/C38_BASE": -6.109999999999999,
+      "XUkun/C39_BASE": -6.590000000000003,
+      "XUkun/C40_BASE": -6.079999999999998,
+      "XUkun/C41_BASE": -13.46
+    },
+    "mean_final_minus_ytrue_by_source_group_residual_ridge": {
+      "G0": -8.327892637512711,
+      "G1": 1.0519909767994662,
+      "G2": 0.5304843183226481,
+      "G3": -0.581014875119591,
+      "G4": -0.8785416687094916,
+      "XUkun/C30_BASE": -6.934453035458773,
+      "XUkun/C31_BASE": -0.13276597443162075,
+      "XUkun/C32_BASE": -3.2827216889294277,
+      "XUkun/C33_BASE": 4.61408791832018,
+      "XUkun/C34_BASE": 2.6526762643905144,
+      "XUkun/C35_BASE": -0.9452658846067195,
+      "XUkun/C36_BASE": 4.594842748031063,
+      "XUkun/C37_BASE": 0.10174592393279625,
+      "XUkun/C38_BASE": 2.830809642303649,
+      "XUkun/C39_BASE": 2.1748341619345695,
+      "XUkun/C40_BASE": -0.39075656890398136,
+      "XUkun/C41_BASE": -6.592551413277896
+    }
+  },
+  "flexural": {
+    "task": "flexural",
+    "formula_bias_mean_y_minus_formula": 0.4867210519446668,
+    "formula_bias_note": "均值为正：整体上公式略低估真值（y_true 高于 formula_pred）。",
+    "mean_y_minus_final_pred_by_model": {
+      "linear": 0.8224467733892002,
+      "ridge": 0.12099046939964762,
+      "hgb": 0.17351153412019785
+    },
+    "best_residual_model_by_mean_abs_error_on_oof": "ridge",
+    "bias_after_best_model": 0.12099046939964762,
+    "residual_reduced_abs_bias_vs_formula": true,
+    "worst_5_samples_by_abs_error": [
+      {
+        "row_id": 0,
+        "fold_id": 3,
+        "source_group": "G0",
+        "y_true": 4.701460316506142,
+        "formula_pred": 4.683535584255634,
+        "residual_pred": -2.038746183806852,
+        "final_pred": 2.644789400448782,
+        "abs_err": 2.05667091605736
+      },
+      {
+        "row_id": 22,
+        "fold_id": 2,
+        "source_group": "G2",
+        "y_true": 4.716490604984816,
+        "formula_pred": 4.809319285672525,
+        "residual_pred": 1.4625845753075701,
+        "final_pred": 6.271903860980095,
+        "abs_err": 1.555413255995279
+      },
+      {
+        "row_id": 24,
+        "fold_id": 3,
+        "source_group": "XUkun/C30_BASE",
+        "y_true": 3.97,
+        "formula_pred": 3.5896895319637308,
+        "residual_pred": 1.6894968917057174,
+        "final_pred": 5.279186423669448,
+        "abs_err": 1.309186423669448
+      },
+      {
+        "row_id": 9,
+        "fold_id": 4,
+        "source_group": "G4",
+        "y_true": 4.564149060126209,
+        "formula_pred": 4.641521324513308,
+        "residual_pred": -1.3796636227100194,
+        "final_pred": 3.2618577018032884,
+        "abs_err": 1.302291358322921
+      },
+      {
+        "row_id": 30,
+        "fold_id": 1,
+        "source_group": "XUkun/C36_BASE",
+        "y_true": 4.67,
+        "formula_pred": 4.348599180270174,
+        "residual_pred": 1.5607445873056203,
+        "final_pred": 5.909343767575795,
+        "abs_err": 1.2393437675757948
+      }
+    ],
+    "mean_final_minus_ytrue_by_source_group_formula_only": {
+      "G0": -7.883895377966966e-05,
+      "G1": 0.02738991040430836,
+      "G2": 0.03405544390354205,
+      "G3": -0.016171805780969172,
+      "G4": 0.028626084047786438,
+      "XUkun/C30_BASE": -0.38031046803626944,
+      "XUkun/C31_BASE": -2.050310468036269,
+      "XUkun/C32_BASE": -1.2003104680362693,
+      "XUkun/C33_BASE": -1.6803104680362688,
+      "XUkun/C34_BASE": -1.1814008197298262,
+      "XUkun/C35_BASE": -1.8314008197298257,
+      "XUkun/C36_BASE": -0.3214008197298259,
+      "XUkun/C37_BASE": -1.731400819729826,
+      "XUkun/C38_BASE": -1.763897650750069,
+      "XUkun/C39_BASE": -1.9138976507500693,
+      "XUkun/C40_BASE": -1.6138976507500695,
+      "XUkun/C41_BASE": -2.1938976507500696
+    },
+    "mean_final_minus_ytrue_by_source_group_residual_ridge": {
+      "G0": -0.8841868797848633,
+      "G1": -0.3418192109566938,
+      "G2": 0.4966521951409222,
+      "G3": -0.0894290253089813,
+      "G4": -0.10647873347248249,
+      "XUkun/C30_BASE": 1.309186423669448,
+      "XUkun/C31_BASE": -1.0994744254100883,
+      "XUkun/C32_BASE": -0.4197562778329713,
+      "XUkun/C33_BASE": 0.11283294366866059,
+      "XUkun/C34_BASE": 0.15606620587063436,
+      "XUkun/C35_BASE": -0.42138955600058114,
+      "XUkun/C36_BASE": 1.2393437675757948,
+      "XUkun/C37_BASE": -0.1590776051992151,
+      "XUkun/C38_BASE": -0.10129564604479313,
+      "XUkun/C39_BASE": -0.03183401324553348,
+      "XUkun/C40_BASE": -0.11698695850828411,
+      "XUkun/C41_BASE": -0.30344221849237396
+    }
+  }
+}

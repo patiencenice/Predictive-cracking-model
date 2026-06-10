@@ -1,0 +1,124 @@
+experiment:
+  name: lab_strength_residual_gan_research_v1
+  task_scope:
+    - compressive_true
+    - flexural_true
+  exclude_tasks:
+    - crack_width
+    - crack_density
+    - cracking_risk
+
+data:
+  input_csv: data/lab_strength_training_merged.csv
+  encoding: utf-8-sig
+  source_domain_column: source_domain
+  source_domain_allowed:
+    - ordinary
+    - fiber
+  data_tier_column: data_tier
+  tier_train_default:
+    include_A: true
+    include_B: false
+    include_C: false
+
+main_eval_set:
+  source_domain: fiber
+  data_tier: A
+  eligible_for_main_oof: 1
+  needs_manual_review_not_equal: 1
+
+weights:
+  real_weight: 1.0
+  synthetic_weight: 0.2
+
+protocol_filter:
+  required_columns:
+    - compressive_true
+    - flexural_true
+    - source_domain
+    - data_tier
+    - source_group
+    - eligible_for_main_oof
+    - needs_manual_review
+    - fiber_content
+    - aspect_ratio
+    - w_b_ratio
+    - binder_content
+    - cement_content
+    - mixing_water
+  non_null_columns:
+    - compressive_true
+    - flexural_true
+    - source_domain
+    - data_tier
+    - source_group
+    - eligible_for_main_oof
+    - needs_manual_review
+  enum_rules:
+    data_tier:
+      - A
+      - B
+      - C
+    source_domain:
+      - ordinary
+      - fiber
+
+physical_gate:
+  w_b_ratio_min: 0.2
+  w_b_ratio_max: 0.8
+  fiber_content_min: 0.0
+  fiber_content_max: 5.0
+  aspect_ratio_min: 20.0
+  aspect_ratio_max: 150.0
+  non_negative_columns:
+    - binder_content
+    - cement_content
+    - fly_ash
+    - slag_powder
+    - mixing_water
+    - stone_content
+    - sand_content
+    - fiber_content
+
+generation:
+  mode: x_only
+  x_only_feature_columns:
+    - source_domain
+    - strength_grade_enc
+    - concrete_type_enc
+    - fiber_type_enc
+    - curing_days
+    - fiber_content
+    - aspect_ratio
+    - w_b_ratio
+    - binder_content
+    - cement_content
+    - mixing_water
+    - fly_ash
+    - slag_powder
+  # 第二阶段修正版：先用少量、固定、简单条件组合
+  condition_columns_active:
+    - source_domain
+    - strength_grade_enc
+    - concrete_type_enc
+    - fiber_type_enc
+  max_condition_combos: 4
+  condition_sample_batch_size: 240
+  condition_max_iters_per_combo: 12
+  # 轻量后处理裁剪（研究链路内，发生在 physical_gate 前）
+  post_clip:
+    w_b_ratio:
+      min: 0.2
+      max: 0.8
+    fiber_content:
+      min: 0.0
+      max: 5.0
+    aspect_ratio:
+      min: 20.0
+      max: 150.0
+    fly_ash:
+      min: 0.0
+      max: 200.0
+    slag_powder:
+      min: 0.0
+      max: 200.0

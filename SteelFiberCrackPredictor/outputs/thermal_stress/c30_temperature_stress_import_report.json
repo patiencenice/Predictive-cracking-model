@@ -1,0 +1,739 @@
+{
+  "import_type": "c30_temperature_stress_validation",
+  "imported_at_iso": "2026-05-23T11:58:33+00:00",
+  "raw_dir": "data\\thermal_stress\\raw",
+  "strength_grade": "C30",
+  "expected_groups": 9,
+  "mapping_file": "data\\thermal_stress\\c30_group_source_map.json",
+  "mapping_entries_loaded": 9,
+  "files_found": {
+    "excel": [
+      "data\\thermal_stress\\raw\\温度应力\\C30.xls",
+      "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\2016-05-12-1122.xls",
+      "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\C30\\基准C30\\2016-05-12-1122.xls",
+      "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\C30\\基准C30\\C30基准72.xls",
+      "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\C30\\金隅C30\\2016-05-23-1153.xls",
+      "data\\thermal_stress\\raw\\温度应力\\C50新.xls",
+      "data\\thermal_stress\\raw\\温度应力\\温度应力计算.xlsx"
+    ],
+    "bmp": [
+      "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\0.36R0.bmp",
+      "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\0.36R100.bmp",
+      "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\0.36R50.bmp",
+      "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\0.44R0.bmp",
+      "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\0.44R100.bmp",
+      "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\0.44R50.bmp",
+      "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\0.48R0.bmp",
+      "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\0.48R100.bmp",
+      "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\0.48R50.bmp"
+    ],
+    "other": [
+      "data\\thermal_stress\\raw\\温度应力\\C30普通水泥混凝土.et",
+      "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\C30\\基准C30\\UNTITLED.opj",
+      "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\C30\\金隅C30\\UNTITLED.opj",
+      "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\温度应力试验机说明书.pdf",
+      "data\\thermal_stress\\raw\\温度应力\\C50.xls",
+      "data\\thermal_stress\\raw\\温度应力\\C50井壁混凝土温度应力.opj",
+      "data\\thermal_stress\\raw\\温度应力\\C50井壁混凝土温度应力20160622.opj",
+      "data\\thermal_stress\\raw\\温度应力\\C50温度应力.opj",
+      "data\\thermal_stress\\raw\\温度应力\\C70.xls",
+      "data\\thermal_stress\\raw\\温度应力\\C70温度应力.opj",
+      "data\\thermal_stress\\raw\\温度应力\\基准C30.opj",
+      "data\\thermal_stress\\raw\\温度应力\\数据表头.xls"
+    ]
+  },
+  "excel_audit": [
+    {
+      "source_file": "data\\thermal_stress\\raw\\温度应力\\C30.xls",
+      "parsed_w_b_ratio": null,
+      "parsed_restraint_code": null,
+      "parsed_restraint_percent": null,
+      "read_ok": true,
+      "sheets": [
+        {
+          "name": "Sheet1",
+          "n_rows": 0,
+          "columns": []
+        },
+        {
+          "name": "Sheet2",
+          "n_rows": 0,
+          "columns": []
+        },
+        {
+          "name": "Sheet3",
+          "n_rows": 0,
+          "columns": []
+        },
+        {
+          "name": "Sheet4",
+          "n_rows": 10842,
+          "columns": [
+            "时间",
+            "试件温度",
+            "轴向应力",
+            "轴向应变",
+            "弹性模量",
+            "累计复位收缩",
+            "累计复位膨胀",
+            "累计复位变形",
+            "空气温度",
+            "端部温度",
+            "室内温度",
+            "无用数据",
+            "夹头位移1",
+            "夹头位移2",
+            "试件控制电压",
+            "无用数据",
+            "无用数据",
+            "顶盖位移1",
+            "顶盖位移2"
+          ]
+        }
+      ],
+      "error": null,
+      "selected_sheet": "Sheet4",
+      "column_map": {
+        "time_h": "时间",
+        "specimen_temperature_c": "试件温度",
+        "axial_stress_mpa": "轴向应力",
+        "deformation_um": "累计复位变形"
+      },
+      "unrecognized_columns": [
+        "轴向应变",
+        "弹性模量",
+        "累计复位收缩",
+        "累计复位膨胀",
+        "空气温度",
+        "端部温度",
+        "室内温度",
+        "无用数据",
+        "夹头位移1",
+        "夹头位移2",
+        "试件控制电压",
+        "无用数据",
+        "无用数据",
+        "顶盖位移1",
+        "顶盖位移2"
+      ],
+      "n_timeseries_rows": 10842
+    },
+    {
+      "source_file": "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\2016-05-12-1122.xls",
+      "parsed_w_b_ratio": null,
+      "parsed_restraint_code": null,
+      "parsed_restraint_percent": null,
+      "read_ok": true,
+      "sheets": [
+        {
+          "name": "Sheet1",
+          "n_rows": 0,
+          "columns": []
+        },
+        {
+          "name": "Sheet2",
+          "n_rows": 0,
+          "columns": []
+        },
+        {
+          "name": "Sheet3",
+          "n_rows": 0,
+          "columns": []
+        },
+        {
+          "name": "Sheet4",
+          "n_rows": 13585,
+          "columns": [
+            "col_0",
+            "col_1",
+            "col_2",
+            "col_3",
+            "col_4",
+            "col_5",
+            "col_6",
+            "col_7",
+            "col_8",
+            "col_9",
+            "col_10",
+            "col_11",
+            "col_12",
+            "col_13",
+            "col_14",
+            "col_15",
+            "col_16",
+            "col_17",
+            "col_18"
+          ]
+        }
+      ],
+      "error": null,
+      "selected_sheet": "Sheet4",
+      "column_map": {
+        "time_h": "col_0",
+        "specimen_temperature_c": "col_1",
+        "axial_stress_mpa": "col_2",
+        "deformation_um": "col_3"
+      },
+      "unrecognized_columns": [
+        "col_0",
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4",
+        "col_5",
+        "col_6",
+        "col_7",
+        "col_8",
+        "col_9",
+        "col_10",
+        "col_11",
+        "col_12",
+        "col_13",
+        "col_14",
+        "col_15",
+        "col_16",
+        "col_17",
+        "col_18"
+      ],
+      "n_timeseries_rows": 13585
+    },
+    {
+      "source_file": "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\C30\\基准C30\\2016-05-12-1122.xls",
+      "parsed_w_b_ratio": null,
+      "parsed_restraint_code": null,
+      "parsed_restraint_percent": null,
+      "read_ok": true,
+      "sheets": [
+        {
+          "name": "Sheet1",
+          "n_rows": 0,
+          "columns": []
+        },
+        {
+          "name": "Sheet2",
+          "n_rows": 0,
+          "columns": []
+        },
+        {
+          "name": "Sheet3",
+          "n_rows": 0,
+          "columns": []
+        },
+        {
+          "name": "Sheet4",
+          "n_rows": 13585,
+          "columns": [
+            "时间",
+            "试件温度",
+            "轴向应力",
+            "轴向应变",
+            "弹性模量",
+            "累计复位收缩",
+            "累计复位膨胀",
+            "累计复位变形",
+            "空气温度",
+            "端部温度",
+            "室内温度",
+            "无用数据",
+            "夹头位移1",
+            "夹头位移2",
+            "试件控制电压",
+            "无用数据",
+            "无用数据",
+            "顶盖位移1",
+            "顶盖位移2"
+          ]
+        }
+      ],
+      "error": null,
+      "selected_sheet": "Sheet4",
+      "column_map": {
+        "time_h": "时间",
+        "specimen_temperature_c": "试件温度",
+        "axial_stress_mpa": "轴向应力",
+        "deformation_um": "累计复位变形"
+      },
+      "unrecognized_columns": [
+        "轴向应变",
+        "弹性模量",
+        "累计复位收缩",
+        "累计复位膨胀",
+        "空气温度",
+        "端部温度",
+        "室内温度",
+        "无用数据",
+        "夹头位移1",
+        "夹头位移2",
+        "试件控制电压",
+        "无用数据",
+        "无用数据",
+        "顶盖位移1",
+        "顶盖位移2"
+      ],
+      "n_timeseries_rows": 13585
+    },
+    {
+      "source_file": "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\C30\\基准C30\\C30基准72.xls",
+      "parsed_w_b_ratio": null,
+      "parsed_restraint_code": null,
+      "parsed_restraint_percent": null,
+      "read_ok": true,
+      "sheets": [
+        {
+          "name": "Sheet1",
+          "n_rows": 0,
+          "columns": []
+        },
+        {
+          "name": "Sheet2",
+          "n_rows": 0,
+          "columns": []
+        },
+        {
+          "name": "Sheet3",
+          "n_rows": 0,
+          "columns": []
+        },
+        {
+          "name": "Sheet4",
+          "n_rows": 8263,
+          "columns": [
+            "时间",
+            "试件温度",
+            "轴向应力",
+            "轴向应变",
+            "弹性模量",
+            "累计复位收缩",
+            "累计复位膨胀",
+            "累计复位变形",
+            "空气温度",
+            "端部温度",
+            "室内温度",
+            "无用数据",
+            "夹头位移1",
+            "夹头位移2",
+            "试件控制电压",
+            "无用数据",
+            "无用数据",
+            "顶盖位移1",
+            "顶盖位移2"
+          ]
+        }
+      ],
+      "error": null,
+      "selected_sheet": "Sheet4",
+      "column_map": {
+        "time_h": "时间",
+        "specimen_temperature_c": "试件温度",
+        "axial_stress_mpa": "轴向应力",
+        "deformation_um": "累计复位变形"
+      },
+      "unrecognized_columns": [
+        "轴向应变",
+        "弹性模量",
+        "累计复位收缩",
+        "累计复位膨胀",
+        "空气温度",
+        "端部温度",
+        "室内温度",
+        "无用数据",
+        "夹头位移1",
+        "夹头位移2",
+        "试件控制电压",
+        "无用数据",
+        "无用数据",
+        "顶盖位移1",
+        "顶盖位移2"
+      ],
+      "n_timeseries_rows": 8263
+    },
+    {
+      "source_file": "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\C30\\金隅C30\\2016-05-23-1153.xls",
+      "parsed_w_b_ratio": null,
+      "parsed_restraint_code": null,
+      "parsed_restraint_percent": null,
+      "read_ok": true,
+      "sheets": [
+        {
+          "name": "Sheet1",
+          "n_rows": 0,
+          "columns": []
+        },
+        {
+          "name": "Sheet2",
+          "n_rows": 0,
+          "columns": []
+        },
+        {
+          "name": "Sheet3",
+          "n_rows": 0,
+          "columns": []
+        },
+        {
+          "name": "Sheet4",
+          "n_rows": 7816,
+          "columns": [
+            "时间",
+            "试件温度",
+            "轴向应力",
+            "轴向应变",
+            "弹性模量",
+            "累计复位收缩",
+            "累计复位膨胀",
+            "累计复位变形",
+            "空气温度",
+            "端部温度",
+            "室内温度",
+            "无用数据",
+            "夹头位移1",
+            "夹头位移2",
+            "试件控制电压",
+            "无用数据",
+            "无用数据",
+            "顶盖位移1",
+            "顶盖位移2"
+          ]
+        }
+      ],
+      "error": null,
+      "selected_sheet": "Sheet4",
+      "column_map": {
+        "time_h": "时间",
+        "specimen_temperature_c": "试件温度",
+        "axial_stress_mpa": "轴向应力",
+        "deformation_um": "累计复位变形"
+      },
+      "unrecognized_columns": [
+        "轴向应变",
+        "弹性模量",
+        "累计复位收缩",
+        "累计复位膨胀",
+        "空气温度",
+        "端部温度",
+        "室内温度",
+        "无用数据",
+        "夹头位移1",
+        "夹头位移2",
+        "试件控制电压",
+        "无用数据",
+        "无用数据",
+        "顶盖位移1",
+        "顶盖位移2"
+      ],
+      "n_timeseries_rows": 7816
+    },
+    {
+      "source_file": "data\\thermal_stress\\raw\\温度应力\\C50新.xls",
+      "parsed_w_b_ratio": null,
+      "parsed_restraint_code": null,
+      "parsed_restraint_percent": null,
+      "read_ok": false,
+      "sheets": [
+        {
+          "name": "Sheet4",
+          "n_rows": 8527,
+          "columns": [
+            "时间",
+            "试件温度",
+            "轴向应力",
+            "轴向应变",
+            "nan",
+            "nan",
+            "nan",
+            "nan",
+            "nan",
+            "nan",
+            "nan",
+            "nan",
+            "nan",
+            "nan",
+            "nan",
+            "nan",
+            "nan",
+            "nan",
+            "nan"
+          ]
+        },
+        {
+          "name": "Sheet1",
+          "n_rows": 8527,
+          "columns": [
+            "时间",
+            "试件温度",
+            "轴向应力",
+            "时间",
+            "试件温度",
+            "轴向应力"
+          ]
+        },
+        {
+          "name": "Sheet2",
+          "n_rows": 0,
+          "columns": []
+        },
+        {
+          "name": "Sheet3",
+          "n_rows": 0,
+          "columns": []
+        }
+      ],
+      "error": "'DataFrame' object has no attribute 'str'"
+    },
+    {
+      "source_file": "data\\thermal_stress\\raw\\温度应力\\温度应力计算.xlsx",
+      "parsed_w_b_ratio": null,
+      "parsed_restraint_code": null,
+      "parsed_restraint_percent": null,
+      "read_ok": true,
+      "sheets": [
+        {
+          "name": "Sheet1",
+          "n_rows": 13,
+          "columns": [
+            "nan",
+            "3d弹性模量E3",
+            "a",
+            "H(t)",
+            "R",
+            "1-v",
+            "T0",
+            "T(t)实测",
+            "T(t)计算",
+            "Th",
+            "Ty(t)",
+            "△T实测11",
+            "△T计算22",
+            "11温度应力",
+            "22温度应力"
+          ]
+        }
+      ],
+      "error": null,
+      "selected_sheet": "Sheet1",
+      "column_map": {
+        "time_h": "nan",
+        "specimen_temperature_c": "3d弹性模量E3",
+        "axial_stress_mpa": "a",
+        "deformation_um": "H(t)"
+      },
+      "unrecognized_columns": [
+        "nan",
+        "3d弹性模量E3",
+        "a",
+        "H(t)",
+        "R",
+        "1-v",
+        "T0",
+        "T(t)实测",
+        "T(t)计算",
+        "Th",
+        "Ty(t)",
+        "△T实测11",
+        "△T计算22"
+      ],
+      "n_timeseries_rows": 0
+    }
+  ],
+  "groups": [
+    {
+      "sample_id": "C30_wb0p36_R0",
+      "w_b_ratio": 0.36,
+      "restraint_code": "R0",
+      "restraint_percent": 0,
+      "mapping_mode": "explicit_map",
+      "n_timeseries_points": 8263,
+      "source_file": "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\C30\\基准C30\\C30基准72.xls",
+      "source_image": "0.36R0.bmp",
+      "max_temperature_c": 35.6901,
+      "max_tensile_stress_mpa": -0.9408,
+      "max_compressive_stress_mpa": 0.0967,
+      "final_stress_mpa": -0.9399
+    },
+    {
+      "sample_id": "C30_wb0p36_R50",
+      "w_b_ratio": 0.36,
+      "restraint_code": "R50",
+      "restraint_percent": 50,
+      "mapping_mode": "explicit_map",
+      "n_timeseries_points": 8263,
+      "source_file": "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\C30\\基准C30\\C30基准72.xls",
+      "source_image": "0.36R50.bmp",
+      "max_temperature_c": 35.6901,
+      "max_tensile_stress_mpa": -0.9408,
+      "max_compressive_stress_mpa": 0.0967,
+      "final_stress_mpa": -0.9399
+    },
+    {
+      "sample_id": "C30_wb0p36_R100",
+      "w_b_ratio": 0.36,
+      "restraint_code": "R100",
+      "restraint_percent": 100,
+      "mapping_mode": "explicit_map",
+      "n_timeseries_points": 8263,
+      "source_file": "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\C30\\基准C30\\C30基准72.xls",
+      "source_image": "0.36R100.bmp",
+      "max_temperature_c": 35.6901,
+      "max_tensile_stress_mpa": -0.9408,
+      "max_compressive_stress_mpa": 0.0967,
+      "final_stress_mpa": -0.9399
+    },
+    {
+      "sample_id": "C30_wb0p44_R0",
+      "w_b_ratio": 0.44,
+      "restraint_code": "R0",
+      "restraint_percent": 0,
+      "mapping_mode": "explicit_map",
+      "n_timeseries_points": 13585,
+      "source_file": "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\C30\\基准C30\\2016-05-12-1122.xls",
+      "source_image": "0.44R0.bmp",
+      "max_temperature_c": 35.6901,
+      "max_tensile_stress_mpa": -0.9408,
+      "max_compressive_stress_mpa": 0.0967,
+      "final_stress_mpa": -0.1744
+    },
+    {
+      "sample_id": "C30_wb0p44_R50",
+      "w_b_ratio": 0.44,
+      "restraint_code": "R50",
+      "restraint_percent": 50,
+      "mapping_mode": "explicit_map",
+      "n_timeseries_points": 13585,
+      "source_file": "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\C30\\基准C30\\2016-05-12-1122.xls",
+      "source_image": "0.44R50.bmp",
+      "max_temperature_c": 35.6901,
+      "max_tensile_stress_mpa": -0.9408,
+      "max_compressive_stress_mpa": 0.0967,
+      "final_stress_mpa": -0.1744
+    },
+    {
+      "sample_id": "C30_wb0p44_R100",
+      "w_b_ratio": 0.44,
+      "restraint_code": "R100",
+      "restraint_percent": 100,
+      "mapping_mode": "explicit_map",
+      "n_timeseries_points": 13585,
+      "source_file": "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\C30\\基准C30\\2016-05-12-1122.xls",
+      "source_image": "0.44R100.bmp",
+      "max_temperature_c": 35.6901,
+      "max_tensile_stress_mpa": -0.9408,
+      "max_compressive_stress_mpa": 0.0967,
+      "final_stress_mpa": -0.1744
+    },
+    {
+      "sample_id": "C30_wb0p48_R0",
+      "w_b_ratio": 0.48,
+      "restraint_code": "R0",
+      "restraint_percent": 0,
+      "mapping_mode": "explicit_map",
+      "n_timeseries_points": 7816,
+      "source_file": "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\C30\\金隅C30\\2016-05-23-1153.xls",
+      "source_image": "0.48R0.bmp",
+      "max_temperature_c": 35.2506,
+      "max_tensile_stress_mpa": -0.8556,
+      "max_compressive_stress_mpa": 0.0956,
+      "final_stress_mpa": -0.8556
+    },
+    {
+      "sample_id": "C30_wb0p48_R50",
+      "w_b_ratio": 0.48,
+      "restraint_code": "R50",
+      "restraint_percent": 50,
+      "mapping_mode": "explicit_map",
+      "n_timeseries_points": 7816,
+      "source_file": "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\C30\\金隅C30\\2016-05-23-1153.xls",
+      "source_image": "0.48R50.bmp",
+      "max_temperature_c": 35.2506,
+      "max_tensile_stress_mpa": -0.8556,
+      "max_compressive_stress_mpa": 0.0956,
+      "final_stress_mpa": -0.8556
+    },
+    {
+      "sample_id": "C30_wb0p48_R100",
+      "w_b_ratio": 0.48,
+      "restraint_code": "R100",
+      "restraint_percent": 100,
+      "mapping_mode": "explicit_map",
+      "n_timeseries_points": 7816,
+      "source_file": "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\C30\\金隅C30\\2016-05-23-1153.xls",
+      "source_image": "0.48R100.bmp",
+      "max_temperature_c": 35.2506,
+      "max_tensile_stress_mpa": -0.8556,
+      "max_compressive_stress_mpa": 0.0956,
+      "final_stress_mpa": -0.8556
+    }
+  ],
+  "missing_groups": [],
+  "unmapped_excel_files": [
+    "data\\thermal_stress\\raw\\温度应力\\C30.xls",
+    "data\\thermal_stress\\raw\\温度应力\\C30温度应力\\2016-05-12-1122.xls",
+    "data\\thermal_stress\\raw\\温度应力\\C50新.xls",
+    "data\\thermal_stress\\raw\\温度应力\\温度应力计算.xlsx"
+  ],
+  "groups_needing_manual_review": [],
+  "field_mapping_reference": {
+    "time_h": [
+      "时间",
+      "time",
+      "time_h",
+      "time(h",
+      "t/h",
+      "hour",
+      "hours",
+      "t(h",
+      "t (h",
+      "elapsed"
+    ],
+    "specimen_temperature_c": [
+      "试件温度",
+      "temperature",
+      "temp",
+      "温度",
+      "specimen",
+      "t/℃",
+      "t(c",
+      "t (c",
+      "℃"
+    ],
+    "axial_stress_mpa": [
+      "轴向应力",
+      "stress",
+      "应力",
+      "axial",
+      "mpa",
+      "σ",
+      "sigma",
+      "force"
+    ],
+    "deformation_um": [
+      "累积变位",
+      "deformation",
+      "变形",
+      "displacement",
+      "disp",
+      "um",
+      "μm",
+      "cumulative",
+      "累积",
+      "累计",
+      "strain"
+    ]
+  },
+  "notes": [
+    "restraint_percent 为试验约束档位（0/50/100），不等同于 Phase1 restraint_factor_R。",
+    "本导入不写入 training_data.csv，不生成 crack 标签。",
+    "方式 A：bmp 同目录同名 stem（如 0.36R0.xls ↔ 0.36R0.bmp）。",
+    "方式 B：data/thermal_stress/c30_group_source_map.json 显式映射（A 未命中时使用）。",
+    "方式 A 下同一 xls 不可重复分配给多个分组；方式 B 允许映射文件显式指向同一 xls。",
+    "未建立映射的分组写入 missing_groups，不强行导入。"
+  ],
+  "outputs": {
+    "timeseries_csv": "data\\thermal_stress\\c30_temperature_stress_timeseries.csv",
+    "summary_csv": "data\\thermal_stress\\c30_temperature_stress_summary.csv",
+    "field_mapping_json": "data\\thermal_stress\\c30_field_mapping.json",
+    "group_source_map_json": "data\\thermal_stress\\c30_group_source_map.json",
+    "n_timeseries_rows": 88992,
+    "n_summary_rows": 9,
+    "n_groups_imported": 9,
+    "n_missing_groups": 0
+  }
+}

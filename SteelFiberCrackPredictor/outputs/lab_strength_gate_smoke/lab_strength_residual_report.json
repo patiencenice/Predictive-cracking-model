@@ -1,0 +1,814 @@
+{
+  "data": "D:\\cursor\\code\\SteelFiberCrackPredictor\\data\\lab_strength_training.example.csv",
+  "default_method_by_task": {
+    "compressive": {
+      "strategy": "formula_plus_ridge_residual",
+      "description": "国标公式基线 + Ridge 残差（默认落盘与推荐推理组合）",
+      "residual_learner": "ridge"
+    },
+    "flexural": {
+      "strategy": "formula_only",
+      "description": "抗折默认仅使用国标公式基线（残差模型可选，不作为默认）",
+      "residual_learner": null
+    }
+  },
+  "practical_gain": false,
+  "residual_not_recommended": false,
+  "training_options": {
+    "append_source_domain": true,
+    "use_sample_weight": true,
+    "weight_local": 1.0,
+    "weight_literature": 0.7,
+    "weight_fiber_missing_mult": 0.8,
+    "source_domain_note": "source_domain 为可选试验特征；默认仍写入矩阵，但不对其效果作对外主卖点表述。"
+  },
+  "group_error_by_source_group_json": "D:\\cursor\\code\\SteelFiberCrackPredictor\\outputs\\lab_strength_gate_smoke\\lab_strength_group_error_by_source_group.json",
+  "group_error_by_source_group_md": "D:\\cursor\\code\\SteelFiberCrackPredictor\\outputs\\lab_strength_gate_smoke\\lab_strength_group_error_by_source_group.md",
+  "worst_groups_row_diagnostics_json": "D:\\cursor\\code\\SteelFiberCrackPredictor\\outputs\\lab_strength_gate_smoke\\lab_strength_worst_groups_row_diagnostics.json",
+  "worst_groups_row_diagnostics_md": "D:\\cursor\\code\\SteelFiberCrackPredictor\\outputs\\lab_strength_gate_smoke\\lab_strength_worst_groups_row_diagnostics.md",
+  "diagnostics": {
+    "source_domain_ablation": {
+      "primary_append_source_domain_true": {
+        "compressive": {
+          "oof_global_metrics": {
+            "formula_only": {
+              "mae": 0.9361464634960486,
+              "rmse": 1.2591549527012353,
+              "r2": 0.9946967485281742,
+              "mae_weighted": 0.9361464634960486,
+              "rmse_weighted": 1.2591549527012353,
+              "r2_weighted": 0.9946967485281742
+            },
+            "linear": {
+              "mae": 1.3913701920430654,
+              "rmse": 1.9207692914959182,
+              "r2": 0.9876594569156024,
+              "mae_weighted": 1.3913701920430654,
+              "rmse_weighted": 1.9207692914959182,
+              "r2_weighted": 0.9876594569156024
+            },
+            "ridge": {
+              "mae": 1.2964739732173596,
+              "rmse": 1.7987491363730077,
+              "r2": 0.9891775631106835,
+              "mae_weighted": 1.2964739732173596,
+              "rmse_weighted": 1.7987491363730077,
+              "r2_weighted": 0.9891775631106835
+            },
+            "hgb": {
+              "mae": 1.0006763667696388,
+              "rmse": 1.2176679776066026,
+              "r2": 0.9950404572837281,
+              "mae_weighted": 1.0006763667696388,
+              "rmse_weighted": 1.2176679776066026,
+              "r2_weighted": 0.9950404572837281
+            }
+          },
+          "effective_best_method_oof_mae": "formula_only"
+        },
+        "flexural": {
+          "oof_global_metrics": {
+            "formula_only": {
+              "mae": 0.03528352964345153,
+              "rmse": 0.043490739948011704,
+              "r2": 0.9971705084841384,
+              "mae_weighted": 0.03528352964345153,
+              "rmse_weighted": 0.043490739948011704,
+              "r2_weighted": 0.9971705084841384
+            },
+            "linear": {
+              "mae": 0.11297031838604603,
+              "rmse": 0.1360557864022571,
+              "r2": 0.9723083498447123,
+              "mae_weighted": 0.11297031838604603,
+              "rmse_weighted": 0.1360557864022571,
+              "r2_weighted": 0.9723083498447123
+            },
+            "ridge": {
+              "mae": 0.1079272834346958,
+              "rmse": 0.12902139364053483,
+              "r2": 0.9750977688628245,
+              "mae_weighted": 0.1079272834346958,
+              "rmse_weighted": 0.12902139364053483,
+              "r2_weighted": 0.9750977688628245
+            },
+            "hgb": {
+              "mae": 0.03515005288881129,
+              "rmse": 0.0437685982161426,
+              "r2": 0.9971342382765161,
+              "mae_weighted": 0.03515005288881129,
+              "rmse_weighted": 0.0437685982161426,
+              "r2_weighted": 0.9971342382765161
+            }
+          },
+          "effective_best_method_oof_mae": "hgb"
+        }
+      },
+      "alternate_append_source_domain_false": {
+        "compressive": {
+          "oof_global_metrics": {
+            "formula_only": {
+              "mae": 0.9361464634960486,
+              "rmse": 1.2591549527012353,
+              "r2": 0.9946967485281742,
+              "mae_weighted": 0.9361464634960486,
+              "rmse_weighted": 1.2591549527012353,
+              "r2_weighted": 0.9946967485281742
+            },
+            "linear": {
+              "mae": 1.3913701920430654,
+              "rmse": 1.9207692914959187,
+              "r2": 0.9876594569156024,
+              "mae_weighted": 1.3913701920430654,
+              "rmse_weighted": 1.9207692914959187,
+              "r2_weighted": 0.9876594569156024
+            },
+            "ridge": {
+              "mae": 1.2964739732173567,
+              "rmse": 1.7987491363730104,
+              "r2": 0.9891775631106835,
+              "mae_weighted": 1.2964739732173567,
+              "rmse_weighted": 1.7987491363730104,
+              "r2_weighted": 0.9891775631106835
+            },
+            "hgb": {
+              "mae": 1.0006763667696388,
+              "rmse": 1.2176679776066026,
+              "r2": 0.9950404572837281,
+              "mae_weighted": 1.0006763667696388,
+              "rmse_weighted": 1.2176679776066026,
+              "r2_weighted": 0.9950404572837281
+            }
+          },
+          "effective_best_method_oof_mae": "formula_only"
+        },
+        "flexural": {
+          "oof_global_metrics": {
+            "formula_only": {
+              "mae": 0.03528352964345153,
+              "rmse": 0.043490739948011704,
+              "r2": 0.9971705084841384,
+              "mae_weighted": 0.03528352964345153,
+              "rmse_weighted": 0.043490739948011704,
+              "r2_weighted": 0.9971705084841384
+            },
+            "linear": {
+              "mae": 0.11297031838604606,
+              "rmse": 0.1360557864022571,
+              "r2": 0.9723083498447123,
+              "mae_weighted": 0.11297031838604606,
+              "rmse_weighted": 0.1360557864022571,
+              "r2_weighted": 0.9723083498447123
+            },
+            "ridge": {
+              "mae": 0.10792728343469567,
+              "rmse": 0.12902139364053491,
+              "r2": 0.9750977688628244,
+              "mae_weighted": 0.10792728343469567,
+              "rmse_weighted": 0.12902139364053491,
+              "r2_weighted": 0.9750977688628244
+            },
+            "hgb": {
+              "mae": 0.03515005288881129,
+              "rmse": 0.0437685982161426,
+              "r2": 0.9971342382765161,
+              "mae_weighted": 0.03515005288881129,
+              "rmse_weighted": 0.0437685982161426,
+              "r2_weighted": 0.9971342382765161
+            }
+          },
+          "effective_best_method_oof_mae": "hgb"
+        }
+      },
+      "interpretation_unweighted_mae": {
+        "label": "关闭 source_domain 特征列",
+        "per_task": {
+          "compressive": {
+            "formula_only": {
+              "mae_primary": 0.9361464634960486,
+              "mae_alternate": 0.9361464634960486,
+              "delta_mae": 0.0,
+              "r2_primary": 0.9946967485281742,
+              "r2_alternate": 0.9946967485281742
+            },
+            "linear": {
+              "mae_primary": 1.3913701920430654,
+              "mae_alternate": 1.3913701920430654,
+              "delta_mae": 0.0,
+              "r2_primary": 0.9876594569156024,
+              "r2_alternate": 0.9876594569156024
+            },
+            "ridge": {
+              "mae_primary": 1.2964739732173596,
+              "mae_alternate": 1.2964739732173567,
+              "delta_mae": -2.886579864025407e-15,
+              "r2_primary": 0.9891775631106835,
+              "r2_alternate": 0.9891775631106835
+            },
+            "hgb": {
+              "mae_primary": 1.0006763667696388,
+              "mae_alternate": 1.0006763667696388,
+              "delta_mae": 0.0,
+              "r2_primary": 0.9950404572837281,
+              "r2_alternate": 0.9950404572837281
+            }
+          },
+          "flexural": {
+            "formula_only": {
+              "mae_primary": 0.03528352964345153,
+              "mae_alternate": 0.03528352964345153,
+              "delta_mae": 0.0,
+              "r2_primary": 0.9971705084841384,
+              "r2_alternate": 0.9971705084841384
+            },
+            "linear": {
+              "mae_primary": 0.11297031838604603,
+              "mae_alternate": 0.11297031838604606,
+              "delta_mae": 2.7755575615628914e-17,
+              "r2_primary": 0.9723083498447123,
+              "r2_alternate": 0.9723083498447123
+            },
+            "ridge": {
+              "mae_primary": 0.1079272834346958,
+              "mae_alternate": 0.10792728343469567,
+              "delta_mae": -1.3877787807814457e-16,
+              "r2_primary": 0.9750977688628245,
+              "r2_alternate": 0.9750977688628244
+            },
+            "hgb": {
+              "mae_primary": 0.03515005288881129,
+              "mae_alternate": 0.03515005288881129,
+              "delta_mae": 0.0,
+              "r2_primary": 0.9971342382765161,
+              "r2_alternate": 0.9971342382765161
+            }
+          }
+        },
+        "summary_lines": [
+          "compressive: 关闭 source_domain 特征列 下各模型 MAE 变化见 per_task",
+          "flexural: 关闭 source_domain 特征列 下各模型 MAE 变化见 per_task"
+        ]
+      }
+    },
+    "sample_weight_ablation": {
+      "primary_use_sample_weight_true": {
+        "compressive": {
+          "oof_global_metrics": {
+            "formula_only": {
+              "mae": 0.9361464634960486,
+              "rmse": 1.2591549527012353,
+              "r2": 0.9946967485281742,
+              "mae_weighted": 0.9361464634960486,
+              "rmse_weighted": 1.2591549527012353,
+              "r2_weighted": 0.9946967485281742
+            },
+            "linear": {
+              "mae": 1.3913701920430654,
+              "rmse": 1.9207692914959182,
+              "r2": 0.9876594569156024,
+              "mae_weighted": 1.3913701920430654,
+              "rmse_weighted": 1.9207692914959182,
+              "r2_weighted": 0.9876594569156024
+            },
+            "ridge": {
+              "mae": 1.2964739732173596,
+              "rmse": 1.7987491363730077,
+              "r2": 0.9891775631106835,
+              "mae_weighted": 1.2964739732173596,
+              "rmse_weighted": 1.7987491363730077,
+              "r2_weighted": 0.9891775631106835
+            },
+            "hgb": {
+              "mae": 1.0006763667696388,
+              "rmse": 1.2176679776066026,
+              "r2": 0.9950404572837281,
+              "mae_weighted": 1.0006763667696388,
+              "rmse_weighted": 1.2176679776066026,
+              "r2_weighted": 0.9950404572837281
+            }
+          },
+          "effective_best_method_oof_mae": "formula_only"
+        },
+        "flexural": {
+          "oof_global_metrics": {
+            "formula_only": {
+              "mae": 0.03528352964345153,
+              "rmse": 0.043490739948011704,
+              "r2": 0.9971705084841384,
+              "mae_weighted": 0.03528352964345153,
+              "rmse_weighted": 0.043490739948011704,
+              "r2_weighted": 0.9971705084841384
+            },
+            "linear": {
+              "mae": 0.11297031838604603,
+              "rmse": 0.1360557864022571,
+              "r2": 0.9723083498447123,
+              "mae_weighted": 0.11297031838604603,
+              "rmse_weighted": 0.1360557864022571,
+              "r2_weighted": 0.9723083498447123
+            },
+            "ridge": {
+              "mae": 0.1079272834346958,
+              "rmse": 0.12902139364053483,
+              "r2": 0.9750977688628245,
+              "mae_weighted": 0.1079272834346958,
+              "rmse_weighted": 0.12902139364053483,
+              "r2_weighted": 0.9750977688628245
+            },
+            "hgb": {
+              "mae": 0.03515005288881129,
+              "rmse": 0.0437685982161426,
+              "r2": 0.9971342382765161,
+              "mae_weighted": 0.03515005288881129,
+              "rmse_weighted": 0.0437685982161426,
+              "r2_weighted": 0.9971342382765161
+            }
+          },
+          "effective_best_method_oof_mae": "hgb"
+        }
+      },
+      "alternate_use_sample_weight_false": {
+        "compressive": {
+          "oof_global_metrics": {
+            "formula_only": {
+              "mae": 0.9361464634960486,
+              "rmse": 1.2591549527012353,
+              "r2": 0.9946967485281742,
+              "mae_weighted": 0.9361464634960486,
+              "rmse_weighted": 1.2591549527012353,
+              "r2_weighted": 0.9946967485281742
+            },
+            "linear": {
+              "mae": 1.3913701920430654,
+              "rmse": 1.9207692914959182,
+              "r2": 0.9876594569156024,
+              "mae_weighted": 1.3913701920430654,
+              "rmse_weighted": 1.9207692914959182,
+              "r2_weighted": 0.9876594569156024
+            },
+            "ridge": {
+              "mae": 1.2964739732173596,
+              "rmse": 1.7987491363730077,
+              "r2": 0.9891775631106835,
+              "mae_weighted": 1.2964739732173596,
+              "rmse_weighted": 1.7987491363730077,
+              "r2_weighted": 0.9891775631106835
+            },
+            "hgb": {
+              "mae": 1.0006763667696388,
+              "rmse": 1.2176679776066026,
+              "r2": 0.9950404572837281,
+              "mae_weighted": 1.0006763667696388,
+              "rmse_weighted": 1.2176679776066026,
+              "r2_weighted": 0.9950404572837281
+            }
+          },
+          "effective_best_method_oof_mae": "formula_only"
+        },
+        "flexural": {
+          "oof_global_metrics": {
+            "formula_only": {
+              "mae": 0.03528352964345153,
+              "rmse": 0.043490739948011704,
+              "r2": 0.9971705084841384,
+              "mae_weighted": 0.03528352964345153,
+              "rmse_weighted": 0.043490739948011704,
+              "r2_weighted": 0.9971705084841384
+            },
+            "linear": {
+              "mae": 0.11297031838604603,
+              "rmse": 0.1360557864022571,
+              "r2": 0.9723083498447123,
+              "mae_weighted": 0.11297031838604603,
+              "rmse_weighted": 0.1360557864022571,
+              "r2_weighted": 0.9723083498447123
+            },
+            "ridge": {
+              "mae": 0.1079272834346958,
+              "rmse": 0.12902139364053483,
+              "r2": 0.9750977688628245,
+              "mae_weighted": 0.1079272834346958,
+              "rmse_weighted": 0.12902139364053483,
+              "r2_weighted": 0.9750977688628245
+            },
+            "hgb": {
+              "mae": 0.03515005288881129,
+              "rmse": 0.0437685982161426,
+              "r2": 0.9971342382765161,
+              "mae_weighted": 0.03515005288881129,
+              "rmse_weighted": 0.0437685982161426,
+              "r2_weighted": 0.9971342382765161
+            }
+          },
+          "effective_best_method_oof_mae": "hgb"
+        }
+      },
+      "interpretation_unweighted_mae": {
+        "label": "关闭训练 sample_weight",
+        "per_task": {
+          "compressive": {
+            "formula_only": {
+              "mae_primary": 0.9361464634960486,
+              "mae_alternate": 0.9361464634960486,
+              "delta_mae": 0.0,
+              "r2_primary": 0.9946967485281742,
+              "r2_alternate": 0.9946967485281742
+            },
+            "linear": {
+              "mae_primary": 1.3913701920430654,
+              "mae_alternate": 1.3913701920430654,
+              "delta_mae": 0.0,
+              "r2_primary": 0.9876594569156024,
+              "r2_alternate": 0.9876594569156024
+            },
+            "ridge": {
+              "mae_primary": 1.2964739732173596,
+              "mae_alternate": 1.2964739732173596,
+              "delta_mae": 0.0,
+              "r2_primary": 0.9891775631106835,
+              "r2_alternate": 0.9891775631106835
+            },
+            "hgb": {
+              "mae_primary": 1.0006763667696388,
+              "mae_alternate": 1.0006763667696388,
+              "delta_mae": 0.0,
+              "r2_primary": 0.9950404572837281,
+              "r2_alternate": 0.9950404572837281
+            }
+          },
+          "flexural": {
+            "formula_only": {
+              "mae_primary": 0.03528352964345153,
+              "mae_alternate": 0.03528352964345153,
+              "delta_mae": 0.0,
+              "r2_primary": 0.9971705084841384,
+              "r2_alternate": 0.9971705084841384
+            },
+            "linear": {
+              "mae_primary": 0.11297031838604603,
+              "mae_alternate": 0.11297031838604603,
+              "delta_mae": 0.0,
+              "r2_primary": 0.9723083498447123,
+              "r2_alternate": 0.9723083498447123
+            },
+            "ridge": {
+              "mae_primary": 0.1079272834346958,
+              "mae_alternate": 0.1079272834346958,
+              "delta_mae": 0.0,
+              "r2_primary": 0.9750977688628245,
+              "r2_alternate": 0.9750977688628245
+            },
+            "hgb": {
+              "mae_primary": 0.03515005288881129,
+              "mae_alternate": 0.03515005288881129,
+              "delta_mae": 0.0,
+              "r2_primary": 0.9971342382765161,
+              "r2_alternate": 0.9971342382765161
+            }
+          }
+        },
+        "summary_lines": [
+          "compressive: 关闭训练 sample_weight 下各模型 MAE 变化见 per_task",
+          "flexural: 关闭训练 sample_weight 下各模型 MAE 变化见 per_task"
+        ]
+      }
+    },
+    "light_ablation_mae_drop": {
+      "compressive": {
+        "formula_only": {
+          "mae": 0.9361464634960486,
+          "relative_mae_drop_vs_formula": 0.0
+        },
+        "ridge": {
+          "mae": 1.2964739732173596,
+          "relative_mae_drop_vs_formula": -0.3849050589537712
+        }
+      },
+      "flexural": {
+        "formula_only": {
+          "mae": 0.03528352964345153,
+          "relative_mae_drop_vs_formula": 0.0
+        },
+        "ridge": {
+          "mae": 0.1079272834346958,
+          "relative_mae_drop_vs_formula": -2.0588573344369654
+        },
+        "hgb": {
+          "mae": 0.03515005288881129,
+          "relative_mae_drop_vs_formula": 0.003782976249515114
+        }
+      }
+    }
+  },
+  "group_worst_mae_by_task": {
+    "formula_only": {
+      "compressive": {
+        "source_group": "G3",
+        "mae": 1.155125340880835
+      },
+      "flexural": {
+        "source_group": "G2",
+        "mae": 0.05074272057054099
+      }
+    },
+    "hgb": {
+      "compressive": {
+        "source_group": "G2",
+        "mae": 1.2859750578543099
+      },
+      "flexural": {
+        "source_group": "G2",
+        "mae": 0.04536796274299544
+      }
+    }
+  },
+  "n_rows_csv": 24,
+  "n_rows_after_task_filter": 24,
+  "n_rows_dropped_due_to_missing_before_patch_equivalent": 0,
+  "n_rows_final_used": 24,
+  "fiber_type_missing_rows_used": 0,
+  "oof_predictions_csv": "D:\\cursor\\code\\SteelFiberCrackPredictor\\outputs\\lab_strength_gate_smoke\\lab_strength_oof_predictions.csv",
+  "oof_diagnosis_json": "D:\\cursor\\code\\SteelFiberCrackPredictor\\outputs\\lab_strength_gate_smoke\\lab_strength_oof_diagnosis.json",
+  "oof_diagnosis_md": "D:\\cursor\\code\\SteelFiberCrackPredictor\\outputs\\lab_strength_gate_smoke\\lab_strength_oof_diagnosis.md",
+  "compressive": {
+    "cv_fold_metrics": {
+      "task": "compressive",
+      "n_samples": 24,
+      "cv": "GroupKFold",
+      "n_folds": 5,
+      "formula_only": {
+        "mae": {
+          "mean": 0.9350069725941651,
+          "std": 0.1498912602741851
+        },
+        "rmse": {
+          "mean": 1.2392232870896687,
+          "std": 0.24201222133104006
+        },
+        "r2": {
+          "mean": 0.9895609310829329,
+          "std": 0.01079094066726736
+        }
+      },
+      "linear": {
+        "mae": {
+          "mean": 1.3752177534072128,
+          "std": 0.33972750285731756
+        },
+        "rmse": {
+          "mean": 1.8296185523025073,
+          "std": 0.552710074372782
+        },
+        "r2": {
+          "mean": 0.976408845376497,
+          "std": 0.01985863072714223
+        }
+      },
+      "ridge": {
+        "mae": {
+          "mean": 1.2773194141570499,
+          "std": 0.3628561227721185
+        },
+        "rmse": {
+          "mean": 1.7058778814198425,
+          "std": 0.5431211830480273
+        },
+        "r2": {
+          "mean": 0.9787941204247852,
+          "std": 0.0185093730196837
+        }
+      },
+      "hgb": {
+        "mae": {
+          "mean": 0.9870418587306629,
+          "std": 0.290756244246432
+        },
+        "rmse": {
+          "mean": 1.17534967526603,
+          "std": 0.3129024016684102
+        },
+        "r2": {
+          "mean": 0.9914319282637507,
+          "std": 0.006109900069933956
+        }
+      }
+    },
+    "oof_global_metrics": {
+      "formula_only": {
+        "mae": 0.9361464634960486,
+        "rmse": 1.2591549527012353,
+        "r2": 0.9946967485281742,
+        "mae_weighted": 0.9361464634960486,
+        "rmse_weighted": 1.2591549527012353,
+        "r2_weighted": 0.9946967485281742
+      },
+      "linear": {
+        "mae": 1.3913701920430654,
+        "rmse": 1.9207692914959182,
+        "r2": 0.9876594569156024,
+        "mae_weighted": 1.3913701920430654,
+        "rmse_weighted": 1.9207692914959182,
+        "r2_weighted": 0.9876594569156024
+      },
+      "ridge": {
+        "mae": 1.2964739732173596,
+        "rmse": 1.7987491363730077,
+        "r2": 0.9891775631106835,
+        "mae_weighted": 1.2964739732173596,
+        "rmse_weighted": 1.7987491363730077,
+        "r2_weighted": 0.9891775631106835
+      },
+      "hgb": {
+        "mae": 1.0006763667696388,
+        "rmse": 1.2176679776066026,
+        "r2": 0.9950404572837281,
+        "mae_weighted": 1.0006763667696388,
+        "rmse_weighted": 1.2176679776066026,
+        "r2_weighted": 0.9950404572837281
+      }
+    },
+    "best_residual_learner_by_oof_mae": "hgb",
+    "formula_beats_all_residual_learners_oof_mae": true,
+    "effective_best_method_oof_mae": "formula_only"
+  },
+  "flexural": {
+    "cv_fold_metrics": {
+      "task": "flexural",
+      "n_samples": 24,
+      "cv": "GroupKFold",
+      "n_folds": 5,
+      "formula_only": {
+        "mae": {
+          "mean": 0.0351532026028289,
+          "std": 0.012249817820360769
+        },
+        "rmse": {
+          "mean": 0.041631742535222525,
+          "std": 0.014018753597191156
+        },
+        "r2": {
+          "mean": 0.9895799953174158,
+          "std": 0.014011773563020817
+        }
+      },
+      "linear": {
+        "mae": {
+          "mean": 0.11313752076055006,
+          "std": 0.031051567951168323
+        },
+        "rmse": {
+          "mean": 0.13101940083193936,
+          "std": 0.03878820784652088
+        },
+        "r2": {
+          "mean": 0.9085952533886601,
+          "std": 0.1277441626119127
+        }
+      },
+      "ridge": {
+        "mae": {
+          "mean": 0.1081514350035108,
+          "std": 0.025676541351692447
+        },
+        "rmse": {
+          "mean": 0.1254278917255714,
+          "std": 0.03206933508976862
+        },
+        "r2": {
+          "mean": 0.9208863381017564,
+          "std": 0.10559760966352351
+        }
+      },
+      "hgb": {
+        "mae": {
+          "mean": 0.03489102257887326,
+          "std": 0.01001379163440873
+        },
+        "rmse": {
+          "mean": 0.041856619851654966,
+          "std": 0.013273708780132855
+        },
+        "r2": {
+          "mean": 0.9908838755006102,
+          "std": 0.011454227958458425
+        }
+      }
+    },
+    "oof_global_metrics": {
+      "formula_only": {
+        "mae": 0.03528352964345153,
+        "rmse": 0.043490739948011704,
+        "r2": 0.9971705084841384,
+        "mae_weighted": 0.03528352964345153,
+        "rmse_weighted": 0.043490739948011704,
+        "r2_weighted": 0.9971705084841384
+      },
+      "linear": {
+        "mae": 0.11297031838604603,
+        "rmse": 0.1360557864022571,
+        "r2": 0.9723083498447123,
+        "mae_weighted": 0.11297031838604603,
+        "rmse_weighted": 0.1360557864022571,
+        "r2_weighted": 0.9723083498447123
+      },
+      "ridge": {
+        "mae": 0.1079272834346958,
+        "rmse": 0.12902139364053483,
+        "r2": 0.9750977688628245,
+        "mae_weighted": 0.1079272834346958,
+        "rmse_weighted": 0.12902139364053483,
+        "r2_weighted": 0.9750977688628245
+      },
+      "hgb": {
+        "mae": 0.03515005288881129,
+        "rmse": 0.0437685982161426,
+        "r2": 0.9971342382765161,
+        "mae_weighted": 0.03515005288881129,
+        "rmse_weighted": 0.0437685982161426,
+        "r2_weighted": 0.9971342382765161
+      }
+    },
+    "best_residual_learner_by_oof_mae": "hgb",
+    "formula_beats_all_residual_learners_oof_mae": false,
+    "effective_best_method_oof_mae": "hgb"
+  },
+  "best_residual_models": {
+    "compressive": "hgb",
+    "flexural": "hgb"
+  },
+  "automated_summary": {
+    "compressive": {
+      "best_residual_learner_oof_mae": "hgb",
+      "oof_mae_formula_only": 0.9361464634960486,
+      "oof_mae_best_residual_learner": 1.0006763667696388,
+      "effective_best_method_oof_mae": "formula_only",
+      "oof_mae_effective_best": 0.9361464634960486,
+      "formula_beats_all_residual_learners_oof_mae": true,
+      "residual_models_with_lower_oof_mae_than_formula": [],
+      "all_three_residuals_beat_formula_mae": false,
+      "relative_mae_drop_effective_vs_formula": 0.0
+    },
+    "flexural": {
+      "best_residual_learner_oof_mae": "hgb",
+      "oof_mae_formula_only": 0.03528352964345153,
+      "oof_mae_best_residual_learner": 0.03515005288881129,
+      "effective_best_method_oof_mae": "hgb",
+      "oof_mae_effective_best": 0.03515005288881129,
+      "formula_beats_all_residual_learners_oof_mae": false,
+      "residual_models_with_lower_oof_mae_than_formula": [
+        "hgb"
+      ],
+      "all_three_residuals_beat_formula_mae": false,
+      "relative_mae_drop_effective_vs_formula": 0.003782976249515114
+    },
+    "ui_integration_hint": {
+      "both_tasks_residual_beat_formula_mae": false,
+      "both_tasks_effective_best_is_residual_not_formula": false,
+      "meaningful_relative_drop_gte_3pct_both": false
+    },
+    "default_method_by_task": {
+      "compressive": {
+        "strategy": "formula_plus_ridge_residual",
+        "description": "国标公式基线 + Ridge 残差（默认落盘与推荐推理组合）",
+        "residual_learner": "ridge"
+      },
+      "flexural": {
+        "strategy": "formula_only",
+        "description": "抗折默认仅使用国标公式基线（残差模型可选，不作为默认）",
+        "residual_learner": null
+      }
+    },
+    "light_ablation_mae_drop": {
+      "compressive": {
+        "formula_only": {
+          "mae": 0.9361464634960486,
+          "relative_mae_drop_vs_formula": 0.0
+        },
+        "ridge": {
+          "mae": 1.2964739732173596,
+          "relative_mae_drop_vs_formula": -0.3849050589537712
+        }
+      },
+      "flexural": {
+        "formula_only": {
+          "mae": 0.03528352964345153,
+          "relative_mae_drop_vs_formula": 0.0
+        },
+        "ridge": {
+          "mae": 0.1079272834346958,
+          "relative_mae_drop_vs_formula": -2.0588573344369654
+        },
+        "hgb": {
+          "mae": 0.03515005288881129,
+          "relative_mae_drop_vs_formula": 0.003782976249515114
+        }
+      }
+    },
+    "practical_gain": false,
+    "residual_not_recommended": false
+  },
+  "saved_residual_by_task": {
+    "compressive": "ridge",
+    "flexural": "hgb"
+  }
+}

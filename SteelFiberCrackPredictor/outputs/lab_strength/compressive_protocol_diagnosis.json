@@ -1,0 +1,322 @@
+{
+  "input_csv": "D:\\cursor\\code\\SteelFiberCrackPredictor\\data\\lab_strength_training_merged.csv",
+  "n_rows_csv": 36,
+  "compressive_protocol_audit": {
+    "lab_specimen": {
+      "present": true,
+      "n_nonempty": 0,
+      "nonempty_ratio": 0.0,
+      "top_values_sample": [],
+      "auditability": "present_but_empty"
+    },
+    "lab_cube_edge_mm": {
+      "present": true,
+      "n_nonempty": 0,
+      "nonempty_ratio": 0.0,
+      "top_values_sample": [],
+      "auditability": "present_but_empty"
+    },
+    "lab_loading_compression": {
+      "present": true,
+      "n_nonempty": 0,
+      "nonempty_ratio": 0.0,
+      "top_values_sample": [],
+      "auditability": "present_but_empty"
+    },
+    "curing_days": {
+      "present": true,
+      "n_nonempty": 36,
+      "nonempty_ratio": 1.0,
+      "top_values_sample": [
+        {
+          "value": "28.0",
+          "count": 12
+        },
+        {
+          "value": "62.0",
+          "count": 2
+        },
+        {
+          "value": "48.0",
+          "count": 2
+        },
+        {
+          "value": "31.0",
+          "count": 2
+        },
+        {
+          "value": "68.0",
+          "count": 1
+        }
+      ],
+      "auditability": "ok"
+    },
+    "curing_condition_fields": {
+      "detected_columns": [
+        "humidity",
+        "lab_curing_note",
+        "lab_curing_regime",
+        "temperature"
+      ],
+      "presence": {
+        "humidity": {
+          "present": true,
+          "n_nonempty": 36,
+          "nonempty_ratio": 1.0,
+          "top_values_sample": [
+            {
+              "value": "95.0",
+              "count": 12
+            },
+            {
+              "value": "43.16729596849459",
+              "count": 1
+            },
+            {
+              "value": "53.731653814387855",
+              "count": 1
+            },
+            {
+              "value": "79.26443861781573",
+              "count": 1
+            },
+            {
+              "value": "44.30516816481472",
+              "count": 1
+            }
+          ],
+          "auditability": "ok"
+        },
+        "lab_curing_note": {
+          "present": true,
+          "n_nonempty": 0,
+          "nonempty_ratio": 0.0,
+          "top_values_sample": [],
+          "auditability": "present_but_empty"
+        },
+        "lab_curing_regime": {
+          "present": true,
+          "n_nonempty": 0,
+          "nonempty_ratio": 0.0,
+          "top_values_sample": [],
+          "auditability": "present_but_empty"
+        },
+        "temperature": {
+          "present": true,
+          "n_nonempty": 36,
+          "nonempty_ratio": 1.0,
+          "top_values_sample": [
+            {
+              "value": "20.0",
+              "count": 12
+            },
+            {
+              "value": "14.28247096393981",
+              "count": 1
+            },
+            {
+              "value": "18.74572542356136",
+              "count": 1
+            },
+            {
+              "value": "19.87859211973073",
+              "count": 1
+            },
+            {
+              "value": "35.77941067206898",
+              "count": 1
+            }
+          ],
+          "auditability": "ok"
+        }
+      },
+      "standard_curing_detection": {
+        "has_explicit_standard_curing_field": true,
+        "mode": "lab_curing_regime",
+        "matched_columns": [
+          "lab_curing_regime"
+        ],
+        "n_rows_marked_standard": 0
+      }
+    },
+    "cube_strength_semantic_fields": {
+      "detected_columns": [
+        "cube_strength_mpa_semantics",
+        "cube_strength_mpa_source_note"
+      ],
+      "note": "检测到可用于解释 cube_strength_mpa 语义的列。"
+    },
+    "lab_protocol_closed_flag_compressive": {
+      "present": true,
+      "n_nonempty": 0,
+      "nonempty_ratio": 0.0,
+      "top_values_sample": [],
+      "auditability": "present_but_empty"
+    }
+  },
+  "compressive_candidate_sets": {
+    "strict": {
+      "n_rows": 0,
+      "source_groups": [],
+      "is_suitable_for_standalone_model_now": false,
+      "conclusion": "暂不建议单独建模（样本量或分组规模不足）"
+    },
+    "relaxed": {
+      "n_rows": 0,
+      "source_groups": [],
+      "is_suitable_for_standalone_model_now": false,
+      "conclusion": "暂不建议单独建模（样本量或分组规模不足）"
+    }
+  },
+  "compressive_worst_group_review": [
+    {
+      "source_group": "XUkun/C33_BASE",
+      "n_rows": 1,
+      "cube_strength_mpa_values": [
+        30.0
+      ],
+      "compressive_true_values": [
+        40.38
+      ],
+      "formula_bias": {
+        "n": 1,
+        "mae_formula_only": 10.530000000000001,
+        "pred_minus_true_formula_only": -10.530000000000001
+      },
+      "protocol_field_missing_summary": {
+        "lab_specimen": {
+          "present": true,
+          "n_nonempty": 0
+        },
+        "lab_cube_edge_mm": {
+          "present": true,
+          "n_nonempty": 0
+        },
+        "lab_loading_compression": {
+          "present": true,
+          "n_nonempty": 0
+        },
+        "curing_days": {
+          "present": true,
+          "n_nonempty": 1
+        }
+      },
+      "suggest_needs_manual_review": true,
+      "suspected_primary_issue": "protocol_inconsistency_or_missing_fields"
+    },
+    {
+      "source_group": "XUkun/C35_BASE",
+      "n_rows": 1,
+      "cube_strength_mpa_values": [
+        40.0
+      ],
+      "compressive_true_values": [
+        49.82
+      ],
+      "formula_bias": {
+        "n": 1,
+        "mae_formula_only": 10.020000000000003,
+        "pred_minus_true_formula_only": -10.020000000000003
+      },
+      "protocol_field_missing_summary": {
+        "lab_specimen": {
+          "present": true,
+          "n_nonempty": 0
+        },
+        "lab_cube_edge_mm": {
+          "present": true,
+          "n_nonempty": 0
+        },
+        "lab_loading_compression": {
+          "present": true,
+          "n_nonempty": 0
+        },
+        "curing_days": {
+          "present": true,
+          "n_nonempty": 1
+        }
+      },
+      "suggest_needs_manual_review": true,
+      "suspected_primary_issue": "protocol_inconsistency_or_missing_fields"
+    },
+    {
+      "source_group": "XUkun/C37_BASE",
+      "n_rows": 1,
+      "cube_strength_mpa_values": [
+        40.0
+      ],
+      "compressive_true_values": [
+        49.62
+      ],
+      "formula_bias": {
+        "n": 1,
+        "mae_formula_only": 9.82,
+        "pred_minus_true_formula_only": -9.82
+      },
+      "protocol_field_missing_summary": {
+        "lab_specimen": {
+          "present": true,
+          "n_nonempty": 0
+        },
+        "lab_cube_edge_mm": {
+          "present": true,
+          "n_nonempty": 0
+        },
+        "lab_loading_compression": {
+          "present": true,
+          "n_nonempty": 0
+        },
+        "curing_days": {
+          "present": true,
+          "n_nonempty": 1
+        }
+      },
+      "suggest_needs_manual_review": true,
+      "suspected_primary_issue": "protocol_inconsistency_or_missing_fields"
+    },
+    {
+      "source_group": "XUkun/C41_BASE",
+      "n_rows": 1,
+      "cube_strength_mpa_values": [
+        50.0
+      ],
+      "compressive_true_values": [
+        63.21
+      ],
+      "formula_bias": {
+        "n": 1,
+        "mae_formula_only": 13.46,
+        "pred_minus_true_formula_only": -13.46
+      },
+      "protocol_field_missing_summary": {
+        "lab_specimen": {
+          "present": true,
+          "n_nonempty": 0
+        },
+        "lab_cube_edge_mm": {
+          "present": true,
+          "n_nonempty": 0
+        },
+        "lab_loading_compression": {
+          "present": true,
+          "n_nonempty": 0
+        },
+        "curing_days": {
+          "present": true,
+          "n_nonempty": 1
+        }
+      },
+      "suggest_needs_manual_review": true,
+      "suspected_primary_issue": "protocol_inconsistency_or_missing_fields"
+    }
+  ],
+  "references": {
+    "group_error_json": "D:\\cursor\\code\\SteelFiberCrackPredictor\\outputs\\lab_strength\\lab_strength_group_error_by_source_group.json",
+    "oof_diagnosis_json": "D:\\cursor\\code\\SteelFiberCrackPredictor\\outputs\\lab_strength\\lab_strength_oof_diagnosis.json",
+    "oof_formula_bias_overview": {
+      "formula_bias_mean_y_minus_formula": 1.8545322702933666,
+      "note": "均值为正：整体上公式略低估真值（y_true 高于 formula_pred）。"
+    }
+  },
+  "scope_note": "只读诊断，不修改训练逻辑、不触发训练。"
+}

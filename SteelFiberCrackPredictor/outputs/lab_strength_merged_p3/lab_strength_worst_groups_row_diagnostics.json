@@ -1,0 +1,67 @@
+{
+  "groups": {
+    "compressive": {
+      "source_group": "XUkun/C30_BASE",
+      "n_rows": 1,
+      "rows": [
+        {
+          "row_id": 24,
+          "fold_id": 3,
+          "y_true": 48.99,
+          "formula_pred": 29.85,
+          "ridge_pred": 42.05554696454123,
+          "hgb_pred": 31.508567734450693,
+          "formula_pred_minus_true": -19.14,
+          "ridge_pred_minus_true": -6.934453035458773,
+          "hgb_pred_minus_true": -17.48143226554931
+        }
+      ],
+      "bias_summary": {
+        "formula_only": {
+          "mean_pred_minus_true": -19.14,
+          "interpretation": "均值<0：该组内该模型整体偏低。"
+        },
+        "ridge": {
+          "mean_pred_minus_true": -6.934453035458773,
+          "interpretation": "均值<0：该组内该模型整体偏低。"
+        },
+        "hgb": {
+          "mean_pred_minus_true": -17.48143226554931,
+          "interpretation": "均值<0：该组内该模型整体偏低。"
+        }
+      }
+    },
+    "flexural": {
+      "source_group": "XUkun/C41_BASE",
+      "n_rows": 1,
+      "rows": [
+        {
+          "row_id": 35,
+          "fold_id": 4,
+          "y_true": 7.24,
+          "formula_pred": 5.046102349249931,
+          "ridge_pred": 6.936557781507626,
+          "hgb_pred": 5.334227328037536,
+          "formula_pred_minus_true": -2.1938976507500696,
+          "ridge_pred_minus_true": -0.30344221849237396,
+          "hgb_pred_minus_true": -1.9057726719624641
+        }
+      ],
+      "bias_summary": {
+        "formula_only": {
+          "mean_pred_minus_true": -2.1938976507500696,
+          "interpretation": "均值<0：该组内该模型整体偏低。"
+        },
+        "ridge": {
+          "mean_pred_minus_true": -0.30344221849237396,
+          "interpretation": "均值<0：该组内该模型整体偏低。"
+        },
+        "hgb": {
+          "mean_pred_minus_true": -1.9057726719624641,
+          "interpretation": "均值<0：该组内该模型整体偏低。"
+        }
+      }
+    }
+  },
+  "note": "pred_minus_true 为正表示整体高估真值。"
+}

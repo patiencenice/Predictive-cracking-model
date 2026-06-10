@@ -1,0 +1,56 @@
+{
+  "standard_columns": [
+    "time_h",
+    "specimen_temperature_c",
+    "axial_stress_mpa",
+    "deformation_um"
+  ],
+  "aliases": {
+    "time_h": [
+      "时间",
+      "time",
+      "time_h",
+      "time(h",
+      "t/h",
+      "hour",
+      "hours",
+      "t(h",
+      "t (h",
+      "elapsed"
+    ],
+    "specimen_temperature_c": [
+      "试件温度",
+      "temperature",
+      "temp",
+      "温度",
+      "specimen",
+      "t/℃",
+      "t(c",
+      "t (c",
+      "℃"
+    ],
+    "axial_stress_mpa": [
+      "轴向应力",
+      "stress",
+      "应力",
+      "axial",
+      "mpa",
+      "σ",
+      "sigma",
+      "force"
+    ],
+    "deformation_um": [
+      "累积变位",
+      "deformation",
+      "变形",
+      "displacement",
+      "disp",
+      "um",
+      "μm",
+      "cumulative",
+      "累积",
+      "累计",
+      "strain"
+    ]
+  }
+}

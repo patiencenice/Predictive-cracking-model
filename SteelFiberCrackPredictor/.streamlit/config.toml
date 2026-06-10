@@ -1,0 +1,17 @@
+[theme]
+primaryColor = "#1a5f7a"
+backgroundColor = "#f4f7fb"
+secondaryBackgroundColor = "#ffffff"
+textColor = "#1e293b"
+font = "sans serif"
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"
+
+[server]
+# 略缩侧栏，把横向空间留给主结果区
+enableCORS = false
+enableXsrfProtection = true

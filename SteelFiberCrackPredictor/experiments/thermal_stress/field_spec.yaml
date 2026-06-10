@@ -1,0 +1,111 @@
+# 温度应力解释板块（Phase 1）字段规范
+# 不并入主 FEATURE_COLUMNS；不替代 crack_* 训练标签。
+
+version: 1
+module: thermal_stress_phase1
+
+A_raw_inputs:
+  description: 原始工程输入（可为空；禁止在派生中静默填 0 冒充已知）
+  fields:
+    - ambient_temperature          # °C
+    - casting_temperature
+    - curing_temperature
+    - T_reference                  # °C，与 T_peak_observed 配对求差
+    - delta_T_user                 # °C，用户直接给出的控制温差
+    - T_peak_observed
+    - delta_T_inner_outer          # °C，内外温差（优先级最高）
+    - wall_thickness_mm
+    - hydration_heat_proxy_level   # enum: low | medium | high
+    - surface_insulation_level     # enum: low | medium | high
+    - thermal_expansion_alpha      # 1/K 或 1/°C
+    - elastic_modulus_E_user       # MPa（>100 视为 MPa；否则可按 GPa×1000 由 derive 解释）
+    - restraint_level              # enum: low | medium | high（缺失则 R=-1）
+    - segment_length_m
+    - slip_layer_present           # 0/1 或 false/true
+    - rock_stiffness_class         # enum: soft | medium | hard
+    - rebar_constraint_class       # enum: light | medium | heavy
+
+A_optional_measured_strength:
+  description: 实测抗拉/抗折（可选；η 分母 f_t 优先实测）
+  fields:
+    - splitting_tensile_strength_mpa   # 劈裂抗拉 ft，MPa；优先用于 η
+    - flexural_strength_mpa            # 抗折，MPa；无劈裂时备选代理
+
+A_optional_temperature_path:
+  description: 温度路径（可选；解释用，不强制进入 σ_T* 基线公式）
+  fields:
+    - core_peak_temperature_c          # 芯部峰值温度 ℃
+    - surface_temperature_c            # 表面温度 ℃
+    - time_to_peak_temperature_h       # 达峰时间 h
+    - cooling_rate_c_per_h             # 冷却速率 ℃/h
+
+A_optional_restraint_test:
+  description: C30 等仪器试验原始约束（≠ restraint_level → restraint_factor_R）
+  fields:
+    - restraint_percent                # 0 / 50 / 100
+    - restraint_code                   # R0 | R50 | R100
+
+A_optional_crack_observation:
+  description: 温度裂缝观测（仅验证 η–开裂关系，不进主预测）
+  fields:
+    - thermal_crack_observed           # bool 或 unknown
+    - thermal_crack_time_h
+    - thermal_crack_width_mm
+    - apparent_crack_filtered          # 是否已过滤表观裂缝
+
+B_derived:
+  description: 派生量与无量纲指数（非 MPa 热应力）
+  fields:
+    - delta_T_eff
+    - delta_T_eff_source           # 诊断用：inner_outer | user | peak_minus_reference | missing
+    - cooling_rate                 # 近似：|delta_T_eff|/max(segment_length_m, eps)（K/m 量级）
+    - thermal_gradient_index       # delta_T_eff / max(wall_thickness_mm, eps_wall)
+    - E_norm                       # [0,1]，由 E_user 或 cube_strength_mpa 估计 E 后归一
+    - alpha_norm                   # [0,1]，由 alpha 相对典型混凝土区间归一
+    - restraint_factor_R           # [0,1] 或缺失时 -1
+    - thermal_stress_index         # 无量纲；关键链断裂时为 -1
+    - thermal_crack_risk_index     # 在 thermal_stress_index 上叠 hydration/insulation 系数（可选枚举缺失则系数=1）
+
+C_missing_flags:
+  description: 每个关键派生量必须带成对 xxx_missing_flag（1=不可信/不可算，0=本规则下已闭合）
+  rule: |
+    禁止将未知输入自动改写为 0。
+    指数类（thermal_stress_index、thermal_crack_risk_index）在关键链断裂时输出 -1 且 *_missing_flag=1。
+    restraint_level 缺失或非法时 restraint_factor_R=-1，restraint_factor_R_missing_flag=1。
+
+enums:
+  restraint_level: [low, medium, high]
+  restraint_code: [R0, R50, R100]
+  rock_stiffness_class: [soft, medium, hard]
+  rebar_constraint_class: [light, medium, heavy]
+  hydration_heat_proxy_level: [low, medium, high]
+  surface_insulation_level: [low, medium, high]
+
+derive_constants:
+  eps_wall_mm: 1.0e-3
+  eps_segment_m: 1.0e-2
+  restraint_base:
+    low: 0.25
+    medium: 0.50
+    high: 0.75
+  wall_thickness_mm_thresholds:
+    tier_400: 400
+    tier_800: 800
+    tier_1200: 1200
+  wall_thickness_multipliers:
+    default: 1.0
+    above_400: 1.05
+    above_800: 1.08
+    above_1200: 1.10
+  rock_hard_multiplier: 1.05
+  rebar_heavy_multiplier: 1.05
+  slip_layer_multiplier: 0.775   # 取 0.70~0.85 中值
+  E_norm:
+    E_from_fcu_sqrt_coef: 4700   # MPa，Ec ≈ coef * sqrt(fcu_MPa)，仅作 E 缺失时的工程代理
+    fcu_ref_min_mpa: 25
+    fcu_ref_max_mpa: 55
+    E_user_ref_min_mpa: 25000
+    E_user_ref_max_mpa: 45000
+  alpha_norm:
+    alpha_min_per_k: 8.0e-6
+    alpha_max_per_k: 13.0e-6

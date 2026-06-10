@@ -1,0 +1,197 @@
+{
+  "generated_at_iso": "2026-05-23T11:58:33+00:00",
+  "method": "multi_source_auto_map",
+  "sources_used": [
+    "bmp_filename",
+    "xls_fingerprint_and_folder",
+    "training_data.csv w/b tier validation",
+    "literature w/b range",
+    "curve_prefix_72_vs_2016-05-12"
+  ],
+  "training_wb_validation": {
+    "source": "data\\training_data.csv",
+    "tiers": {
+      "0.36": {
+        "n_rows_within_0.02": 25,
+        "validated_in_training_db": true
+      },
+      "0.44": {
+        "n_rows_within_0.02": 23,
+        "validated_in_training_db": true
+      },
+      "0.48": {
+        "n_rows_within_0.02": 21,
+        "validated_in_training_db": true
+      }
+    }
+  },
+  "literature_bridge": {
+    "thermal_stress_matrix_in_literature": false,
+    "wb_range_covers_036_044_048": [
+      {
+        "source": "data/literature/example_raw_extracted.csv",
+        "w_b_min": 0.38,
+        "w_b_max": 0.4,
+        "covers_matrix_wb": false
+      },
+      {
+        "source": "data/training_data.csv",
+        "w_b_min": 0.3015,
+        "w_b_max": 0.4991,
+        "covers_matrix_wb": true
+      }
+    ],
+    "note": "文献/主表仅校验 w/b 量纲，不能行级对齐温度应力九组"
+  },
+  "curve_prefix_evidence": {
+    "verified": true,
+    "prefix_points": 8263,
+    "max_stress_diff_mpa": 0.0,
+    "interpretation": "0.36档xls为0.44档同试验早期截断"
+  },
+  "wb_tier_to_xls": {
+    "0.36": {
+      "path": "data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/C30基准72.xls",
+      "reason": "文件名72≈73h；为2016-05-12长试验截断前缀；基准C30子目录",
+      "confidence": 0.99
+    },
+    "0.44": {
+      "path": "data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/2016-05-12-1122.xls",
+      "reason": "完整长试验≈120h；有表头Sheet4；与基准72同曲线前缀",
+      "confidence": 0.93
+    },
+    "0.48": {
+      "path": "data/thermal_stress/raw/温度应力/C30温度应力/C30/金隅C30/2016-05-23-1153.xls",
+      "reason": "金隅C30独立子目录；唯一较低T_max与σ_t指纹",
+      "confidence": 0.96
+    }
+  },
+  "assignments": [
+    {
+      "sample_id": "C30_wb0p36_R0",
+      "bmp": "C30温度应力/0.36R0.bmp",
+      "w_b_ratio": 0.36,
+      "restraint_code": "R0",
+      "xls_path": "data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/C30基准72.xls",
+      "w_b_confidence": 0.99,
+      "r_source": "bmp_filename",
+      "r_confidence": 0.85,
+      "r_xls_independent": false,
+      "reason": "文件名72≈73h；为2016-05-12长试验截断前缀；基准C30子目录"
+    },
+    {
+      "sample_id": "C30_wb0p36_R100",
+      "bmp": "C30温度应力/0.36R100.bmp",
+      "w_b_ratio": 0.36,
+      "restraint_code": "R100",
+      "xls_path": "data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/C30基准72.xls",
+      "w_b_confidence": 0.99,
+      "r_source": "bmp_filename",
+      "r_confidence": 0.85,
+      "r_xls_independent": false,
+      "reason": "文件名72≈73h；为2016-05-12长试验截断前缀；基准C30子目录"
+    },
+    {
+      "sample_id": "C30_wb0p36_R50",
+      "bmp": "C30温度应力/0.36R50.bmp",
+      "w_b_ratio": 0.36,
+      "restraint_code": "R50",
+      "xls_path": "data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/C30基准72.xls",
+      "w_b_confidence": 0.99,
+      "r_source": "bmp_filename",
+      "r_confidence": 0.85,
+      "r_xls_independent": false,
+      "reason": "文件名72≈73h；为2016-05-12长试验截断前缀；基准C30子目录"
+    },
+    {
+      "sample_id": "C30_wb0p44_R0",
+      "bmp": "C30温度应力/0.44R0.bmp",
+      "w_b_ratio": 0.44,
+      "restraint_code": "R0",
+      "xls_path": "data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/2016-05-12-1122.xls",
+      "w_b_confidence": 0.93,
+      "r_source": "bmp_filename",
+      "r_confidence": 0.85,
+      "r_xls_independent": false,
+      "reason": "完整长试验≈120h；有表头Sheet4；与基准72同曲线前缀"
+    },
+    {
+      "sample_id": "C30_wb0p44_R100",
+      "bmp": "C30温度应力/0.44R100.bmp",
+      "w_b_ratio": 0.44,
+      "restraint_code": "R100",
+      "xls_path": "data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/2016-05-12-1122.xls",
+      "w_b_confidence": 0.93,
+      "r_source": "bmp_filename",
+      "r_confidence": 0.85,
+      "r_xls_independent": false,
+      "reason": "完整长试验≈120h；有表头Sheet4；与基准72同曲线前缀"
+    },
+    {
+      "sample_id": "C30_wb0p44_R50",
+      "bmp": "C30温度应力/0.44R50.bmp",
+      "w_b_ratio": 0.44,
+      "restraint_code": "R50",
+      "xls_path": "data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/2016-05-12-1122.xls",
+      "w_b_confidence": 0.93,
+      "r_source": "bmp_filename",
+      "r_confidence": 0.85,
+      "r_xls_independent": false,
+      "reason": "完整长试验≈120h；有表头Sheet4；与基准72同曲线前缀"
+    },
+    {
+      "sample_id": "C30_wb0p48_R0",
+      "bmp": "C30温度应力/0.48R0.bmp",
+      "w_b_ratio": 0.48,
+      "restraint_code": "R0",
+      "xls_path": "data/thermal_stress/raw/温度应力/C30温度应力/C30/金隅C30/2016-05-23-1153.xls",
+      "w_b_confidence": 0.96,
+      "r_source": "bmp_filename",
+      "r_confidence": 0.85,
+      "r_xls_independent": false,
+      "reason": "金隅C30独立子目录；唯一较低T_max与σ_t指纹"
+    },
+    {
+      "sample_id": "C30_wb0p48_R100",
+      "bmp": "C30温度应力/0.48R100.bmp",
+      "w_b_ratio": 0.48,
+      "restraint_code": "R100",
+      "xls_path": "data/thermal_stress/raw/温度应力/C30温度应力/C30/金隅C30/2016-05-23-1153.xls",
+      "w_b_confidence": 0.96,
+      "r_source": "bmp_filename",
+      "r_confidence": 0.85,
+      "r_xls_independent": false,
+      "reason": "金隅C30独立子目录；唯一较低T_max与σ_t指纹"
+    },
+    {
+      "sample_id": "C30_wb0p48_R50",
+      "bmp": "C30温度应力/0.48R50.bmp",
+      "w_b_ratio": 0.48,
+      "restraint_code": "R50",
+      "xls_path": "data/thermal_stress/raw/温度应力/C30温度应力/C30/金隅C30/2016-05-23-1153.xls",
+      "w_b_confidence": 0.96,
+      "r_source": "bmp_filename",
+      "r_confidence": 0.85,
+      "r_xls_independent": false,
+      "reason": "金隅C30独立子目录；唯一较低T_max与σ_t指纹"
+    }
+  ],
+  "sample_id_to_xls": {
+    "C30_wb0p36_R0": "data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/C30基准72.xls",
+    "C30_wb0p36_R100": "data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/C30基准72.xls",
+    "C30_wb0p36_R50": "data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/C30基准72.xls",
+    "C30_wb0p44_R0": "data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/2016-05-12-1122.xls",
+    "C30_wb0p44_R100": "data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/2016-05-12-1122.xls",
+    "C30_wb0p44_R50": "data/thermal_stress/raw/温度应力/C30温度应力/C30/基准C30/2016-05-12-1122.xls",
+    "C30_wb0p48_R0": "data/thermal_stress/raw/温度应力/C30温度应力/C30/金隅C30/2016-05-23-1153.xls",
+    "C30_wb0p48_R100": "data/thermal_stress/raw/温度应力/C30温度应力/C30/金隅C30/2016-05-23-1153.xls",
+    "C30_wb0p48_R50": "data/thermal_stress/raw/温度应力/C30温度应力/C30/金隅C30/2016-05-23-1153.xls"
+  },
+  "limitations": [
+    "文献库无温度应力 3×3 矩阵，R 档不能从 xls 内容区分",
+    "同 w/b 三档 R 共用一条仪器应力曲线，R 仅写入元数据供公式 σ=R·E·α·ΔT",
+    "C30.xls 为对照试件（高 T_max/大拉应力），未纳入九组矩阵"
+  ],
+  "n_groups": 9,
+  "n_unique_xls": 3
+}

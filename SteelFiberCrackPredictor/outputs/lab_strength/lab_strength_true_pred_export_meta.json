@@ -1,0 +1,14 @@
+{
+  "oof_csv": "D:\\cursor\\code\\SteelFiberCrackPredictor\\outputs\\lab_strength\\lab_strength_oof_predictions.csv",
+  "report_json": "D:\\cursor\\code\\SteelFiberCrackPredictor\\outputs\\lab_strength\\lab_strength_residual_report.json",
+  "default_residual_model_by_task": {
+    "compressive": "ridge",
+    "flexural": "formula_only"
+  },
+  "n_rows_compressive": 33,
+  "export_files": {
+    "compressive": "D:\\cursor\\code\\SteelFiberCrackPredictor\\outputs\\lab_strength\\lab_strength_compressive_true_pred.csv",
+    "flexural": "D:\\cursor\\code\\SteelFiberCrackPredictor\\outputs\\lab_strength\\lab_strength_flexural_true_pred.csv",
+    "combined": "D:\\cursor\\code\\SteelFiberCrackPredictor\\outputs\\lab_strength\\lab_strength_compressive_flexural_true_pred.csv"
+  }
+}

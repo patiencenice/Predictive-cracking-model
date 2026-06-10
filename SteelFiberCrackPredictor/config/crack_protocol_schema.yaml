@@ -1,0 +1,61 @@
+# 裂缝相关「协议列」schema（与 GB/T 50082-2024 对齐用侧车元数据）
+# 不要求一次填满；闸门可检查「列存在 + 单位声明 + 与 method_id 一致」。
+
+version: 0.1
+description: >
+  描述训练/推理 CSV 或 sidecar 中与裂缝及 50082 试验相关的列名约定。
+  不修改 features.FEATURE_COLUMNS 核心集合；新列供闸门与派生特征使用。
+
+recommended_columns:
+  # 溯源与分层（可与 lab_strength 追溯列同名）
+  - name: literature_key
+    dtype: string
+    required_for_tier: ["B_literature_verified", "C_literature_extracted"]
+  - name: table_or_figure_ref
+    dtype: string
+    required_for_tier: ["B_literature_verified", "C_literature_extracted"]
+  - name: extraction_batch_id
+    dtype: string
+    required: false
+  - name: data_tier
+    dtype: string
+    enum_suggested: ["A_lab_native", "B_literature_verified", "C_literature_extracted", ""]
+  - name: standard_method_id
+    dtype: string
+    description: "与 config/gbt50082_methods.yaml 顶层 methods 键一致，如 early_cracking_plate"
+
+  # 试件 / 环境（示例名，与现有 CSV 对齐时改名映射）
+  - name: specimen_shape_id
+    dtype: string
+    required_for_gate: false
+  - name: specimen_length_mm
+    dtype: float
+    unit: mm
+  - name: specimen_width_mm
+    dtype: float
+    unit: mm
+  - name: specimen_thickness_mm
+    dtype: float
+    unit: mm
+  - name: curing_temperature_c
+    dtype: float
+    unit: "degC"
+  - name: curing_rh_pct
+    dtype: float
+    unit: "%"
+  - name: test_environment_note
+    dtype: string
+
+  # 裂缝指标（主链路若已有同名列，此处仅作协议文档）
+  - name: crack_width_mm
+    dtype: float
+    role: "L1_protocol_or_L0_raw"
+  - name: crack_density_per_m2
+    dtype: float
+    role: "L1_protocol_or_L0_raw"
+  - name: cracking_risk_score
+    dtype: float
+    role: "L1_protocol_or_L0_raw"
+
+reporting_fields_required_tbd:
+  note: "从 GB/T 50082-2024 各试验「报告」章节摘取后填入列表"
